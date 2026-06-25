@@ -1,15 +1,11 @@
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
 
+import { useQuery } from "@tanstack/react-query";
+import axiosinstance from './../API/axiosinstance'
 function Getcategorise() {
 
   const getcategorise= async ()=>{
 
-   const respons= await axios.get(`${import.meta.env.VITE_BURL}/Categories`,{
-    headers:{
-        'Accept-Language':"en"
-    }
-   });
+   const respons= await axiosinstance.get(`/Categories`);
 
  
   return respons.data
