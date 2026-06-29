@@ -3,28 +3,28 @@ import axios from "axios";
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 
-import {schema} from './Schema'
+import { schemaLogin} from './SchemaLogin'
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Register() {
+function Login() {
 
     const[error,seterror]=useState([]); 
    
       // هان استخدمنا مكتبة useForm
   const { register,handleSubmit,formState: { errors ,isSubmitting }}=useForm({
-     resolver: yupResolver(schema),
+     resolver: yupResolver( schemaLogin),
   });
   
   //   هان عملت function يلي بتستقبل ال data
   const registerform= async(data)=>{
         try {
     const response = await axios.post(
-      `${import.meta.env.VITE_BURL}/auth/Account/Register`,
+      `${import.meta.env.VITE_BURL}/auth/Account/Login`,
       data
     );
 
-    console.log(response.data);
+    console.log(response.data.accessToken);
   } catch (err) {
     seterror(err.response.data.errors)
     console.log(err.response.data.errors)
@@ -47,35 +47,7 @@ function Register() {
 
        
       
-      <h2 className="text-2xl font-bold text-center">Register</h2>
-
-      <input
-        type="text"
-        placeholder="User Name"
-        {...register("userName")}
-        className="border p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-      />
-
-
-      {errors.userName?<div className="text-red-600">{errors.userName.message}</div>:""}
-
-      <input
-        type="text"
-        placeholder="Full Name"
-        {...register("fullName")}
-        className="border p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-      />
-
-        {errors.fullName?<div className="text-red-600">{errors.fullName.message}</div>:""}
-
-      <input
-        type="text"
-        placeholder="Phone Number"
-        {...register("phoneNumber")}
-        className="border p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-      />
-       
-        {errors.phoneNumber?<div className="text-red-600">{errors.phoneNumber.message}</div>:""}
+      <h2 className="text-3xl font-bold text-center text-gray-900">Login</h2>
 
       <input
         type="email"
@@ -100,7 +72,7 @@ function Register() {
         disabled={isSubmitting}
         className="bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition"
       >
-        {isSubmitting?<span className="loader"></span>:'Register'}
+        {isSubmitting?<span className="loader"></span>:'Login'}
       </button>
 
        {/* هان بظهر الخطا يلي جاي من server */}
@@ -110,19 +82,16 @@ function Register() {
         return <span className="text-red-600">{err}</span>
       }) :''}
 
-       <div className="text-center text-sm text-gray-600">
+      <div className="text-center text-sm text-gray-600">
         <span>
-            Already have an account?
+           Don't have an account?
         </span>
-       <Link to="/Login" className="text-blue-600 hover:underline font-medium">Login here</Link>
+       <Link to="/Register" className="text-blue-600 hover:underline font-medium"> Register here</Link>
     </div>
-    </form>
-    
-    
-    
+    </form>   
   </div>
     </>
   )
 }
 
-export default Register;
+export default Login;
