@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 function Login() {
 
-    const[error,seterror]=useState([]); 
+    const[error,seterror]=useState([]);
    
       // هان استخدمنا مكتبة useForm
   const { register,handleSubmit,formState: { errors ,isSubmitting }}=useForm({
@@ -23,8 +23,9 @@ function Login() {
       `${import.meta.env.VITE_BURL}/auth/Account/Login`,
       data
     );
-
+     
     console.log(response.data.accessToken);
+    localStorage.setItem("token", response.data.accessToken);
   } catch (err) {
     seterror(err.response.data.errors)
     console.log(err.response.data.errors)
