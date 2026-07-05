@@ -2,8 +2,11 @@
 
 import { useQuery } from "@tanstack/react-query";
 import Authinstance from '../../API/Authinstance';
-
-function Cart() {
+import {Counterstore} from "../../store/Counterstore";
+function Cart() { 
+    const counter= Counterstore((state)=>state.count)
+    const increment= Counterstore((state)=>state.increment)
+    const decrement= Counterstore((state)=>state.decrement)
 
     const getCart = async () => {
         try {
@@ -29,7 +32,19 @@ if(error){
 }
  return (
     <div>
-     
+      <h2>
+       Cart Count: {counter}
+      </h2>
+      
+      <div className="flex gap-2">
+        <button onClick={increment} className="bg-blue-500 text-white px-2 py-1 rounded">
+        +
+      </button>
+
+       <button onClick={decrement} className="bg-red-500 text-white px-2 py-1 rounded">
+        -
+      </button>
+      </div>
     </div>
   )
 }   
