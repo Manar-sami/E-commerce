@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const token = localStorage.getItem('token');
+const token = localStorage.getItem('accessToken');
 const Authinstance = axios.create({
     
     baseURL:`${import.meta.env.VITE_BURL}`,

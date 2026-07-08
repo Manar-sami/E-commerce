@@ -27,7 +27,7 @@ function Login() {
     );
      
     console.log(response.data.accessToken);
-    // localStorage.setItem("token", response.data.accessToken);
+    
     setToken(response.data.accessToken)
   } catch (err) {
     seterror(err.response.data.errors)
