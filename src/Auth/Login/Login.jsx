@@ -7,10 +7,12 @@ import { schemaLogin} from './SchemaLogin'
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import UseAuthStore from "../../store/UseAuthStore";
+
 function Login() {
 
     const[error,seterror]=useState([]);
-   
+     const setToken=UseAuthStore((state)=>state.setToken)
       // هان استخدمنا مكتبة useForm
   const { register,handleSubmit,formState: { errors ,isSubmitting }}=useForm({
      resolver: yupResolver( schemaLogin),
@@ -25,7 +27,8 @@ function Login() {
     );
      
     console.log(response.data.accessToken);
-    localStorage.setItem("token", response.data.accessToken);
+    // localStorage.setItem("token", response.data.accessToken);
+    setToken(response.data.accessToken)
   } catch (err) {
     seterror(err.response.data.errors)
     console.log(err.response.data.errors)
