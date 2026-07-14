@@ -1,7 +1,9 @@
 import useProductdetails from "../../Hook/Productdetails";
 import { useParams } from "react-router-dom";
+import useAddtocart from "../../Hook/Addtocart";
 
 function ProductDetails() {
+  const {mutate:addtocart} = useAddtocart()
     const {id} = useParams()
     const{data, isLoading}=useProductdetails(id)
     if (isLoading) {
@@ -49,7 +51,7 @@ function ProductDetails() {
             {data.description}
           </p>
 
-          <button className="mt-8 flex items-center justify-center gap-2 bg-black text-white py-4 rounded-xl hover:bg-gray-800 duration-300">
+          <button onClick={() => addtocart({ ProductId: data.id, Count: 1 })} className="mt-8 flex items-center justify-center gap-2 bg-black text-white py-4 rounded-xl hover:bg-gray-800 duration-300">
            
             Add To Cart
           </button>
