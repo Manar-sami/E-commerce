@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
-
+import { useNavigate } from "react-router-dom";
 import { schemaLogin} from './SchemaLogin'
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import UseAuthStore from "../../store/UseAuthStore";
 
 function Login() {
-
+    const navigate=useNavigate();
     const[error,seterror]=useState([]);
      const setToken=UseAuthStore((state)=>state.setToken)
       // هان استخدمنا مكتبة useForm
@@ -27,7 +27,7 @@ function Login() {
     );
      
     console.log(response.data.accessToken);
-    
+    navigate('/');
     setToken(response.data.accessToken)
   } catch (err) {
     seterror(err.response.data.errors)
