@@ -1,52 +1,54 @@
 
+import useGetitemformcart from "../../Hook/Getitemformcart";
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import Typography from "@mui/material/Typography";
 
-import { useQuery } from "@tanstack/react-query";
-import Authinstance from '../../API/Authinstance';
-import {Counterstore} from "../../store/Counterstore";
 function Cart() { 
-    const counter= Counterstore((state)=>state.count)
-    const increment= Counterstore((state)=>state.increment)
-    const decrement= Counterstore((state)=>state.decrement)
+  const{data,isLoading,isError,error}=useGetitemformcart();
 
-    const getCart = async () => {
-        try {
-            const response = await Authinstance.get(`/Carts`);
-            console.log(response);
-            return response;
-        }  
-        catch (error) {
-            console.error('Error fetching cart:', error);
-        }            
-}
+  if (isLoading) return <div>Loading...</div>
+  if (isError) return <div>{error.message}</div>
 
-const {data,isLoading,error}=useQuery({
-    queryKey:['cart'],
-    queryFn:getCart
-})
+  console.log(data)
 
-if(isLoading){
-    return <div>Loading...</div>
-}
-if(error){
-    return <div>Error </div>
-}
  return (
-    <div>
-      <h2>
-       Cart Count: {counter}
-      </h2>
-      
-      <div className="flex gap-2">
-        <button onClick={increment} className="bg-blue-500 text-white px-2 py-1 rounded">
-        +
-      </button>
-
-       <button onClick={decrement} className="bg-red-500 text-white px-2 py-1 rounded">
-        -
-      </button>
-      </div>
-    </div>
-  )
-}   
+    
+     <TableContainer component={Paper}>
+        <Typography  align="center" variant="h1" component="h1" > Cart </ Typography>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>productName</TableCell>
+            <TableCell align="right">Price</TableCell>
+            <TableCell align="right">Quantity</TableCell>
+            <TableCell align="right">Total</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((item) => (
+            <TableRow
+              key={item.id}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {item.productName}
+              </TableCell>
+              <TableCell align="right">{item.price}</TableCell>
+              <TableCell align="right">{item.count}</TableCell>
+              <TableCell align="right">{item.totalPrice}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+  
+}
 
 export default Cart;

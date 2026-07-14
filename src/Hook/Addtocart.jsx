@@ -5,6 +5,7 @@ import { useMutation } from '@tanstack/react-query';
 function Addtocart() {
 
    const addcart=async({ProductId,Count})=>{
+    console.log(ProductId,Count)
     try {
         const response = await Authinstance.post(`/Carts`,{
             ProductId:ProductId,

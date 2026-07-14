@@ -3,13 +3,16 @@ import { useParams } from "react-router-dom";
 import useAddtocart from "../../Hook/Addtocart";
 
 function ProductDetails() {
-  const {mutate:addtocart} = useAddtocart()
+    const {mutate:addtocart} = useAddtocart()
     const {id} = useParams()
     const{data, isLoading}=useProductdetails(id)
+
     if (isLoading) {
         return (<div>Loading...</div>)
     }
+
     console.log(data)
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
      
