@@ -1,26 +1,20 @@
-
 import { useQuery } from "@tanstack/react-query";
-import Authinstance from '../API/Authinstance';
+import Authinstance from "../API/Authinstance";
 
 function Getitemformcart() {
+  const getitemformcart = async () => {
+    const respons = await Authinstance.get(`/Carts`);
 
-  const getitemformcart= async ()=>{
+    return respons.data.items;
+  };
 
-   const respons= await Authinstance.get(`/Carts`);
-
- 
-  return respons.data.items;
-
-  }
-
- const query =useQuery({
-    queryKey:['itemformcart','en'],
-    queryFn:getitemformcart,
-    staleTime:1000*60*5
+  const query = useQuery({
+    queryKey: ["cart", "en"],
+    queryFn: getitemformcart,
+    staleTime: 1000 * 60 * 5,
   });
 
   return query;
-    
 }
 
-export default Getitemformcart
+export default Getitemformcart;
