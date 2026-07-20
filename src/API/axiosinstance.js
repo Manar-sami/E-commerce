@@ -1,5 +1,6 @@
 
 import axios from "axios";
+import i18n from "../languge";
 
 const  instance =axios.create({
 
@@ -9,4 +10,9 @@ const  instance =axios.create({
     }
 })
 
+instance.interceptors.request.use((config)=>{
+    config.headers["Accept-Language"]=i18n.language;
+    return config;
+
+})
 export default instance;

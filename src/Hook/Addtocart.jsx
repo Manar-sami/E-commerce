@@ -4,6 +4,7 @@ import { useMutation } from '@tanstack/react-query';
 import { useQueryClient } from '@tanstack/react-query';
 
 function Addtocart() {
+ 
   const queryClient = useQueryClient();
 
    const addcart=async({ProductId,Count})=>{
@@ -18,6 +19,10 @@ function Addtocart() {
     } catch (error) {
         console.error('Error adding to cart:', error);
     }
+
+    
+   
+
   };
 
   const mutate=useMutation({

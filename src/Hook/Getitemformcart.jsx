@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import Authinstance from "../API/Authinstance";
+import i18n from "../languge";
 
 function Getitemformcart() {
   const getitemformcart = async () => {
@@ -9,7 +10,7 @@ function Getitemformcart() {
   };
 
   const query = useQuery({
-    queryKey: ["cart", "en"],
+    queryKey: ["cart",i18n.language],
     queryFn: getitemformcart,
     staleTime: 1000 * 60 * 5,
   });

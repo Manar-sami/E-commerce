@@ -6,10 +6,11 @@ import { useNavigate } from "react-router-dom";
 import { schemaLogin} from './SchemaLogin'
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from 'react-i18next';
 import UseAuthStore from "../../store/UseAuthStore";
 
 function Login() {
+  const { t } = useTranslation();
     const navigate=useNavigate();
     const[error,seterror]=useState([]);
      const setToken=UseAuthStore((state)=>state.setToken)
@@ -51,7 +52,7 @@ function Login() {
 
        
       
-      <h2 className="text-3xl font-bold text-center text-gray-900">Login</h2>
+      <h2 className="text-3xl font-bold text-center text-gray-900">{t('Login')}</h2>
 
       <input
         type="email"
@@ -88,7 +89,7 @@ function Login() {
 
       <div className="text-center text-sm text-gray-600">
         <span>
-           Don't have an account?
+          {t('Dont have an account')} ?
         </span>
        <Link to="/Register" className="text-blue-600 hover:underline font-medium"> Register here</Link>
     </div>

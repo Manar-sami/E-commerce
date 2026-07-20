@@ -15,6 +15,7 @@ import Box from "@mui/material/Box";
 import IconButton from '@mui/material/IconButton';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import useClearcart from "../../Hook/Clearcart";
 
 
 function Cart() { 
@@ -32,6 +33,8 @@ function Cart() {
     const item=data.find(i=>i.productId==productId);
     console.log(item);
 
+   
+
     if (action === "+") {
     update({
       productId,
@@ -39,15 +42,17 @@ function Cart() {
     });
   }
     else {
-      if(data.count<0){
-         
-      }
+      
   update({
     productId,
     count: item.count - 1
   });
 }
    }
+   
+    // هان ال hook الخاص ب مسح جميع عناصر السلة 
+    const {mutate:clear}=useClearcart();
+    console.log(clear);
 
   if (isLoading) return <div>Loading...</div>
   if (isError) return <div>{error.message}</div>
@@ -56,7 +61,9 @@ function Cart() {
 
  return (
     
-     <TableContainer component={Paper}>
+    <Box >
+       <TableContainer component={Paper}>
+     
         <Typography  align="center" variant="h1" component="h1" > Cart </ Typography>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
@@ -81,21 +88,21 @@ function Cart() {
               <TableCell align="right">{item.price}$</TableCell>
               <TableCell align="right">
                  <Box sx={{display: "flex",alignItems:"center",justifyContent:"end"}}>
-                 {item.count<1?<>
+                 {item.count<=1?<>
                   <IconButton sx={{opacity:0}} >
-                  < RemoveIcon onClick={()=>handuleupdate(item.productId,'-')}/>
+                  < RemoveIcon disabled={updateitem} onClick={()=>handuleupdate(item.productId,'-')}/>
                  </IconButton>
                   </> :
                   <>
                   <IconButton >
-                  < RemoveIcon onClick={()=>handuleupdate(item.productId,'-')}/>
+                  < RemoveIcon disabled={updateitem} onClick={()=>handuleupdate(item.productId,'-')}/>
                  </IconButton>
                   </>
                   }
                  
                  <TableCell align="right">{item.count}</TableCell>
                    <IconButton>
-                  < AddIcon onClick={()=>handuleupdate(item.productId,'+')}/>
+                  < AddIcon disabled={updateitem} onClick={()=>handuleupdate(item.productId,'+')}/>
                  </IconButton>
               </Box>
               </TableCell>
@@ -110,6 +117,12 @@ function Cart() {
         </TableBody>
       </Table>
     </TableContainer>
+
+    <Button onClick={()=>clear()}>
+      clear cart
+    </Button>
+    </Box>
+    
   );
   
 }

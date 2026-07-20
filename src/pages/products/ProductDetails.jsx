@@ -3,9 +3,10 @@ import { useParams } from "react-router-dom";
 import useAddtocart from "../../Hook/Addtocart";
 
 function ProductDetails() {
-    const {mutate:addtocart} = useAddtocart()
+    const {mutate:addtocart,isSuccess} = useAddtocart()
     const {id} = useParams()
-    const{data, isLoading}=useProductdetails(id)
+    const{data, isLoading}=useProductdetails(id);
+    
 
     if (isLoading) {
         return (<div>Loading...</div>)
@@ -15,7 +16,13 @@ function ProductDetails() {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
-     
+     {
+     isSuccess?   <div className="bg-green-100 text-green-700 p-3 rounded mb-4">
+    تمت إضافة المنتج إلى السلة ✅
+  </div>
+  
+  : null
+     } 
       <div className="grid lg:grid-cols-2 gap-12 bg-white rounded-3xl shadow-lg p-8">
    
         <div className="bg-gray-100 rounded-2xl flex items-center justify-center ">
@@ -25,7 +32,7 @@ function ProductDetails() {
             className="w-full h-full  hover:scale-105 duration-300"
           />
         </div>
-
+        
       
         <div className="flex flex-col">
           <h1 className="text-4xl font-bold text-gray-900">
