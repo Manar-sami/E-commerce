@@ -30,7 +30,7 @@ function Products() {
         {data.response.data.map((product) => (
           <Link to={`/product/${product.id}`} >
       <div className="bg-white rounded-lg shadow-md   hover:shadow-lg transition duration-300" key={product.id}>
-        <img src={product.image} alt={product.name}  className="w-full h-[400px]"/>
+        <img src={product.image} alt={product.name}  className="w-full h-100"/>
         <div className="p-4">
           <h3 className="text-lg font-bold">{product.name}</h3>
         <span className="text-gray-600">{product.price}</span>
