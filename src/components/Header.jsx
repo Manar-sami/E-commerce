@@ -58,7 +58,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
       
       
         <Box sx={{display:"flex",alignItems:"center",textAlign:'center',justifyContent:"space-between"}} >
-         <Box sx={{display:"flex",gap:"20px"}}>
+         <Box sx={{display:"flex",gap:{xs:"5px",lg:"20px"}}}>
            <Box
              component={Link}
              to="/"
@@ -72,7 +72,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
               KaShop
           </Box>
           
-           <List sx={{display:"flex",}}>
+           <List sx={{display:{xs:"none",lg:"flex"}}}>
             <ListItem component={Link} to="/" sx={{color:"#C7C4D7", fontSize:"16px",fontWeight:"600",
              transition:"0.3s",
              "&:hover":{
@@ -116,6 +116,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
             {/* التصميم الخاص بال mune */}
 
           <Box sx={{display:{xs:"flex",md:"none"}}}>
+            
       <Button
         id="demo-positioned-button"
         aria-controls={open ? 'demo-positioned-menu' : undefined}
@@ -141,6 +142,41 @@ const [anchorEl, setAnchorEl] = React.useState(null);
           horizontal: 'left',
         }}
       >
+         <ListItem component={Link} to="/" sx={{color:"#C7C4D7", fontSize:"16px",fontWeight:"600",
+             transition:"0.3s",
+             "&:hover":{
+              color:"#C0C1FF",
+              textDecoration:"underline"
+
+             }
+            }}>
+
+                {t('Home')}
+            </ListItem>
+            <ListItem component={Link} to="/Products" sx={{color:"#C7C4D7", fontSize:"16px",fontWeight:"600",
+             transition:"0.3s",
+             "&:hover":{
+              color:"#C0C1FF",
+              textDecoration:"underline"
+
+             }
+            }}>
+
+               {t('Products')} 
+            </ListItem>
+
+             <ListItem component={Link} to="/Categories" sx={{color:"#C7C4D7", fontSize:"16px",fontWeight:"600",
+             transition:"0.3s",
+             "&:hover":{
+              color:"#C0C1FF",
+              textDecoration:"underline"
+
+             }
+            }}>
+
+                {t('Categories')}
+            </ListItem>
+            
 
           <MenuItem>
          <IconButton onClick={ changeLanguage}

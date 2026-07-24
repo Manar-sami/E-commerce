@@ -27,8 +27,10 @@ i18n
           "Refined silhouettes and premium materials, curated for the discerning individual":"Refined silhouettes and premium materials, curated for the discerning individual",
           "View All Products":"View All Products",
           "Featured Categories":"Featured Categories",
-          "View All  Categories":"View All  Categories"
-
+          "View All  Categories":"View All  Categories",
+          "A Seasonal Shift.":"A Seasonal Shift.",
+          "Exclusive early access to our Autumn/Winter pre-collection. Tailored for the transition.":"Exclusive early access to our Autumn/Winter pre-collection. Tailored for the transition.",
+          "Explore Pre-Collection":"Explore Pre-Collection",
 
         }
       },
@@ -48,6 +50,9 @@ i18n
           "View All Products":"عرض جميع المنتجات",
           "Featured Categories":"التصنيفات المميزة",
           "View All  Categories":"عرض جميع الفئات",
+          "A Seasonal Shift.":"تحوّل موسمي.",
+          "Exclusive early access to our Autumn/Winter pre-collection. Tailored for the transition.":"وصول حصري مبكر إلى مجموعتنا التمهيدية لخريف/شتاء. مصمّمة بعناية لتناسب مرحلة الانتقال.",
+          "Explore Pre-Collection":"استكشف المجموعة التمهيدية",
 
 
         }
