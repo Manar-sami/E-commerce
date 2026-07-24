@@ -6,6 +6,13 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import {schema} from './Schema'
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 function Register() {
 
@@ -36,91 +43,177 @@ function Register() {
 
 
     <>
-     {/* هان عملت تنسيق بسيط لل form  */}
+     <Container maxWidth="lg">
+      <Box sx={{ mt: 10, px: 4 }}>
+        <Grid container >
 
-     <div className="min-h-screen flex items-center justify-center">
-      
-    <form
-      onSubmit={handleSubmit(registerform)}
-      className="w-full max-w-md bg-white p-6 rounded-lg shadow-md flex flex-col gap-4"
-    >
+          {/* Left Side */}
+          <Grid size={{ lg: 6, xs: 12 }} sx={{ py: 8,px:3 }}>
 
-       
-      
-      <h2 className="text-2xl font-bold text-center">Register</h2>
+            <Typography
+              sx={{
+                fontSize: 48,
+                fontWeight: "bold",
+              }}
+            >
+              Create Account
+            </Typography>
 
-      <input
-        type="text"
-        placeholder="User Name"
-        {...register("userName")}
-        className="border p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-      />
+            <Typography sx={{ mt: 1, color: "#767683" }}>
+              Join our community and start your shopping journey.
+            </Typography>
 
+            <Box
+              component="form"
+              onSubmit={handleSubmit(registerform)}
+              sx={{
+                mt: 5,
+                display: "flex",
+                flexDirection: "column",
+                gap: 4,
+              }}
+            >
 
-      {errors.userName?<div className="text-red-600">{errors.userName.message}</div>:""}
+              <TextField
+                {...register("fullName")}
+                label="Full Name"
+                variant="standard"
+              />
+              <Typography color="error">
+                {errors.fullName?.message}
+              </Typography>
 
-      <input
-        type="text"
-        placeholder="Full Name"
-        {...register("fullName")}
-        className="border p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-      />
+              <TextField
+                {...register("userName")}
+                label="Username"
+                variant="standard"
+              />
+              <Typography color="error">
+                {errors.userName?.message}
+              </Typography>
 
-        {errors.fullName?<div className="text-red-600">{errors.fullName.message}</div>:""}
+              <TextField
+                {...register("email")}
+                label="Email"
+                variant="standard"
+              />
+              <Typography color="error">
+                {errors.email?.message}
+              </Typography>
 
-      <input
-        type="text"
-        placeholder="Phone Number"
-        {...register("phoneNumber")}
-        className="border p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-      />
-       
-        {errors.phoneNumber?<div className="text-red-600">{errors.phoneNumber.message}</div>:""}
+              <TextField
+                {...register("phoneNumber")}
+                label="Phone Number"
+                variant="standard"
+              />
+              <Typography color="error">
+                {errors.phoneNumber?.message}
+              </Typography>
 
-      <input
-        type="email"
-        placeholder="Email"
-        {...register("email")}
-        className="border p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-      />
-       
-        {errors.email?<div className="text-red-600">{errors.email.message}</div>:""}
+              <TextField
+                {...register("password")}
+                label="Password"
+                type="password"
+                variant="standard"
+              />
+              <Typography color="error">
+                {errors.password?.message}
+              </Typography>
 
-      <input
-        type="text"
-        placeholder="Password"
-        {...register("password")}
-        className="border p-3 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-      />
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                variant="contained"
+                sx={{
+                  py: 2,
+                  borderRadius: 5,
+                  background: "#000666",
+                }}
+              >
+                {isSubmitting ? (
+                  <span className="loader"></span>
+                ) : (
+                  <>
+                    Create Account
+                    <ArrowRightAltIcon />
+                  </>
+                )}
+              </Button>
 
-        {errors.password?<div className="text-red-600">{errors.password.message}</div>:""}
+              <Typography
+                component={Link}
+                to="/Login"
+                sx={{
+                  textAlign: "center",
+                  color: "#000666",
+                  textDecoration: "none",
+                }}
+              >
+                Already have an account? Sign In
+              </Typography>
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition"
-      >
-        {isSubmitting?<span className="loader"></span>:'Register'}
-      </button>
+              <Typography>
+                {error?.length > 0 ? error.map((err)=>{
 
-       {/* هان بظهر الخطا يلي جاي من server */}
+           return <span className="text-red-600">{err}</span>
+          }) :''}
+              </Typography>
 
-      {error?.length > 0 ? error.map((err)=>{
+            </Box>
 
-        return <span className="text-red-600">{err}</span>
-      }) :''}
+          </Grid>
 
-       <div className="text-center text-sm text-gray-600">
-        <span>
-            Already have an account?
-        </span>
-       <Link to="/Login" className="text-blue-600 hover:underline font-medium">Login here</Link>
-    </div>
-    </form>
-    
-    
-    
-  </div>
+          {/* Right Side */}
+          <Grid
+            size={{ lg: 6, xs: 12 }}
+            sx={{
+              backgroundImage: `
+                linear-gradient(
+                  0deg,
+                  rgba(0,6,102,.8),
+                  rgba(0,6,102,.35)
+                ),
+                url('./image/login.png')
+              `,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              p: 5,
+            }}
+          >
+            <Typography
+              sx={{
+                color: "#fff",
+                fontSize: {
+                  xs: 30,
+                  md: 60,
+                },
+                fontWeight: "bold",
+              }}
+            >
+              Welcome!
+            </Typography>
+
+            <Typography
+              sx={{
+                color: "#fff",
+                mt: 2,
+                textAlign: "center",
+              }}
+            >
+              Create your account to explore exclusive collections,
+              personalized recommendations, and a premium shopping
+              experience.
+            </Typography>
+
+          </Grid>
+
+        </Grid>
+      </Box>
+    </Container>
     </>
   )
 }
