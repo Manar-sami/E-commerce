@@ -26,6 +26,8 @@ i18n
           "Curated Essentials":"Curated Essentials",
           "Refined silhouettes and premium materials, curated for the discerning individual":"Refined silhouettes and premium materials, curated for the discerning individual",
           "View All Products":"View All Products",
+          "Featured Categories":"Featured Categories",
+          "View All  Categories":"View All  Categories"
 
 
         }
@@ -44,7 +46,9 @@ i18n
           "Curated Essentials":"الأساسيات المختارة بعناية",
           "Refined silhouettes and premium materials, curated for the discerning individual":"تصاميم أنيقة بخطوط انسيابية ومواد فاخرة، مختارة بعناية لتناسب أصحاب الذوق الرفيع",
           "View All Products":"عرض جميع المنتجات",
-          
+          "Featured Categories":"التصنيفات المميزة",
+          "View All  Categories":"عرض جميع الفئات",
+
 
         }
       }

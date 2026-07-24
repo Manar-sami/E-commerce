@@ -63,7 +63,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
              component={Link}
              to="/"
              sx={{
-               fontSize: 32,
+               fontSize: {xs:"20px",md:"24px",lg:"32px"},
                fontWeight: "bold",
                color: "white",
                textDecoration: "none",

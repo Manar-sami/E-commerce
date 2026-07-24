@@ -14,18 +14,19 @@ function Product_section() {
 
     //  الخاص بالترجمة 
      const { t } = useTranslation();
-    
+
+    //  ال hook الخاص لجلب المنتجات 
      const{data,isLoading,isError}=useGetproducts();
 
-     if (isLoading) return <p>Loading...</p>;
-   if (isError) return <p>Error</p>;
+      if (isLoading) return <span class="loader"></span>;
+      if (isError) return <p>Error</p>;
      console.log(data.response.data);
   return (
     <Box sx={{py:10}}>
      <Container maxWidth="lg">
        <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"start"}}>
         <Box>
-            <Typography component="p" sx={{fontSize:"16px",fontWeight:"bold"}}>
+            <Typography component="p" sx={{fontSize:"32px",fontWeight:"bold"}}>
            {t('Curated Essentials')}
         </Typography>
 
