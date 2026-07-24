@@ -37,6 +37,10 @@ i18n
           "The Archive Series":"The Archive Series",
           "Elevated Basics":"Elevated Basics",
           "Object & Form":"Object & Form",
+          "Join the Collective.":"Join the Collective.",
+          "Subscribe to receive early access to new arrivals, private sales, and curated lifestyle editorials.":"Subscribe to receive early access to new arrivals, private sales, and curated lifestyle editorials.",
+          "By subscribing, you agree to our Privacy Policy and Terms of Service.":"By subscribing, you agree to our Privacy Policy and Terms of Service.",
+
 
         }
       },
@@ -65,6 +69,9 @@ i18n
           "The Archive Series":"مجموعة الأرشيف",
           "Elevated Basics":"القطع الأساسية الفاخرة",
           "Object & Form":"الشكل والمادة",
+          "Join the Collective.":"انضم إلى المجتمع",
+          "Subscribe to receive early access to new arrivals, private sales, and curated lifestyle editorials.":"اشترك للحصول على وصول مبكر إلى المنتجات الجديدة، والعروض الخاصة، والمقالات المختارة بعناية حول أسلوب الحياة.",
+          "By subscribing, you agree to our Privacy Policy and Terms of Service.":"بالاشتراك، فإنك توافق على سياسة الخصوصية وشروط الخدمة الخاصة بنا.",
 
         }
       }

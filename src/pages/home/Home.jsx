@@ -3,6 +3,7 @@ import COMMUNITY from "./COMMUNITY";
 import Hero from "./Hero";
 import Product_section from "./Product_section";
 import Seasonal_section from "./Seasonal_section";
+import Join from "./Join";
 
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
      <Categories_section></Categories_section>
      <Seasonal_section></Seasonal_section>
      <COMMUNITY></COMMUNITY>
+     <Join></Join>
     </>
   )
 }
