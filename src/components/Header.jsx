@@ -52,7 +52,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
   }
   return (
     <>
-     <Box sx={{boxShadow:"0 2px 3px  #0000002b"}}>
+     <Box sx={{position:"absolute",width:"100%"}}>
       <Container maxWidth="lg">
        <Box sx={{py:"20px"}} >
       
@@ -65,7 +65,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
              sx={{
                fontSize: 32,
                fontWeight: "bold",
-               color: "black",
+               color: "white",
                textDecoration: "none",
                 }}
               >
@@ -73,10 +73,10 @@ const [anchorEl, setAnchorEl] = React.useState(null);
           </Box>
           
            <List sx={{display:"flex",}}>
-            <ListItem component={Link} to="/" sx={{color:"#454652", fontSize:"16px",fontWeight:"600",
+            <ListItem component={Link} to="/" sx={{color:"#C7C4D7", fontSize:"16px",fontWeight:"600",
              transition:"0.3s",
              "&:hover":{
-              color:"#000666",
+              color:"#C0C1FF",
               textDecoration:"underline"
 
              }
@@ -85,10 +85,10 @@ const [anchorEl, setAnchorEl] = React.useState(null);
                 {t('Home')}
             </ListItem>
 
-             <ListItem component={Link} to="/Products" sx={{color:"#454652", fontSize:"16px",fontWeight:"600",
+             <ListItem component={Link} to="/Products" sx={{color:"#C7C4D7", fontSize:"16px",fontWeight:"600",
              transition:"0.3s",
              "&:hover":{
-              color:"#000666",
+              color:"#C0C1FF",
               textDecoration:"underline"
 
              }
@@ -97,10 +97,10 @@ const [anchorEl, setAnchorEl] = React.useState(null);
                {t('Products')} 
             </ListItem>
 
-             <ListItem component={Link} to="/Categories" sx={{color:"#454652", fontSize:"16px",fontWeight:"600",
+             <ListItem component={Link} to="/Categories" sx={{color:"#C7C4D7", fontSize:"16px",fontWeight:"600",
              transition:"0.3s",
              "&:hover":{
-              color:"#000666",
+              color:"#C0C1FF",
               textDecoration:"underline"
 
              }
@@ -122,7 +122,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
         aria-haspopup="true"
         aria-expanded={open}
         onClick={handleClick}
-        sx={{color:"#454652"}}
+        sx={{color:"#C7C4D7"}}
       >
         <MenuIcon/>
       </Button>
@@ -145,7 +145,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
           <MenuItem>
          <IconButton onClick={ changeLanguage}
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
             }}
@@ -158,7 +158,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
           {/* profil */}
            <Box component={Link}
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
             }}
@@ -170,7 +170,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
          {/* darkmode */}
          <IconButton 
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
             }}>
@@ -182,7 +182,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
             <MenuItem>
             <Box component={Link} to="/Cart"
              sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
             }}
@@ -195,7 +195,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
         {/* logout */}
         <Box onClick={ hundellogout}
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
             }}
@@ -213,13 +213,20 @@ const [anchorEl, setAnchorEl] = React.useState(null);
          <Box sx={{display:{xs:"none",md:"flex"}}}>
              {Token?
             <>
-             <Box sx={{display:{xs:"none",md:"flex"},alignItems:"center",justifyContent:"space-between",gap:"15px"}}>
+             <Box sx={{display:{xs:"none",md:"flex"},alignItems:"center",justifyContent:"space-between",gap:"15px"
+            }}>
 
             <IconButton onClick={ changeLanguage}
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
+              transition:"0.4s",
+               "&:hover":{
+              color:"#C0C1FF",
+              
+
+             }
             }}
             >
             {i18n.language==='ar'?"EN":"AR"}
@@ -227,18 +234,30 @@ const [anchorEl, setAnchorEl] = React.useState(null);
 
             <IconButton 
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
+              transition:"0.4s",
+               "&:hover":{
+              color:"#C0C1FF",
+              
+
+             }
             }}>
               <DarkModeIcon/>
             </IconButton>
 
              <Box component={Link} to="/Cart"
              sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
+              transition:"0.4s",
+               "&:hover":{
+              color:"#C0C1FF",
+              
+
+             }
             }}
              >
              <ShoppingCartIcon/>
@@ -246,9 +265,15 @@ const [anchorEl, setAnchorEl] = React.useState(null);
             </Box>
             <Box component={Link}
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
+              transition:"0.4s",
+               "&:hover":{
+              color:"#C0C1FF",
+              
+
+             }
             }}
             >
               < AccountCircleIcon/>
@@ -256,9 +281,15 @@ const [anchorEl, setAnchorEl] = React.useState(null);
 
             <Box onClick={ hundellogout}
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
+              transition:"0.4s",
+               "&:hover":{
+              color:"#C0C1FF",
+              
+
+             }
             }}
             >
               < LogoutIcon/>
@@ -281,7 +312,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
 
             <IconButton onClick={ changeLanguage}
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
             }}
@@ -291,7 +322,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
 
             <IconButton 
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
             }}>
@@ -305,7 +336,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
             component={Link}
             to="/Login"
             sx={{
-              color:"#454652",
+              color:"#C7C4D7",
               fontSize:"18px",
               fontWeight:"600",
             }}
