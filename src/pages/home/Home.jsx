@@ -1,4 +1,5 @@
 import Categories_section from "./Categories_section";
+import COMMUNITY from "./COMMUNITY";
 import Hero from "./Hero";
 import Product_section from "./Product_section";
 import Seasonal_section from "./Seasonal_section";
@@ -12,6 +13,7 @@ function Home() {
      <Product_section></Product_section>
      <Categories_section></Categories_section>
      <Seasonal_section></Seasonal_section>
+     <COMMUNITY></COMMUNITY>
     </>
   )
 }

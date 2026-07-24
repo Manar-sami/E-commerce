@@ -31,6 +31,12 @@ i18n
           "A Seasonal Shift.":"A Seasonal Shift.",
           "Exclusive early access to our Autumn/Winter pre-collection. Tailored for the transition.":"Exclusive early access to our Autumn/Winter pre-collection. Tailored for the transition.",
           "Explore Pre-Collection":"Explore Pre-Collection",
+          "THE COMMUNITY":"THE COMMUNITY",
+          "Trusted by the Discerning.":"Trusted by the Discerning.",
+          "EXPLORE":"EXPLORE",
+          "The Archive Series":"The Archive Series",
+          "Elevated Basics":"Elevated Basics",
+          "Object & Form":"Object & Form",
 
         }
       },
@@ -53,7 +59,12 @@ i18n
           "A Seasonal Shift.":"تحوّل موسمي.",
           "Exclusive early access to our Autumn/Winter pre-collection. Tailored for the transition.":"وصول حصري مبكر إلى مجموعتنا التمهيدية لخريف/شتاء. مصمّمة بعناية لتناسب مرحلة الانتقال.",
           "Explore Pre-Collection":"استكشف المجموعة التمهيدية",
-
+          "THE COMMUNITY":"المجتمع",
+          "Trusted by the Discerning.":"اختيار موثوق لمن يقدّرون التميز",
+          "EXPLORE":"استكشف",
+          "The Archive Series":"مجموعة الأرشيف",
+          "Elevated Basics":"القطع الأساسية الفاخرة",
+          "Object & Form":"الشكل والمادة",
 
         }
       }

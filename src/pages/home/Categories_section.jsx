@@ -64,7 +64,7 @@ function Categories_section() {
                              {item.name}
                            </Typography>
                            <Typography sx={{color:"#000666",fontSize:"16px"}}>
-                            EXPLORE
+                            {t("EXPLORE")}
                            </Typography>
                          </Box>
                       </Grid>
