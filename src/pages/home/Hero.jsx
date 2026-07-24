@@ -2,8 +2,11 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import { useTranslation } from 'react-i18next';
 
 function Hero() {
+  const { t } = useTranslation();
+
   return (
     <>
     <Box sx={{
@@ -26,15 +29,14 @@ function Hero() {
                 flexDirection:"column",
             }}>
              <Typography sx={{color:"#C0C1FF",fontSize:"16px",letterSpacing:"7px"}}>
-                COLLECTION 2024
+                 {t('COLLECTION 2026')}
              </Typography>
             <Typography component="h1" variant="h1" sx={{fontSize:{xs:"24px",md:"48px"},fontWeight:"bold",color:"#E4E1E9"}}>
-               The Art of Technical Precision.
+                 {t('The Art of Technical Precision')}
             </Typography>
 
             <Typography component="p" sx={{color:"#C7C4D7",fontSize:"16px"}}>
-               A meticulously curated selection of world-class designers and timeless pieces
-               engineered for the modern aesthetic.
+               {t('A meticulously curated selection of world-class designers and timeless pieces engineered for the modern aesthetic')}
             </Typography>
 
              <Box sx={{display:"flex",gap:2,flexWrap:"wrap"}}>
@@ -52,7 +54,7 @@ function Hero() {
                         color:"#1000A9",
                     }
                 }}>
-                    Shop the Collection
+                     {t('Shop the Collection')}
                 </Button>
 
                  <Button sx={{
@@ -69,7 +71,7 @@ function Hero() {
                         color:"#1000A9",
                     }
                 }}>
-                    View Archive
+                      {t('View Archive')}
                 </Button>
              </Box>
 

@@ -293,7 +293,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
             }}
             >
               < LogoutIcon/>
-              Logout
+               {t('Logout')}
             
             </Box>
 

@@ -17,11 +17,17 @@ i18n
           "Home":"Home",
           "Products":"Products",
           "Categories":"Categories",
-          "logout":"logout",
-          "Login":"Login",
-          "Register":"Register",
-          "Dont have an account":"Don't have an account",
-          "Cart":"Cart"
+          "The Art of Technical Precision":"The Art of Technical Precision",
+          "A meticulously curated selection of world-class designers and timeless pieces engineered for the modern aesthetic":"A meticulously curated selection of world-class designers and timeless pieces engineered for the modern aesthetic",
+          "Shop the Collection":"Shop the Collection",
+          "View Archive":"View Archive",
+          "COLLECTION 2026":"COLLECTION 2026",
+          "Logout":"Logout",
+          "Curated Essentials":"Curated Essentials",
+          "Refined silhouettes and premium materials, curated for the discerning individual":"Refined silhouettes and premium materials, curated for the discerning individual",
+          "View All Products":"View All Products",
+
+
         }
       },
       ar: {
@@ -29,11 +35,17 @@ i18n
           "Home": "الرئيسية",
           "Categories": "التصنيفات",
           "Products": "المنتجات",
-          "Login": "تسجيل الدخول",
-          "logout": "تسجيل الخروج",
-          "Dont have an account": "ليس لديك حساب؟",
-          "Register": "إنشاء حساب",
-          "Cart": "سلة التسوق"
+          "The Art of Technical Precision":"فن الدقة التقنية",
+          "A meticulously curated selection of world-class designers and timeless pieces engineered for the modern aesthetic":"تشكيلة مختارة بعناية من تصاميم نخبة المصممين العالميين وقطع خالدة، صُمِّمت بإتقان لتجسد الجماليات العصرية",
+          "Shop the Collection":"تسوّق المجموعة",
+          "View Archive":"استعرض الأرشيف",
+          "COLLECTION 2026":"مجموعة 2026",
+          "Logout":"تسجيل الخروج",
+          "Curated Essentials":"الأساسيات المختارة بعناية",
+          "Refined silhouettes and premium materials, curated for the discerning individual":"تصاميم أنيقة بخطوط انسيابية ومواد فاخرة، مختارة بعناية لتناسب أصحاب الذوق الرفيع",
+          "View All Products":"عرض جميع المنتجات",
+          
+
         }
       }
    
