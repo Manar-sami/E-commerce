@@ -72,6 +72,9 @@ const [anchorEl, setAnchorEl] = React.useState(null);
               KaShop
           </Box>
           
+           
+         </Box>
+         
            <List sx={{display:{xs:"none",lg:"flex"}}}>
             <ListItem component={Link} to="/" sx={{color:"#C7C4D7", fontSize:"16px",fontWeight:"600",
              transition:"0.3s",
@@ -110,9 +113,6 @@ const [anchorEl, setAnchorEl] = React.useState(null);
             </ListItem>
             
            </List>
-         </Box>
-         
-           
             {/* التصميم الخاص بال mune */}
 
           <Box sx={{display:{xs:"flex",md:"none"}}}>

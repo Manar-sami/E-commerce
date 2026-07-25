@@ -56,6 +56,11 @@ i18n
           "Terms of Service":"Terms of Service",
           "Cookie Settings":"Cookie Settings",
           "© 2026 KaShop Luxury Retail. All rights reserved.":"© 2026 KaShop Luxury Retail. All rights reserved.",
+          "THE EXCLUSIVE 2026 COLLECTION":"THE EXCLUSIVE 2026 COLLECTION",
+          "Premium Collection":"Premium Collection",
+          "Discover the perfect balance between architectural innovation and minimalist aesthetics. Premium appliances designed to elevate every moment in your home.":"Discover the perfect balance between architectural innovation and minimalist aesthetics. Premium appliances designed to elevate every moment in your home.",
+          "Explore Now":"Explore Now",
+          "Watch Video":"Watch Video",
 
 
         }
@@ -104,6 +109,12 @@ i18n
           "Terms of Service":"شروط الخدمة",
           "Cookie Settings":"إعدادات ملفات تعريف الارتباط",
           "© 2026 KaShop Luxury Retail. All rights reserved.":"© 2026 KaShop لتجارة التجزئة الفاخرة. جميع الحقوق محفوظة.",
+          "THE EXCLUSIVE 2026 COLLECTION": "المجموعة الحصرية لعام 2026",
+          "Discover the perfect balance between architectural innovation and minimalist aesthetics. Premium appliances designed to elevate every moment in your home.": "اكتشف التوازن المثالي بين الابتكار المعماري والجماليات البسيطة. أجهزة منزلية فاخرة صُممت لترتقي بكل لحظة في منزلك.",
+          "Explore Now": "استكشف الآن",
+          "Premium Collection": "المجموعة الفاخرة",
+          "Watch Video": "شاهد الفيديو",
+
 
 
 
