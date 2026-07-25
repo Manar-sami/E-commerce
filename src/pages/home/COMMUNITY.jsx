@@ -14,7 +14,7 @@ function COMMUNITY() {
                   <Typography component="p" sx={{fontSize:"12px",fontWeight:"600",color:"#000666",textAlign:"center"}}>
                       {t('THE COMMUNITY')}
                  </Typography>
-            <Typography component="p" sx={{fontSize:"32px",fontWeight:"bold",color:"#0B1C30"}}>
+            <Typography component="p" sx={{fontSize:"32px",fontWeight:"bold",textAlign:"center",color:"#0B1C30"}}>
            {t('Trusted by the Discerning.')}
         </Typography>
         </Box>

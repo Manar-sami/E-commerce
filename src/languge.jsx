@@ -40,6 +40,22 @@ i18n
           "Join the Collective.":"Join the Collective.",
           "Subscribe to receive early access to new arrivals, private sales, and curated lifestyle editorials.":"Subscribe to receive early access to new arrivals, private sales, and curated lifestyle editorials.",
           "By subscribing, you agree to our Privacy Policy and Terms of Service.":"By subscribing, you agree to our Privacy Policy and Terms of Service.",
+          "Elevating the everyday through curated luxury and architectural design.":"Elevating the everyday through curated luxury and architectural design.",
+          "Track Order":"Track Order",
+          "Shipping & Returns":"Shipping & Returns",
+          "Size Guide":"Size Guide",
+          "Contact Us":"Contact Us",
+          "CLIENT SERVICE":"CLIENT SERVICE",
+          "ABOUT KASHOP":"ABOUT KASHOP",
+          "Our Story":"Our Story",
+          "Sustainability":"Sustainability",
+          "Retail Locations":"Retail Locations",
+          "Careers":"Careers",
+          "LEGAL":"LEGAL",
+          "Privacy Policy":"Privacy Policy",
+          "Terms of Service":"Terms of Service",
+          "Cookie Settings":"Cookie Settings",
+          "© 2026 KaShop Luxury Retail. All rights reserved.":"© 2026 KaShop Luxury Retail. All rights reserved.",
 
 
         }
@@ -72,6 +88,24 @@ i18n
           "Join the Collective.":"انضم إلى المجتمع",
           "Subscribe to receive early access to new arrivals, private sales, and curated lifestyle editorials.":"اشترك للحصول على وصول مبكر إلى المنتجات الجديدة، والعروض الخاصة، والمقالات المختارة بعناية حول أسلوب الحياة.",
           "By subscribing, you agree to our Privacy Policy and Terms of Service.":"بالاشتراك، فإنك توافق على سياسة الخصوصية وشروط الخدمة الخاصة بنا.",
+          "Elevating the everyday through curated luxury and architectural design.":"نرتقي بتفاصيل الحياة اليومية عبر فخامةٍ منتقاة بعناية وتصميمٍ معماري راقٍ.",
+          "Track Order":"تتبع الطلب",
+          "Shipping & Returns":"الشحن والإرجاع",
+          "Size Guide":"دليل المقاسات",
+          "Contact Us":"اتصل بنا",
+          "CLIENT SERVICE":"خدمة العملاء",
+          "ABOUT KASHOP":"عن KASHOP",
+          "Our Story":"قصتنا",
+          "Sustainability":"الاستدامة",
+          "Retail Locations":"مواقع البيع بالتجزئة",
+          "Careers":"الوظائف",
+          "LEGAL":"قانوني",
+          "Privacy Policy":"سياسة الخصوصية",
+          "Terms of Service":"شروط الخدمة",
+          "Cookie Settings":"إعدادات ملفات تعريف الارتباط",
+          "© 2026 KaShop Luxury Retail. All rights reserved.":"© 2026 KaShop لتجارة التجزئة الفاخرة. جميع الحقوق محفوظة.",
+
+
 
         }
       }

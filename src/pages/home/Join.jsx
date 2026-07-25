@@ -94,7 +94,7 @@ function Join() {
           </Box>
 
           
-          <Typography sx={{ color: 'rgba(255, 255, 255, 0.4)', fontSize: '12px' }}>
+          <Typography sx={{ color: 'rgba(255, 255, 255, 0.4)', fontSize: '12px', }}>
             {t('By subscribing, you agree to our Privacy Policy and Terms of Service.')}
           </Typography>
         </Box>
