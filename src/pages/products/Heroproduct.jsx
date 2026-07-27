@@ -16,7 +16,7 @@ function Heroproduct() {
         height:"90vh",
         backgroundPosition:"center",
         backgroundSize:"cover",
-        py:20,
+        py:{xs:10,md:10,lg:20},
       }}
      >
         <Container>
@@ -30,10 +30,10 @@ function Heroproduct() {
             </Box> */}
 
             <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",border:"1px solid white",
-               width:"45%", 
+               width:{sx:"75%",md:"65%",lg:"45%"}, 
                 mx:"auto",
                 borderRadius:"16px",
-                p:{xs:"20px",md:"32px"},
+                p:{xs:"10px",md:"20px",lg:"32px"},
                 gap:{xs:2,md:4},
                 textAlign:"center",
                 backdropFilter: "blur(7px)",
@@ -56,8 +56,8 @@ function Heroproduct() {
                     fontSize:"16px",
                     fontWeight:"400",
                     borderRadius:"8px",
-                    px:{xs:"20px",md:"40px"},
-                    py:{xs:"12px",md:"24px"},
+                    px:{xs:"10px",md:"20px",lg:"40px"},
+                    py:{xs:"8px",md:"12px",lg:"24px"},
                     border:"1px solid #908FA0",
                     transition:"0.5s"
 ,                    "&:hover":{
@@ -73,8 +73,8 @@ function Heroproduct() {
                     fontSize:"16px",
                     fontWeight:"400",
                     borderRadius:"8px",
-                    px:{xs:"20px",md:"40px"},
-                    py:{xs:"12px",md:"24px"},
+                    px:{xs:"10px",md:"20px",lg:"40px"},
+                    py:{xs:"8px",md:"12px",lg:"24px"},
                     border:"1px solid #908FA0",
                     transition:"0.5s"
 ,                    "&:hover":{
