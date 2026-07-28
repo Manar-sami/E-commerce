@@ -55,7 +55,7 @@ function Header() {
   };
   return (
     <>
-      <Box sx={{ position: "absolute", width: "100%" }}>
+      <Box sx={{ width: "100%",backgroundColor:"#ffffff4f",boxShadow:2 }}>
         <Container maxWidth="lg">
           <Box sx={{ py: "20px" }}>
             <Box
@@ -73,7 +73,7 @@ function Header() {
                   sx={{
                     fontSize: { xs: "20px", md: "24px", lg: "32px" },
                     fontWeight: "bold",
-                    color: "white",
+                    color: "black",
                     textDecoration: "none",
                   }}
                 >
@@ -86,12 +86,12 @@ function Header() {
                   component={Link}
                   to="/"
                   sx={{
-                    color: "#C7C4D7",
+                    color: "#1B1C1C",
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
                     "&:hover": {
-                      color: "#C0C1FF",
+                      color: "#000666",
                       textDecoration: "underline",
                     },
                   }}
@@ -103,12 +103,12 @@ function Header() {
                   component={Link}
                   to="/Products"
                   sx={{
-                    color: "#C7C4D7",
+                    color: "#1B1C1C",
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
                     "&:hover": {
-                      color: "#C0C1FF",
+                      color: "#000666",
                       textDecoration: "underline",
                     },
                   }}
@@ -120,12 +120,12 @@ function Header() {
                   component={Link}
                   to="/Categories"
                   sx={{
-                    color: "#C7C4D7",
+                    color: "#1B1C1C",
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
                     "&:hover": {
-                      color: "#C0C1FF",
+                      color: "#000666",
                       textDecoration: "underline",
                     },
                   }}
@@ -142,7 +142,7 @@ function Header() {
                   aria-haspopup="true"
                   aria-expanded={open}
                   onClick={handleClick}
-                  sx={{ color: "#C7C4D7" }}
+                  sx={{ color: "#1B1C1C" }}
                 >
                   <MenuIcon />
                 </Button>
@@ -165,12 +165,12 @@ function Header() {
                     component={Link}
                     to="/"
                     sx={{
-                      color: "#C7C4D7",
+                      color: "#1B1C1C",
                       fontSize: "16px",
                       fontWeight: "600",
                       transition: "0.3s",
                       "&:hover": {
-                        color: "#C0C1FF",
+                        color: "#000666",
                         textDecoration: "underline",
                       },
                     }}
@@ -181,12 +181,12 @@ function Header() {
                     component={Link}
                     to="/Products"
                     sx={{
-                      color: "#C7C4D7",
+                      color: "#1B1C1C",
                       fontSize: "16px",
                       fontWeight: "600",
                       transition: "0.3s",
                       "&:hover": {
-                        color: "#C0C1FF",
+                        color: "#000666",
                         textDecoration: "underline",
                       },
                     }}
@@ -198,12 +198,12 @@ function Header() {
                     component={Link}
                     to="/Categories"
                     sx={{
-                      color: "#C7C4D7",
+                      color: "#1B1C1C",
                       fontSize: "16px",
                       fontWeight: "600",
                       transition: "0.3s",
                       "&:hover": {
-                        color: "#C0C1FF",
+                        color: "#000666",
                         textDecoration: "underline",
                       },
                     }}
@@ -215,7 +215,7 @@ function Header() {
                     <IconButton
                       onClick={changeLanguage}
                       sx={{
-                        color: "#C7C4D7",
+                        color: "#1B1C1C",
                         fontSize: "18px",
                         fontWeight: "600",
                       }}
@@ -229,7 +229,7 @@ function Header() {
                     <Box
                       component={Link}
                       sx={{
-                        color: "#C7C4D7",
+                        color: "#1B1C1C",
                         fontSize: "18px",
                         fontWeight: "600",
                       }}
@@ -243,7 +243,7 @@ function Header() {
                     <IconButton
                       onClick={toggleMode}
                       sx={{
-                        color: "#C7C4D7",
+                        color: "#1B1C1C",
                         fontSize: "18px",
                         fontWeight: "600",
                       }}
@@ -257,7 +257,7 @@ function Header() {
                       component={Link}
                       to="/Cart"
                       sx={{
-                        color: "#C7C4D7",
+                        color: "#1B1C1C",
                         fontSize: "18px",
                         fontWeight: "600",
                       }}
@@ -270,7 +270,7 @@ function Header() {
                     <Box
                       onClick={hundellogout}
                       sx={{
-                        color: "#C7C4D7",
+                        color: "#1B1C1C",
                         fontSize: "18px",
                         fontWeight: "600",
                       }}
@@ -296,12 +296,12 @@ function Header() {
                       <IconButton
                         onClick={changeLanguage}
                         sx={{
-                          color: "#C7C4D7",
+                          color: "#1B1C1C",
                           fontSize: "18px",
                           fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
-                            color: "#C0C1FF",
+                            color: "#000666",
                           },
                         }}
                       >
@@ -311,12 +311,12 @@ function Header() {
                       <IconButton
                       onClick={toggleMode}
                         sx={{
-                          color: "#C7C4D7",
+                          color: "#1B1C1C",
                           fontSize: "18px",
                           fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
-                            color: "#C0C1FF",
+                            color: "#000666",
                           },
                         }}
                       >
@@ -327,12 +327,12 @@ function Header() {
                         component={Link}
                         to="/Cart"
                         sx={{
-                          color: "#C7C4D7",
+                          color: "#1B1C1C",
                           fontSize: "18px",
                           fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
-                            color: "#C0C1FF",
+                            color: "#000666",
                           },
                         }}
                       >
@@ -341,12 +341,12 @@ function Header() {
                       <Box
                         component={Link}
                         sx={{
-                          color: "#C7C4D7",
+                          color: "#1B1C1C",
                           fontSize: "18px",
                           fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
-                            color: "#C0C1FF",
+                            color: "#000666",
                           },
                         }}
                       >
@@ -356,12 +356,12 @@ function Header() {
                       <Box
                         onClick={hundellogout}
                         sx={{
-                          color: "#C7C4D7",
+                          color: "#1B1C1C",
                           fontSize: "18px",
                           fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
-                            color: "#C0C1FF",
+                            color: "#000666",
                           },
                         }}
                       >
@@ -383,7 +383,7 @@ function Header() {
                       <IconButton
                         onClick={changeLanguage}
                         sx={{
-                          color: "#C7C4D7",
+                          color: "#1B1C1C",
                           fontSize: "18px",
                           fontWeight: "600",
                         }}
@@ -393,7 +393,7 @@ function Header() {
 
                       <IconButton
                         sx={{
-                          color: "#C7C4D7",
+                          color: "#1B1C1C",
                           fontSize: "18px",
                           fontWeight: "600",
                         }}
@@ -405,7 +405,7 @@ function Header() {
                         component={Link}
                         to="/Login"
                         sx={{
-                          color: "#C7C4D7",
+                          color: "#1B1C1C",
                           fontSize: "18px",
                           fontWeight: "600",
                         }}
