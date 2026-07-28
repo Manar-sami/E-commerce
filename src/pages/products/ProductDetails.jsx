@@ -1,11 +1,66 @@
 import useProductdetails from "../../Hook/Productdetails";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAddtocart from "../../Hook/Addtocart";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import i18n from "../../languge";
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import StarIcon from '@mui/icons-material/Star';
+import Button from "@mui/material/Button";
+import { useState } from "react";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Reviews from "./Reviews";
 
 function ProductDetails() {
+   const star=[1,2,3,4,5];
     const {mutate:addtocart,isSuccess} = useAddtocart()
     const {id} = useParams()
     const{data, isLoading}=useProductdetails(id);
+    const [showMore, setShowMore] = useState(false);
+     const [cart, setcart] = useState("");
+
+    const addtocartt=()=>{
+      addtocart({
+        ProductId: data.id, Count: 1
+      })
+    setTimeout(() => {
+     setcart(     
+       <Box
+    sx={{
+      position: "fixed",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: 400,
+      height: 300,
+      bgcolor: "white",
+      borderRadius: 3,
+      boxShadow: 5,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: 2000,
+    }}
+  >
+    <Typography sx={{ fontSize: "60px" }}>✅</Typography>
+
+    <Typography sx={{ fontSize: "28px", fontWeight: "bold" }}>
+      Product added to cart
+    </Typography>
+  </Box>
+        )
+    });
+      setTimeout(() => {
+    setcart("");
+  }, 2000);
+    }
+
     
 
     if (isLoading) {
@@ -15,89 +70,132 @@ function ProductDetails() {
     console.log(data)
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10">
-     {
-     isSuccess?   <div className="bg-green-100 text-green-700 p-3 rounded mb-4">
-    تمت إضافة المنتج إلى السلة ✅
-  </div>
-  
-  : null
-     } 
-      <div className="grid lg:grid-cols-2 gap-12 bg-white rounded-3xl shadow-lg p-8">
-   
-        <div className="bg-gray-100 rounded-2xl flex items-center justify-center ">
-          <img
-            src={data.image}
-            alt={data.name}
-            className="w-full h-full  hover:scale-105 duration-300"
-          />
-        </div>
-        
+    <Box sx={{py:20}}>
       
-        <div className="flex flex-col">
-          <h1 className="text-4xl font-bold text-gray-900">
-            {data.name}
-          </h1>
-
-          <div className="flex items-center gap-2 mt-4">
+      <Container>
+        <Box sx={{display:"flex",alignItems:"center"}}>
+          <Typography component={Link} to="/" sx={{color:"#45464fb8",fontSize:"14px"}} >
+           Home
+          </Typography>
+          
+          <Box sx={{color:"#45464fb8",fontSize:"14px"}}>
+            {i18n.language === "ar"?<KeyboardArrowLeftIcon/>:<KeyboardArrowRightIcon/>}
+          </Box>
+           <Typography component={Link} to="/Products" sx={{color:"#45464fb8",fontSize:"14px"}} >
+           Product
+          </Typography>
+          <Box sx={{color:"#45464fb8",fontSize:"14px"}}>
+            {i18n.language === "ar"?<KeyboardArrowLeftIcon/>:<KeyboardArrowRightIcon/>}
+          </Box>
+           <Typography  sx={{color:"black",fontSize:"14px"}} >
+           {data.name}
+          </Typography>
            
-            <span className="text-gray-500">
-              ({data.reviews.length} Reviews)
-            </span>
-          </div>
+        </Box>
 
-          <h2 className="text-4xl font-bold text-emerald-600 mt-6">
-            ${data.price}
-          </h2>
+        <Grid container spacing={4} sx={{pt:5}}>
+        <Grid size={{xs:12,md:6}}>
+         <Box component="img"
+         src={data.image}
+         alt={data.name}
+         sx={{
+          width: "100%",
+          objectFit: "cover",
+          borderRadius: "12px",
+          boxShadow: 3,
+         }}
+         >
 
-          <div className="mt-3">
-            <span className="font-semibold">Stock:</span>{" "}
-            <span className="text-green-600">
-              {data.quantity} Available
-            </span>
-          </div>
+         </Box>
+        </Grid>
 
-          <p className="mt-6 text-gray-600 leading-8 whitespace-pre-line">
-            {data.description}
-          </p>
+        <Grid size={{xs:12,md:6}} sx={{display:"flex",flexDirection:"column",gap:2,}}>
+         <Typography component="h2" sx={{fontSize:"44px",fontWeight:"bold",color:"#1A1C1E"}}>
+          {data.name}
+         </Typography>
 
-          <button onClick={() => addtocart({ ProductId: data.id, Count: 1 })} className="mt-8 flex items-center justify-center gap-2 bg-black text-white py-4 rounded-xl hover:bg-gray-800 duration-300">
-           
-            Add To Cart
-          </button>
-        </div>
-      </div>
+         <Typography  component="p" sx={{color:"#45464F",fontSize:"14px"}}>
+          Product ID: {data.id}
+         </Typography>
 
-     
-      <div className="mt-14">
-        <h2 className="text-3xl font-bold mb-8">
-          Customer Reviews
-        </h2>
+         <Box sx={{display:"flex",gap:2}} >
+          <Box>
+            {star.map((star)=>{
+              return star <= data.rate ? <StarIcon sx={{color:"#1A237E"}} key={star} /> : <StarBorderIcon sx={{color:"#1A237E"}} key={star} />;
+          //  return  <StarBorderIcon sx={{color: star <= data.rate ? "#1A237E" : "#ccc"}} key={star} />
+          })}
+          </Box>
 
-        <div className="space-y-6">
-          {data.reviews.map((review, index) => (
-            <div
-              key={index}
-              className="bg-white shadow rounded-2xl p-6"
+          <Box sx={{color:"#45464F",fontSize:"16px"}}>
+            ({data.reviews.length} reviews)
+          </Box>
+
+         </Box>
+
+         <Box sx={{backgroundColor:"#F3F3FA",p:"24px",fontSize:"40px",fontWeight:"bold" ,borderRadius:"16px"}}>
+          {data.price}.00$
+
+         </Box>
+         <Typography component="p" sx={{
+             textAlign: "justify",
+             display: "-webkit-box",
+             WebkitLineClamp: showMore ? "unset" : 10,
+             WebkitBoxOrient: "vertical",
+             overflow: "hidden",
+  }}>
+          {data.description}
+         </Typography>
+         <Typography sx={{cursor:"pointer",color:"#1A237E"}}  onClick={() => setShowMore(!showMore)} >
+          {showMore ? "Read less" : "Read more"}
+         </Typography>
+
+          <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:2}}>
+            <Button onClick={addtocartt} sx={{
+             border:"1px solid #C6C6D0",
+             width:"100%",
+             borderRadius:"12px",
+             color:"black",
+             fontSize:"18px",
+             fontWeight:"bold",
+             py:"24px",
+             transition:"ease 0.3s",
+             "&:hover":{
+              backgroundColor:"#1A237E",
+              color:"white",
+             }
+            }}>
+             <ShoppingCartIcon sx={{mx:2}} /> Add to Cart
+            </Button>
+            <Button
+             sx={{
+             border:"1px solid #C6C6D0",
+             width:"100%",
+             borderRadius:"12px",
+             color:"black",
+             fontSize:"18px",
+             fontWeight:"bold",
+             py:"24px",
+             transition:"ease 0.3s",
+             "&:hover":{
+              backgroundColor:"#1A237E",
+              color:"white",
+             }
+            }}
             >
-              <div className="flex justify-between items-center">
-                <h3 className="font-semibold text-lg">
-                  {review.userName}
-                </h3>
+              <FavoriteBorderIcon sx={{mx:2}} /> Add to Wishlist
+            </Button>
+          </Box>
 
-               
-              </div>
+          
 
-              <p className="text-gray-600 mt-3">
-                {review.comment}
-              </p>
+         {cart}
+        </Grid>
+      </Grid>
 
-              
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+      <Reviews></Reviews>
+      </Container>
+
+    </Box>
   )
 }
 

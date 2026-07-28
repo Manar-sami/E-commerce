@@ -16,7 +16,10 @@ function Product_section() {
      const { t } = useTranslation();
 
     //  ال hook الخاص لجلب المنتجات 
-     const{data,isLoading,isError}=useGetproducts();
+     const{data,isLoading,isError}=useGetproducts({  
+     ascending:false,
+    sortBy:"price"
+  });
 
       if (isLoading) return <span class="loader"></span>;
       if (isError) return <p>Error</p>;
