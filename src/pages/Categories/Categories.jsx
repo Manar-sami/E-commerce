@@ -1,5 +1,12 @@
 
 import useGetcategorise from './../../Hook/Getcategorise'
+import Herocategories from './Herocategories';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { Container } from '@mui/material';
+import SubscribeSection from './SubscribeSection';
+
 function Categories() {
 
    const{data,isLoading,isError}=useGetcategorise();
@@ -17,21 +24,69 @@ function Categories() {
 
 
   return (
-    <>
-   <div className="container mx-auto px-4 py-8">
-  <div className="flex flex-col gap-3.5 ">
-    {data.response.data.map((data) => (
-      <div
-        
-        className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300"
+    <> 
+    <Herocategories></Herocategories>
+    
+  <Container>
+     <Grid container spacing={3} sx={{py:10}}>
+  {data.response.data.map((category) => (
+    <Grid key={category.id} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
+      <Box
+        sx={{
+          p: 4,
+          borderRadius: 3,
+          backgroundColor: "#fff",
+          boxShadow: 2,
+          textAlign: "center",
+          transition: "0.3s",
+          cursor: "pointer",
+          "&:hover": {
+            transform: "translateY(-6px)",
+            boxShadow: 6,
+          },
+        }}
       >
-        <h3 className="text-xl font-semibold text-gray-800 text-center">
-          {data.name}
-        </h3>
-      </div>
-    ))}
-  </div>
-</div>
+        <Box
+          sx={{
+            width: 70,
+            height: 70,
+            borderRadius: "50%",
+            bgcolor: "#EEF2FF",
+            color: "#1A237E",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            mx: "auto",
+            mb: 2,
+            fontSize: 28,
+            fontWeight: "bold",
+          }}
+        >
+          {category.id}
+        </Box>
+
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", color: "#1A1C1E" }}
+        >
+          {category.name}
+        </Typography>
+
+        <Typography
+          variant="body2"
+          sx={{ color: "#6B7280", mt: 1 }}
+        >
+          Browse products in this category
+        </Typography>
+      </Box>
+    </Grid>
+  ))}
+</Grid> 
+  </Container>
+
+     <SubscribeSection></SubscribeSection>
+
+
     </>
   )
 }
