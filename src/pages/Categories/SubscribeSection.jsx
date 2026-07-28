@@ -10,7 +10,7 @@ import {
 function SubscribeSection() {
   return (
     <Box sx={{ py: 10, backgroundColor: "#F7F5F3" }}>
-      <Container maxWidth="md">
+      <Container >
         <Paper
           elevation={0}
           sx={{
@@ -27,7 +27,6 @@ function SubscribeSection() {
               fontWeight: "bold",
               color: "#222",
               mb: 2,
-              fontFamily: "Playfair Display",
             }}
           >
             Join the Circle
@@ -59,10 +58,6 @@ function SubscribeSection() {
               placeholder="Your email address"
               sx={{
                 width: { xs: "100%", sm: 320 },
-                "& .MuiOutlinedInput-root": {
-                  borderRadius: "10px",
-                  backgroundColor: "#F5F5F5",
-                },
               }}
             />
 

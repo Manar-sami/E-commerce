@@ -16,11 +16,14 @@ import IconButton from '@mui/material/IconButton';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import useClearcart from "../../Hook/Clearcart";
+import { Container, Grid } from "@mui/material";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 function Cart() { 
   // هان استدعينا ال hook الخاص يلي بجيب المنتجات الموجودة في السلة
   const{data,isLoading,isError,error}=useGetitemformcart();
+  console.log(data)
 
  // هان استدعينا ال hook الخاص يلي بحذف المنتج الموجودة في السلة
   const{mutate:removecart,isPending}=useRemovitemcart();
@@ -60,68 +63,76 @@ function Cart() {
  
 
  return (
-    
-    <Box >
-       <TableContainer component={Paper}>
-     
-        <Typography  align="center" variant="h1" component="h1" > Cart </ Typography>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>productName</TableCell>
-            <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Quantity</TableCell>
-            <TableCell align="right">Total</TableCell>
-            <TableCell align="right">Action</TableCell>
-            
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((item) => (
-            <TableRow
-              key={item.id}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {item.productName}
-              </TableCell>
-              <TableCell align="right">{item.price}$</TableCell>
-              <TableCell align="right">
-                 <Box sx={{display: "flex",alignItems:"center",justifyContent:"end"}}>
-                 {item.count<=1?<>
+
+  <Box sx={{py:10}}>
+    <Container>
+      <Typography component="h1" sx={{fontSize:{xs:"24px",md:"48px"},fontWeight:"bold",color:"#000666"}}>
+       Your Shopping Bag
+      </Typography>
+      <Typography sx={{color:"#5E5E5E",fontSize:"16px"}}>
+        {data.length}  Items ready for delivery
+      </Typography>
+
+      <Grid container spacing={4}>
+        <Grid size={8} sx={{mt:5}}>
+        
+        {data.map((cart)=>{
+          return(
+            <Box sx={{display:"flex",flexDirection:"column",mb:3,gap:2,boxShadow:2,p:"24px",borderRadius:"8px"}}>
+              <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                <Typography sx={{color:"#000666",fontSize:"24px",fontWeight:"bold"}}>
+                  {cart.productName}
+                </Typography>
+                <Typography sx={{color:"#000666",fontSize:"24px",fontWeight:"bold"}}>
+                 {cart.price}$
+                </Typography>
+              </Box>
+              <Typography sx={{color:"#5E5E5E",fontSize:"12px"}}>
+                Matte Black / 5.5L Capacity
+              </Typography>
+
+              <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                 <Box sx={{display: "flex",alignItems:"center",justifyContent:"end",border:"1px solid #C6C5D4",borderRadius:"8px"}}>
+                 {cart.count<=1?<>
                   <IconButton sx={{opacity:0}} >
-                  < RemoveIcon disabled={updateitem} onClick={()=>handuleupdate(item.productId,'-')}/>
+                  < RemoveIcon disabled={updateitem} onClick={()=>handuleupdate(cart.productId,'-')}/>
                  </IconButton>
                   </> :
                   <>
                   <IconButton >
-                  < RemoveIcon disabled={updateitem} onClick={()=>handuleupdate(item.productId,'-')}/>
+                  < RemoveIcon disabled={updateitem} onClick={()=>handuleupdate(cart.productId,'-')}/>
                  </IconButton>
                   </>
                   }
                  
-                 <TableCell align="right">{item.count}</TableCell>
+                 <Box align="right">{cart.count}</Box>
                    <IconButton>
-                  < AddIcon disabled={updateitem} onClick={()=>handuleupdate(item.productId,'+')}/>
+                  < AddIcon disabled={updateitem} onClick={()=>handuleupdate(cart.productId,'+')}/>
                  </IconButton>
               </Box>
-              </TableCell>
-             
-              <TableCell align="right">{item.totalPrice}$</TableCell>
-              
-              <TableCell align="right"><Button  align="right"  color="error"
-               disabled={isPending}
-              onClick={()=>removecart(item.productId)}>delete</Button></TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
 
-    <Button onClick={()=>clear()}>
-      clear cart
-    </Button>
-    </Box>
+               <Box sx={{color:"#BA1A1A"}}>
+                
+                <Button sx={{color:"#BA1A1A"}} onClick={()=>removecart(cart.productId)}> <DeleteIcon/>Remove</Button>
+               </Box>
+              </Box>
+            </Box>
+          )
+        })}
+
+        <Button  onClick={()=>clear()} sx={{fontSize:"16px",display:"flex",justifyContent:"center",alignItems:"center",width:"100%",color:"#000666"}}>
+           Clear Cart
+        </Button>
+      </Grid>
+      <Grid size={4}>
+       
+      </Grid>
+
+      </Grid>
+    </Container>
+
+  </Box>
+    
     
   );
   
