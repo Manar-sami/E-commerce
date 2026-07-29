@@ -1,12 +1,5 @@
 
 import useGetitemformcart from "../../Hook/Getitemformcart";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import Typography from "@mui/material/Typography";
 import useRemovitemcart from "../../Hook/Removitemcart";
 import useUpdateQuantity from "../../Hook/UpdateQuantity";
@@ -18,6 +11,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import useClearcart from "../../Hook/Clearcart";
 import { Container, Grid } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
+import Checkout_section from "./Checkout_section";
 
 
 function Cart() { 
@@ -74,7 +68,7 @@ function Cart() {
       </Typography>
 
       <Grid container spacing={4}>
-        <Grid size={8} sx={{mt:5}}>
+        <Grid size={{xs:12,md:8}} sx={{mt:5}}>
         
         {data.map((cart)=>{
           return(
@@ -84,7 +78,7 @@ function Cart() {
                   {cart.productName}
                 </Typography>
                 <Typography sx={{color:"#000666",fontSize:"24px",fontWeight:"bold"}}>
-                 {cart.price}$
+                 ${cart.price}
                 </Typography>
               </Box>
               <Typography sx={{color:"#5E5E5E",fontSize:"12px"}}>
@@ -124,7 +118,8 @@ function Cart() {
            Clear Cart
         </Button>
       </Grid>
-      <Grid size={4}>
+      <Grid size={{xs:12,md:4}} sx={{mt:5}}>
+        <Checkout_section></Checkout_section>
        
       </Grid>
 
