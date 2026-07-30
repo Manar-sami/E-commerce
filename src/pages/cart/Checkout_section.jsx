@@ -2,11 +2,12 @@
 import { Box, Button, CircularProgress, Typography } from "@mui/material";
 import useGetitemformcart from "../../Hook/Getitemformcart";
 import HttpsIcon from '@mui/icons-material/Https';
+import { useNavigate } from "react-router-dom";
 
 function Checkout_section() {
       const{data,isLoading,isError,error}=useGetitemformcart();
       let total = 0;
-     
+      const navigatin=useNavigate()
 
       data.map((item) => {
         total += item.totalPrice;
@@ -61,7 +62,7 @@ function Checkout_section() {
         </Box>
         </Box>
        
-        <Button sx={{bgcolor:"#000666",color:"white",py:2,borderRadius:"8px"}}>
+        <Button onClick={()=>navigatin("/Checkout")} sx={{bgcolor:"#000666",color:"white",py:2,borderRadius:"8px"}}>
             < HttpsIcon/> Secure Checkout
         </Button>
         <Typography sx={{textAlign:"center",mt:1,color:"#5E5E5E"}}>

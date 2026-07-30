@@ -12,6 +12,7 @@ import Loginlayout from "./src/layout/Loginlayout";
 import ResetPassword from "./src/Auth/resetpassword/ResetPassword";
 import Forgetpassword from "./src/Auth/forgetpassword/Forgetpassword";
 import VerifyCode from "./src/Auth/VerifyCode";
+import Checkout from "./src/pages/Checkout/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,14 @@ const router = createBrowserRouter([
         element: (
           <Productedrouter>
             <Cart />
+          </Productedrouter>
+        ),
+      },
+        {
+        path: "Checkout",
+        element: (
+          <Productedrouter>
+            <Checkout></Checkout>
           </Productedrouter>
         ),
       },
