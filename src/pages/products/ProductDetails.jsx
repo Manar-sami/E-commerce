@@ -15,6 +15,8 @@ import { useState } from "react";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Reviews from "./Reviews";
+import { useTranslation } from "react-i18next";
+import { CircularProgress } from "@mui/material";
 
 function ProductDetails() {
    const star=[1,2,3,4,5];
@@ -23,6 +25,7 @@ function ProductDetails() {
     const{data, isLoading}=useProductdetails(id);
     const [showMore, setShowMore] = useState(false);
      const [cart, setcart] = useState("");
+     const{t}= useTranslation();
 
     const addtocartt=()=>{
       addtocart({
@@ -51,7 +54,7 @@ function ProductDetails() {
     <Typography sx={{ fontSize: "60px" }}>✅</Typography>
 
     <Typography sx={{ fontSize: "28px", fontWeight: "bold" }}>
-      Product added to cart
+      {t("Product added to cart")}
     </Typography>
   </Box>
         )
@@ -64,7 +67,7 @@ function ProductDetails() {
     
 
     if (isLoading) {
-        return (<div>Loading...</div>)
+        return (<CircularProgress></CircularProgress>)
     }
 
     console.log(data)
@@ -75,14 +78,14 @@ function ProductDetails() {
       <Container>
         <Box sx={{display:"flex",alignItems:"center"}}>
           <Typography component={Link} to="/" sx={{color:"#45464fb8",fontSize:"14px"}} >
-           Home
+           {t("Home")}
           </Typography>
           
           <Box sx={{color:"#45464fb8",fontSize:"14px"}}>
             {i18n.language === "ar"?<KeyboardArrowLeftIcon/>:<KeyboardArrowRightIcon/>}
           </Box>
            <Typography component={Link} to="/Products" sx={{color:"#45464fb8",fontSize:"14px"}} >
-           Product
+           {t("Products")}
           </Typography>
           <Box sx={{color:"#45464fb8",fontSize:"14px"}}>
             {i18n.language === "ar"?<KeyboardArrowLeftIcon/>:<KeyboardArrowRightIcon/>}
@@ -115,7 +118,7 @@ function ProductDetails() {
          </Typography>
 
          <Typography  component="p" sx={{color:"#45464F",fontSize:"14px"}}>
-          Product ID: {data.id}
+          {t("Product ID")}: {data.id}
          </Typography>
 
          <Box sx={{display:"flex",gap:2}} >
@@ -127,7 +130,7 @@ function ProductDetails() {
           </Box>
 
           <Box sx={{color:"#45464F",fontSize:"16px"}}>
-            ({data.reviews.length} reviews)
+            ({data.reviews.length} {t("reviews")})
           </Box>
 
          </Box>
@@ -146,7 +149,7 @@ function ProductDetails() {
           {data.description}
          </Typography>
          <Typography sx={{cursor:"pointer",color:"#1A237E"}}  onClick={() => setShowMore(!showMore)} >
-          {showMore ? "Read less" : "Read more"}
+          {showMore ? `${t("Read less")}` : `${t("Read more")}`}
          </Typography>
 
           <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:2}}>
@@ -164,7 +167,7 @@ function ProductDetails() {
               color:"white",
              }
             }}>
-             <ShoppingCartIcon sx={{mx:2}} /> Add to Cart
+             <ShoppingCartIcon sx={{mx:2}} />{t("Add to Cart")}
             </Button>
             <Button
              sx={{
@@ -182,7 +185,7 @@ function ProductDetails() {
              }
             }}
             >
-              <FavoriteBorderIcon sx={{mx:2}} /> Add to Wishlist
+              <FavoriteBorderIcon sx={{mx:2}} /> {t("Add to Wishlist")}
             </Button>
           </Box>
 

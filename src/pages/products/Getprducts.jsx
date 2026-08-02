@@ -155,7 +155,7 @@ function Getprducts() {
                 fontSize: { xs: '32px', md: '38px' },
               }}
             >
-              Innovation Beyond <br /> the Familiar
+              {t("Innovation Beyond")} <br /> {t("the Familiar")}
             </Typography>
 
           
@@ -168,7 +168,7 @@ function Getprducts() {
                 maxWidth: '480px',
               }}
             >
-              We don't just sell tools; we offer artistic pieces that elevate the quality of your daily experience in the heart of your home.
+             {t(" We don't just sell tools; we offer artistic pieces that elevate the quality of your daily experience in the heart of your home.")}
             </Typography>
 
             
@@ -190,7 +190,7 @@ function Getprducts() {
                 },
               }}
             >
-              Explore Full Collection
+              {t("Explore Full Collection")}
             </Button>
           </Box>
         </Grid>

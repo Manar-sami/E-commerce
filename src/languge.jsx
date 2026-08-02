@@ -68,7 +68,23 @@ i18n
           "Filter":"Filter",
           "Precision technology meets modern luxury design for every morning.":"Precision technology meets modern luxury design for every morning.",
           "DESIGN PHILOSOPHY":"DESIGN PHILOSOPHY",
-
+          "Innovation Beyond":"Innovation Beyond",
+          "the Familiar":"the Familiar",
+          " We don't just sell tools; we offer artistic pieces that elevate the quality of your daily experience in the heart of your home.":" We don't just sell tools; we offer artistic pieces that elevate the quality of your daily experience in the heart of your home.",
+          "Explore Full Collection":"Explore Full Collection",
+          "Product added to cart":"Product added to cart",
+          "Product ID":"Product ID",
+          "reviews":"reviews",
+          "Read more":"Read more",
+          "Read less":"Read less",
+          "Add to Cart":"Add to Cart",
+          "Add to Wishlist":"Add to Wishlist",
+          "Customer Reviews":"Customer Reviews",
+          "Write Review":"Write Review",
+          "Your comment":"Your comment",
+          "Submit":"Submit"
+          
+          
         }
       },
       ar: {
@@ -127,7 +143,21 @@ i18n
           "Filter": "تصفية",
           "Precision technology meets modern luxury design for every morning.": "تلتقي التكنولوجيا الدقيقة مع التصميم الفاخر العصري في كل صباح.",
           "DESIGN PHILOSOPHY": "فلسفة التصميم" ,
-
+          "Innovation Beyond": "الابتكار يتجاوز",
+          "the Familiar": "المألوف",
+          " We don't just sell tools; we offer artistic pieces that elevate the quality of your daily experience in the heart of your home.": "نحن لا نبيع الأدوات فقط؛ بل نقدم قطعًا فنية ترتقي بجودة تجربتك اليومية في قلب منزلك.",
+          "Explore Full Collection": "استكشف المجموعة الكاملة",
+          "Product added to cart": "تمت إضافة المنتج إلى السلة",
+          "Product ID": "معرف المنتج",
+          "reviews": "المراجعات",
+          "Read more": "اقرأ المزيد",
+          "Read less": "اقرأ أقل",
+          "Add to Cart": "أضف إلى السلة",
+          "Add to Wishlist": "أضف إلى قائمة الرغبات",
+          "Customer Reviews": "مراجعات العملاء",
+          "Write Review": "اكتب مراجعة",
+          "Your comment": "تعليقك",
+          "Submit": "إرسال"
 
 
         }

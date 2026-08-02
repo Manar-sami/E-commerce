@@ -19,6 +19,8 @@ import { schemaLogin } from "../../Auth/Login/SchemaLogin";
 import Rating from '@mui/material/Rating';
 import * as React from 'react';
 import { useNavigate } from "react-router-dom";
+import { CircularProgress } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 
 function Reviews() {
@@ -31,6 +33,7 @@ function Reviews() {
   const{mutate:addreview}=useAddreview();
     const [value, setValue] = React.useState(0);
     const [comment, setComment] = useState("");
+    const{t}= useTranslation();
     
     const navigate=useNavigate();
 
@@ -66,13 +69,13 @@ const review=(data)=>{
 console.log(comment);
 
 
-  if(isLoading) return <Typography> loading</Typography>
+  if(isLoading) return <CircularProgress></CircularProgress>
   
   return (
   <Box sx={{py:10}}>
         <Container>
           <Typography sx={{fontSize:"28px",fontWeight:"bold"}}>
-            Customer Reviews
+            {t("Customer Reviews")}
         </Typography>
         <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap"}}>
             <Box  sx={{display:"flex",alignItems:"center",gap:6 ,flexWrap:"wrap"}}>
@@ -86,14 +89,14 @@ console.log(comment);
           </Box>
 
           <Typography sx={{fontWeight:"bold",fontSize:"14px",letterSpacing:3}}>
-           {data.reviews.length} REVIEWS
+           {data.reviews.length} {t("reviews")}
           </Typography>
           
 
         </Box>
          <Box component="form">
            <Button  onClick={opens} sx={{color:"#000666",fontSize:"14px",fontWeight:"bold",boxShadow:2,borderRadius:7,px:6}}> 
-            WRITE REVIEW
+            {t("Write Review")}
             < CreateIcon sx={{m:1}}/>
         </Button>
          </Box>
@@ -177,7 +180,7 @@ console.log(comment);
   >
 
     <Typography sx={{fontSize:24,fontWeight:"bold"}}>
-      Write Review
+     {t("Write Review")}
     </Typography>
 
    
@@ -206,7 +209,7 @@ console.log(comment);
     type="submit"
       sx={{mt:2}}
     >
-      Submit
+      {t("Submit")}
     </Button>
     </Box>
 
