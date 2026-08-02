@@ -13,6 +13,9 @@ import ResetPassword from "./src/Auth/resetpassword/ResetPassword";
 import Forgetpassword from "./src/Auth/forgetpassword/Forgetpassword";
 import VerifyCode from "./src/Auth/VerifyCode";
 import Checkout from "./src/pages/Checkout/Checkout";
+import Profilelayout from "./src/pages/profile/Profilelayout";
+import Account from "./src/pages/profile/Account"
+import Order from "./src/pages/profile/Order";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +47,24 @@ const router = createBrowserRouter([
             <Cart />
           </Productedrouter>
         ),
+      },
+       {
+        path: "Profile",
+        element: 
+          <Productedrouter>
+            <Profilelayout></Profilelayout>
+          </Productedrouter>,
+                   children:[
+          {
+            index:true,
+            element:<Account></Account>
+          },
+          
+          {
+            path:"order",
+            element:<Order></Order>
+          }
+        ],
       },
         {
         path: "Checkout",

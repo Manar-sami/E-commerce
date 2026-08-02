@@ -227,7 +227,9 @@ function Header() {
                   <MenuItem>
                     {/* profil */}
                     <Box
+                     
                       component={Link}
+                      to="/Profile"
                       sx={{
                         color: "#1B1C1C",
                         fontSize: "18px",
@@ -340,6 +342,7 @@ function Header() {
                       </Box>
                       <Box
                         component={Link}
+                        to="/Profile"
                         sx={{
                           color: "#1B1C1C",
                           fontSize: "18px",
