@@ -211,6 +211,7 @@ function Header() {
                     {t("Categories")}
                   </ListItem>
 
+                  {Token ?<>
                   <MenuItem>
                     <IconButton
                       onClick={changeLanguage}
@@ -224,6 +225,20 @@ function Header() {
                     </IconButton>
                   </MenuItem>
 
+                     <MenuItem>
+                    {/* darkmode */}
+
+                    <IconButton
+                      onClick={toggleMode}
+                      sx={{
+                        color: "#1B1C1C",
+                        fontSize: "18px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+                    </IconButton>
+                  </MenuItem>
                   <MenuItem>
                     {/* profil */}
                     <Box
@@ -239,22 +254,8 @@ function Header() {
                       <AccountCircleIcon />
                     </Box>
                   </MenuItem>
-                  <MenuItem>
-                    {/* darkmode */}
 
-                    <IconButton
-                      onClick={toggleMode}
-                      sx={{
-                        color: "#1B1C1C",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
-                    </IconButton>
-                  </MenuItem>
-
-                  <MenuItem>
+                   <MenuItem>
                     <Box
                       component={Link}
                       to="/Cart"
@@ -267,7 +268,7 @@ function Header() {
                       <ShoppingCartIcon />
                     </Box>
                   </MenuItem>
-                  <MenuItem>
+                   <MenuItem>
                     {/* logout */}
                     <Box
                       onClick={hundellogout}
@@ -281,6 +282,58 @@ function Header() {
                       Logout
                     </Box>
                   </MenuItem>
+                  </> :
+                  <>
+
+                    <MenuItem>
+                    {/* darkmode */}
+
+                    <IconButton
+                      onClick={toggleMode}
+                      sx={{
+                        color: "#1B1C1C",
+                        fontSize: "18px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+                    </IconButton>
+                  </MenuItem>
+                  <MenuItem>
+                    <IconButton
+                      onClick={changeLanguage}
+                      sx={{
+                        color: "#1B1C1C",
+                        fontSize: "18px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {i18n.language === "ar" ? "EN" : "AR"}
+                    </IconButton>
+                  </MenuItem>
+                  
+                  <Box
+                        component={Link}
+                        to="/Login"
+                        sx={{
+                          color: "#1B1C1C",
+                          fontSize: "18px",
+                          fontWeight: "600",
+                        }}
+                      >
+                        <LoginIcon />
+                        Login
+                  </Box>
+                  </>
+                  }
+
+                  
+
+                  
+               
+
+                 
+                 
                 </Menu>
               </Box>
 

@@ -19,7 +19,7 @@ function ResetPassword() {
   const { mutate: reset } = useResetPassword();
   const onSubmit = (data) => {
     console.log(data);
-    console.log("manar");
+    
     reset(data,{
        onSuccess:()=>{
           alert("Password changed successfully");

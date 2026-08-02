@@ -5,9 +5,7 @@ import i18n from "../languge";
 const  instance =axios.create({
 
     baseURL:`${import.meta.env.VITE_BURL}`,
-    headers:{
-        'Accept-Language':"en"
-    }
+  
 })
 
 instance.interceptors.request.use((config)=>{

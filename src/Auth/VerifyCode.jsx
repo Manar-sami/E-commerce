@@ -5,8 +5,14 @@ import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Button from "@mui/material/Button";
+import useResetPassword from "../../src/Hook/ResetPassword";
+import { useState } from "react";
 function VerifyCode() {
-    const navigate=useNavigate()
+    const navigate=useNavigate();
+
+     const { mutate: reset } = useResetPassword();
+     const [value, setvalue] = useState("");
+     
 
  const {
      register,
@@ -15,8 +21,21 @@ function VerifyCode() {
 
 
 const onSubmit = (data) => {
-  console.log(data); 
-  navigate("/ResetPassword");
+  reset(
+        {
+      code: value,
+      email:"",
+    },
+    {
+      onSuccess: () => {
+        navigate("/ResetPassword");
+      },
+      onError: () => {
+        alert("Invalid code");
+      },
+    }
+  );
+  
 };
 
   return (
@@ -53,7 +72,8 @@ const onSubmit = (data) => {
   </Typography>
 
   <TextField
-    {...register("code")}
+    value={value}
+    onChange={(e) => setvalue(e.target.value)}
     fullWidth
     label="Verification Code"
     variant="standard"

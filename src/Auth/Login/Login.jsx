@@ -16,6 +16,7 @@ import Button from "@mui/material/Button";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
+import { CircularProgress } from "@mui/material";
 
 function Login() {
   const { t } = useTranslation();
@@ -43,8 +44,8 @@ function Login() {
       navigate("/");
       setToken(response.data.accessToken);
     } catch (err) {
-      seterror(err.response.data.errors);
-      console.log(err.response.data.errors);
+      seterror(err.response.data.message);
+      console.log(err.response.data);
     }
   };
 
@@ -128,7 +129,7 @@ function Login() {
                   sx={{ background: "#000666", borderRadius: 5, pt: 2, pb: 2 }}
                 >
                   {isSubmitting ? (
-                    <span className="loader"></span>
+                    <CircularProgress></CircularProgress>
                   ) : (
                     <>
                       Sign In <ArrowRightAltIcon />
@@ -137,11 +138,7 @@ function Login() {
                 </Button>
                 {/* هان بظهر الخطا يلي جاي من server */}
 
-                {error?.length > 0
-                  ? error.map((err) => {
-                      return <span className="text-red-600">{err}</span>;
-                    })
-                  : ""}
+               <Box className="text-red-600">{error}</Box>
 
                 <Typography
                   component="p"
