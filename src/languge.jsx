@@ -61,7 +61,13 @@ i18n
           "Discover the perfect balance between architectural innovation and minimalist aesthetics. Premium appliances designed to elevate every moment in your home.":"Discover the perfect balance between architectural innovation and minimalist aesthetics. Premium appliances designed to elevate every moment in your home.",
           "Explore Now":"Explore Now",
           "Watch Video":"Watch Video",
-
+          "All Appliances":"All Appliances",
+          "items":"items",
+          "Sort by: Price Low to High":"Sort by: Price Low to High",
+          "Sort by: Price High to Low":"Sort by: Price High to Low",
+          "Filter":"Filter",
+          "Precision technology meets modern luxury design for every morning.":"Precision technology meets modern luxury design for every morning.",
+          "DESIGN PHILOSOPHY":"DESIGN PHILOSOPHY",
 
         }
       },
@@ -114,7 +120,13 @@ i18n
           "Explore Now": "استكشف الآن",
           "Premium Collection": "المجموعة الفاخرة",
           "Watch Video": "شاهد الفيديو",
-
+          "All Appliances": "جميع الأجهزة",
+          "items": "العناصر",
+          "Sort by: Price Low to High": "الترتيب حسب: السعر من الأقل إلى الأعلى",
+          "Sort by: Price High to Low": "الترتيب حسب: السعر من الأعلى إلى الأقل",
+          "Filter": "تصفية",
+          "Precision technology meets modern luxury design for every morning.": "تلتقي التكنولوجيا الدقيقة مع التصميم الفاخر العصري في كل صباح.",
+          "DESIGN PHILOSOPHY": "فلسفة التصميم" ,
 
 
 

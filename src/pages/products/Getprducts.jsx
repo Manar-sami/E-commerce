@@ -61,16 +61,16 @@ function Getprducts() {
                 
                 
                 <MenuItem value="asc">
-                 <SortIcon/> Sort by: Price Low to High
+                 <SortIcon/> {t("Sort by: Price Low to High")}
                 </MenuItem>
                 <MenuItem value="desc">
-                 <SortIcon/> Sort by: Price High to Low
+                 <SortIcon/> {t("Sort by: Price High to Low")}
                 </MenuItem>
             </Select>
 
             <Box sx={{border:"1px solid #EEF1F7",p:"12px",borderRadius:"4px"}}>
                 <TuneIcon/>
-                Filter
+                {t("Filter")}
             </Box>
         </Box>
       </Box>
@@ -99,8 +99,7 @@ function Getprducts() {
             {product.price}$
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Precision technology meets modern luxury
-            design for every morning.
+            {t("Precision technology meets modern luxury design for every morning.")}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -141,7 +140,7 @@ function Getprducts() {
                 mb: 2,
               }}
             >
-              DESIGN PHILOSOPHY
+              {t("DESIGN PHILOSOPHY")}
             </Typography>
 
           
