@@ -90,7 +90,10 @@ i18n
            "The Art of Living Well":"The Art of Living Well",
           "Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.":"Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.",
           "Our Mission":"Our Mission",
-          "To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.":"To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance."
+          "To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.":"To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.",
+          "MASTERY":"MASTERY",
+          "Obsessive Craftsmanship":"Obsessive Craftsmanship",
+          "Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation.":"Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation."
 
         }
       },
@@ -172,7 +175,10 @@ i18n
           "The Art of Living Well":"فن العيش بشكل جيد",
           "Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.":"حيث يلتقي الهندسة الدقيقة بالتصميم الخالد. نحن نصنع الأدوات لحياة عاشت بنية.",
           "Our Mission":"مهمتنا",
-          "To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.":"لرفع تجربة الإنسان من خلال دمج الطقوس اليومية بالجمال، الصمت، والأداء الذي لا مثيل له."
+          "To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.":"لرفع تجربة الإنسان من خلال دمج الطقوس اليومية بالجمال، الصمت، والأداء الذي لا مثيل له.",
+          "MASTERY":"الإتقان",
+          "Obsessive Craftsmanship":"الحرفية المهووسة",
+          "Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation.":"يتم قياس كل مكون إلى الميكرون، مما يضمن ملاءمة وتشطيبًا لا تشوبه شائبة يدوم لأجيال. نحن نصمم للأذنين بقدر ما نصمم للعيون، باستخدام تقنيات متقدمة لتخفيف الصوت لضمان تشغيل شبه صامت."
 
         }
       }
