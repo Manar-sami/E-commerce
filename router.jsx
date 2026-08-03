@@ -16,6 +16,7 @@ import Checkout from "./src/pages/Checkout/Checkout";
 import Profilelayout from "./src/pages/profile/Profilelayout";
 import Account from "./src/pages/profile/Account"
 import Order from "./src/pages/profile/Order";
+import Aboutpage from "./src/pages/about/aboutpage";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "Categories",
         element: <Categories />,
+      },
+      {
+        path: "about",
+        element: <Aboutpage/>,
       },
        
 

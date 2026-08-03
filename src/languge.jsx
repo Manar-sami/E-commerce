@@ -82,7 +82,8 @@ i18n
           "Customer Reviews":"Customer Reviews",
           "Write Review":"Write Review",
           "Your comment":"Your comment",
-          "Submit":"Submit"
+          "Submit":"Submit",
+          "ABOUT":"ABOUT",
           
           
         }
@@ -157,7 +158,8 @@ i18n
           "Customer Reviews": "مراجعات العملاء",
           "Write Review": "اكتب مراجعة",
           "Your comment": "تعليقك",
-          "Submit": "إرسال"
+          "Submit": "إرسال",
+          "ABOUT":"من نحن"
 
 
         }

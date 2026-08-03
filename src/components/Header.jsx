@@ -81,7 +81,7 @@ function Header() {
                 </Box>
               </Box>
 
-              <List sx={{ display: { xs: "none", lg: "flex" } }}>
+              <List sx={{ display: { xs: "none", lg: "flex" },justifyContent:"space-between" }}>
                 <ListItem
                   component={Link}
                   to="/"
@@ -131,6 +131,22 @@ function Header() {
                   }}
                 >
                   {t("Categories")}
+                </ListItem>
+                <ListItem
+                  component={Link}
+                  to="/about"
+                  sx={{
+                    color: "#1B1C1C",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    transition: "0.3s",
+                    "&:hover": {
+                      color: "#000666",
+                      textDecoration: "underline",
+                    },
+                  }}
+                >
+                  {t("ABOUT")}
                 </ListItem>
               </List>
               {/* التصميم الخاص بال mune */}
@@ -210,6 +226,23 @@ function Header() {
                   >
                     {t("Categories")}
                   </ListItem>
+
+                  <ListItem
+                  component={Link}
+                  to="/about"
+                  sx={{
+                    color: "#1B1C1C",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    transition: "0.3s",
+                    "&:hover": {
+                      color: "#000666",
+                      textDecoration: "underline",
+                    },
+                  }}
+                >
+                  {t("ABOUT US")}
+                </ListItem>
 
                   {Token ?<>
                   <MenuItem>
