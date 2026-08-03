@@ -7,7 +7,7 @@ function Heroabout() {
   return (
     <Box   sx={{
         backgroundImage:"url(./image/about/about.png)",
-        height:"90vh",
+        height:"70vh",
         backgroundPosition:"center",
         backgroundSize:"cover",
         py:{xs:10,md:10,lg:20},
@@ -20,8 +20,7 @@ function Heroabout() {
                 {t("The Art of Living Well")}
             </Typography>
             <Typography sx={{fontSize:"18px",color:"#454652",maxWidth:"50%",mx:"auto"}}>
-                Where precision engineering meets timeless design. We craft the tools for a
-                life lived with intentionality.
+               {t("Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.")}
             </Typography>
            </Box>
         </Box>

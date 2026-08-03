@@ -84,8 +84,11 @@ i18n
           "Your comment":"Your comment",
           "Submit":"Submit",
           "ABOUT":"ABOUT",
-          
-          
+          "OUR HERITAGE":"OUR HERITAGE",
+          "Redefining the Modern Home":"Redefining the Modern Home",
+           "descriptionabout":"Founded on the principle that everyday objects should be both functional and transcendent, KaShop began as a small workshop dedicated to the pursuit of perfection. Today, we are the standard-bearer for luxury appliances that integrate seamlessly into the world's most refined interiors. Every curve, every tactile response, and every silent mechanism is the result of thousands of hours of refinement. We don't just build appliances; we curate environments.",
+           "The Art of Living Well":"The Art of Living Well",
+          "Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.":"Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.",
         }
       },
       ar: {
@@ -159,8 +162,12 @@ i18n
           "Write Review": "اكتب مراجعة",
           "Your comment": "تعليقك",
           "Submit": "إرسال",
-          "ABOUT":"من نحن"
-
+          "ABOUT":"من نحن",
+          "OUR HERITAGE":"تراثنا",
+          "Redefining the Modern Home":"إعادة تعريف المنزل العصري",
+          "descriptionabout":"تأسست على مبدأ أن الأشياء اليومية يجب أن تكون عملية ومتجاوزة في الوقت نفسه، بدأت KaShop كورشة صغيرة مكرسة للسعي نحو الكمال. اليوم، نحن الرائدون في مجال الأجهزة الفاخرة التي تندمج بسلاسة في أرقى الديكورات الداخلية في العالم. كل منحنى، وكل استجابة لمسية، وكل آلية صامتة هي نتيجة لآلاف الساعات من التحسين. نحن لا نصنع الأجهزة فقط؛ بل ننسق البيئات.",
+          "The Art of Living Well":"فن العيش بشكل جيد",
+          "Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.":"حيث يلتقي الهندسة الدقيقة بالتصميم الخالد. نحن نصنع الأدوات لحياة عاشت بنية."
 
         }
       }
