@@ -10,7 +10,7 @@ function OUR_HERITAGE() {
        <Container>
          <Grid container spacing={2}>
 
-            <Grid size={6} sx={{display:"flex",flexDirection:"column",gap:2,justifyContent:"center",px:3,textAlign:"justify"}}>
+            <Grid size={{xs:12,md:6}} sx={{display:"flex",flexDirection:"column",gap:2,justifyContent:"center",px:3,textAlign:"justify"}}>
             <Typography sx={{fontSize:"14px",color:"#1A237E60",fontweight:"700"}}>
               {t("OUR HERITAGE")}
             </Typography>
@@ -22,7 +22,7 @@ function OUR_HERITAGE() {
             </Typography>
             </Grid>
 
-            <Grid size={6}>
+            <Grid size={{xs:12,md:6}}>
                  <Box
                     component="img"
                     src="/image/about/OURHERITAGE.png"
