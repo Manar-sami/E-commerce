@@ -83,7 +83,7 @@ i18n
           "Write Review":"Write Review",
           "Your comment":"Your comment",
           "Submit":"Submit",
-          "ABOUT":"ABOUT",
+          "About":"About",
           "OUR HERITAGE":"OUR HERITAGE",
           "Redefining the Modern Home":"Redefining the Modern Home",
            "descriptionabout":"Founded on the principle that everyday objects should be both functional and transcendent, KaShop began as a small workshop dedicated to the pursuit of perfection. Today, we are the standard-bearer for luxury appliances that integrate seamlessly into the world's most refined interiors. Every curve, every tactile response, and every silent mechanism is the result of thousands of hours of refinement. We don't just build appliances; we curate environments.",
@@ -104,7 +104,9 @@ i18n
           "True luxury is responsible. Our commitment to the planet is woven into the very fabric of our manufacturing processes.":"True luxury is responsible. Our commitment to the planet is woven into the very fabric of our manufacturing processes.",
           "Experience Excellence":"Experience Excellence",
           "EXPLORE COLLECTIONS":"EXPLORE COLLECTIONS",
-          "VISIT A SHOWROOM":"VISIT A SHOWROOM"
+          "VISIT A SHOWROOM":"VISIT A SHOWROOM",
+          "Shop All Products":"Shop All Products",
+          "Elevate your daily rituals with our curated collection of architectural appliances and refined home technology.":"Elevate your daily rituals with our curated collection of architectural appliances and refined home technology."
 
         }
       },
@@ -179,7 +181,7 @@ i18n
           "Write Review": "اكتب مراجعة",
           "Your comment": "تعليقك",
           "Submit": "إرسال",
-          "ABOUT":"من نحن",
+          "About":"من نحن",
           "OUR HERITAGE":"تراثنا",
           "Redefining the Modern Home":"إعادة تعريف المنزل العصري",
           "descriptionabout":"تأسست على مبدأ أن الأشياء اليومية يجب أن تكون عملية ومتجاوزة في الوقت نفسه، بدأت KaShop كورشة صغيرة مكرسة للسعي نحو الكمال. اليوم، نحن الرائدون في مجال الأجهزة الفاخرة التي تندمج بسلاسة في أرقى الديكورات الداخلية في العالم. كل منحنى، وكل استجابة لمسية، وكل آلية صامتة هي نتيجة لآلاف الساعات من التحسين. نحن لا نصنع الأجهزة فقط؛ بل ننسق البيئات.",
@@ -200,7 +202,10 @@ i18n
           "True luxury is responsible. Our commitment to the planet is woven into the very fabric of our manufacturing processes.":"الفخامة الحقيقية مسؤولة. التزامنا بالكوكب منسوج في نسيج عمليات التصنيع لدينا.",
           "Experience Excellence":"تجربة التميز",
           "EXPLORE COLLECTIONS":"استكشاف المجموعات",
-          "VISIT A SHOWROOM":"زيارة صالة العرض"
+          "VISIT A SHOWROOM":"زيارة صالة العرض",
+          "Shop All Products":"تسوق جميع المنتجات",
+          "Elevate your daily rituals with our curated collection of architectural appliances and refined home technology.":"ارتقِ بطقوسك اليومية مع تشكيلتنا المختارة بعناية من الأجهزة ذات التصاميم المعمارية المبتكرة وتقنيات المنزل المتطورة."
+
 
         }
       }

@@ -132,6 +132,23 @@ function Header() {
                 >
                   {t("Categories")}
                 </ListItem>
+
+                <ListItem
+                  component={Link}
+                  to="/shop"
+                  sx={{
+                    color: "#1B1C1C",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    transition: "0.3s",
+                    "&:hover": {
+                      color: "#000666",
+                      textDecoration: "underline",
+                    },
+                  }}
+                >
+                  {t("Shop")}
+                </ListItem>
                 <ListItem
                   component={Link}
                   to="/about"
@@ -146,7 +163,7 @@ function Header() {
                     },
                   }}
                 >
-                  {t("ABOUT")}
+                  {t("About")}
                 </ListItem>
               </List>
               {/* التصميم الخاص بال mune */}
@@ -227,6 +244,21 @@ function Header() {
                     {t("Categories")}
                   </ListItem>
 
+                   <ListItem
+                  component={Link}
+                  to="/shop"
+                  sx={{
+                    color: "#1B1C1C",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    transition: "0.3s",
+                    "&:hover": {
+                      color: "#000666",
+                      textDecoration: "underline",
+                    },
+                  }}
+                ></ListItem>
+
                   <ListItem
                   component={Link}
                   to="/about"
@@ -241,7 +273,7 @@ function Header() {
                     },
                   }}
                 >
-                  {t("ABOUT US")}
+                  {t("About")}
                 </ListItem>
 
                   {Token ?<>

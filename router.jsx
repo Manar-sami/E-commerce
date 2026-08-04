@@ -17,6 +17,7 @@ import Profilelayout from "./src/pages/profile/Profilelayout";
 import Account from "./src/pages/profile/Account"
 import Order from "./src/pages/profile/Order";
 import Aboutpage from "./src/pages/about/aboutpage";
+import Shoppage from "./src/pages/Shop/Shoppage";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+      },
+        {
+        path: "shop",
+        element: <Shoppage></Shoppage>,
       },
       {
         path: "product/:id",
