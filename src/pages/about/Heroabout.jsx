@@ -16,10 +16,10 @@ function Heroabout() {
 
         <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}}>
            <Box>
-              <Typography sx={{fontSize:"48px",fontWeight:"bold",color:"#000666"}}>
+              <Typography sx={{fontSize:{xs:"28px",sm:"38px",md:"48px"},fontWeight:"bold",color:"#000666"}}>
                 {t("The Art of Living Well")}
             </Typography>
-            <Typography sx={{fontSize:"18px",color:"#454652",maxWidth:"50%",mx:"auto"}}>
+            <Typography sx={{fontSize:"18px",color:"#454652",maxWidth:{xs:"90%",md:"50%"},mx:"auto"}}>
                {t("Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.")}
             </Typography>
            </Box>

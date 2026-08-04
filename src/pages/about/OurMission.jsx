@@ -10,7 +10,7 @@ function OurMission() {
     <Box sx={{py:10,display:"flex",justifyContent:"center",
     flexDirection:"column",gap:2,textAlign:"center",
     alignItems:"center",boxShadow:3,
-    width:"50%",
+    width:{xs:"90%",md:"50%"},
     mx:"auto",
     borderRadius:"12px",
     }}>

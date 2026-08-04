@@ -93,7 +93,18 @@ i18n
           "To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.":"To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.",
           "MASTERY":"MASTERY",
           "Obsessive Craftsmanship":"Obsessive Craftsmanship",
-          "Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation.":"Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation."
+          "Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation.":"Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation.",
+          "Circular Life":"Circular Life",
+          "Our products are 98% recyclable and designed to be repaired, not replaced.":"Our products are 98% recyclable and designed to be repaired, not replaced.",
+          "Efficiency Max":"Efficiency Max",
+          "A-rated energy consumption across our entire catalog without compromising performance.":"A-rated energy consumption across our entire catalog without compromising performance.",
+          "Carbon Neutral":"Carbon Neutral",
+          "Our logistics and manufacturing centers operate on 100% renewable energy.":"Our logistics and manufacturing centers operate on 100% renewable energy.",
+          "Sustainability by Design":"Sustainability by Design",
+          "True luxury is responsible. Our commitment to the planet is woven into the very fabric of our manufacturing processes.":"True luxury is responsible. Our commitment to the planet is woven into the very fabric of our manufacturing processes.",
+          "Experience Excellence":"Experience Excellence",
+          "EXPLORE COLLECTIONS":"EXPLORE COLLECTIONS",
+          "VISIT A SHOWROOM":"VISIT A SHOWROOM"
 
         }
       },
@@ -178,7 +189,18 @@ i18n
           "To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.":"لرفع تجربة الإنسان من خلال دمج الطقوس اليومية بالجمال، الصمت، والأداء الذي لا مثيل له.",
           "MASTERY":"الإتقان",
           "Obsessive Craftsmanship":"الحرفية المهووسة",
-          "Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation.":"يتم قياس كل مكون إلى الميكرون، مما يضمن ملاءمة وتشطيبًا لا تشوبه شائبة يدوم لأجيال. نحن نصمم للأذنين بقدر ما نصمم للعيون، باستخدام تقنيات متقدمة لتخفيف الصوت لضمان تشغيل شبه صامت."
+          "Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation.":"يتم قياس كل مكون إلى الميكرون، مما يضمن ملاءمة وتشطيبًا لا تشوبه شائبة يدوم لأجيال. نحن نصمم للأذنين بقدر ما نصمم للعيون، باستخدام تقنيات متقدمة لتخفيف الصوت لضمان تشغيل شبه صامت.",
+          "Circular Life":"الحياة الدائرية",
+          "Our products are 98% recyclable and designed to be repaired, not replaced.":"منتجاتنا قابلة لإعادة التدوير بنسبة 98٪ ومصممة لتكون قابلة للإصلاح، وليس للاستبدال.",
+          "Efficiency Max":"الكفاءة القصوى",
+          "A-rated energy consumption across our entire catalog without compromising performance.":"استهلاك الطاقة بدرجة A عبر مجموعتنا بأكملها دون التأثير على الأداء.",
+          "Carbon Neutral":"محايد للكربون",
+          "Our logistics and manufacturing centers operate on 100% renewable energy.":"تعمل مراكزنا اللوجستية والتصنيعية على طاقة متجددة بنسبة 100٪.",
+          "Sustainability by Design":"الاستدامة من خلال التصميم",
+          "True luxury is responsible. Our commitment to the planet is woven into the very fabric of our manufacturing processes.":"الفخامة الحقيقية مسؤولة. التزامنا بالكوكب منسوج في نسيج عمليات التصنيع لدينا.",
+          "Experience Excellence":"تجربة التميز",
+          "EXPLORE COLLECTIONS":"استكشاف المجموعات",
+          "VISIT A SHOWROOM":"زيارة صالة العرض"
 
         }
       }
