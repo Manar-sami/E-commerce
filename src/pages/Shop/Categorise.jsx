@@ -1,10 +1,9 @@
-import { Box, CircularProgress, Container, Typography } from "@mui/material";
+import { Box, CircularProgress, Container, Typography,Grid } from "@mui/material";
 import useGetcategorise from "../../Hook/Getcategorise";
 import { useTranslation } from "react-i18next";
-import TuneIcon from "@mui/icons-material/Tune";
 import TextField from "@mui/material/TextField";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
-import { use, useState } from "react";
+import {  useState } from "react";
 import Products from "./Products";
 
 
@@ -16,7 +15,7 @@ function Categorise() {
 
   const { t } = useTranslation();
 
-  const[sort,setsort]=useState("");
+  const[sort,setsort]=useState("price");
   //  تنازلي 
   const[asc,setasc]=useState(false);
   console.log(asc)
@@ -30,119 +29,132 @@ function Categorise() {
   if (isError) return <Typography>error </Typography>;
 
   return (
-    <Box sx={{ py: 10 }}>
-      <Container>
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            flexDirection:{xs:"column",md:"row"},
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
+   <Box sx={{ py: { xs: 4, md: 8 }}}>
+      <Container maxWidth="lg">
+        
+         
           <Box
             sx={{
-              bgcolor: "#000666",
-              color: "white",
-              py: "4px",
-              px: "24px",
-              borderRadius: "30px",
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 1.5,
+              mb: 3,
+              alignItems: "center",
             }}
           >
-            {t("All")}
-          </Box>
-          {/* categorise */}
-          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
-            {data.response.data.map((categorise) => {
-              return (
-                <Box
-                  sx={{
-                    bgcolor: "#E0DFDF",
-                    color: "#626362",
-                    py: "4px",
-                    px: "24px",
-                    borderRadius: "30px",
-                  }}
-                >
-                  {categorise.name}
-                </Box>
-              );
-            })}
-          </Box>
-
-         
-
-          {/* min price */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <Typography sx={{ color: "#5E5E5E" }}>MIN</Typography>
-            <TextField
-              placeholder="$0"
-              value={min}
-              onChange={(e)=>setmin(e.target.value)}
-              variant="outlined"
+            <Box
               sx={{
-                width: "80px",
-                "& .MuiOutlinedInput-root": {
-                  height: 35,
-                },
+                bgcolor: "#000666",
+                color: "white",
+                py: "6px",
+                px: "20px",
+                borderRadius: "20px",
+                fontSize: "14px",
+                fontWeight: "bold",
+                cursor: "pointer",
+                transition: "0.2s",
+                "&:hover": { opacity: 0.9 },
               }}
-            />
-          </Box>
-
-          {/* max price */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <Typography sx={{ color: "#5E5E5E" }}>MAX</Typography>
-            <TextField
-              placeholder="$500"
-              value={max}
-              onChange={(e)=>setmax(e.target.value)}
-              variant="outlined"
-              sx={{
-                width: "80px",
-                "& .MuiOutlinedInput-root": {
-                  height: 35,
-                },
-              }}
-            />
-          </Box>
-            
-            <InputLabel>{t("Sort Order")}</InputLabel>
-           <Select
-             displayEmpty
-            value={asc ? "asc" : "desc"}
-            onChange={(e) => setasc(e.target.value === "asc")}
-             
             >
-                
-                
-                <MenuItem value="asc">
-                  {t("Ascending")}
-                </MenuItem>
-                <MenuItem value="desc">
-                 {t("Descending")}
-                </MenuItem>
-            </Select>
+              {t("All")}
+            </Box>
 
-          {/* select */}
-
-          <InputLabel>{t("SORT BY:")}</InputLabel>
-
-          <Select displayEmpty value={sort} onChange={(e)=>setsort(e.target.value)}  label="Sort By">
-            <MenuItem value="price">Price</MenuItem>
-            <MenuItem value="name" >Name</MenuItem>
-            <MenuItem value="rate">Rate</MenuItem>
-          </Select>
-
-          <Box>
-             <Products
-             ascending={asc}
-             sortBy={sort}
-             minPrice={min}
-             maxPrice={max}
-             ></Products>
-            
+            {data?.response?.data?.map((categorise) => (
+              <Box
+                key={categorise.id}
+                sx={{
+                  bgcolor: "#f0f0f0",
+                  color: "#555",
+                  py: "6px",
+                  px: "20px",
+                  borderRadius: "20px",
+                  fontSize: "14px",
+                  cursor: "pointer",
+                  transition: "0.2s",
+                  "&:hover": {
+                    bgcolor: "#000666",
+                    color: "white",
+                  },
+                }}
+              >
+                {categorise.name}
+              </Box>
+            ))}
           </Box>
+
+          
+          <Grid container spacing={2} alignItems="center">
+            {/* min Price */}
+            <Grid item xs={6} sm={3} md={2}>
+              <TextField
+                fullWidth
+                size="small"
+                label={t("MIN")}
+                placeholder="$0"
+                value={min}
+                onChange={(e) => setmin(e.target.value)}
+                type="number"
+                variant="outlined"
+              />
+            </Grid>
+
+            {/* max Price */}
+            <Grid item xs={6} sm={3} md={2}>
+              <TextField
+                fullWidth
+                size="small"
+                label={t("MAX")}
+                placeholder="$500"
+                value={max}
+                onChange={(e) => setmax(e.target.value)}
+                type="number"
+                variant="outlined"
+              />
+            </Grid>
+
+           
+            <Grid item xs={12} sm={3} md={4}>
+              <FormControl fullWidth size="small">
+                <InputLabel >{t("Sort Order")}</InputLabel>
+                <Select
+                  
+                  label={t("Sort Order")}
+                  value={asc ? "asc" : "desc"}
+                  onChange={(e) => setasc(e.target.value === "asc")}
+                >
+                  <MenuItem value="asc">{t("Ascending")}</MenuItem>
+                  <MenuItem value="desc">{t("Descending")}</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+
+            {/* Sort By :*/}
+            <Grid item xs={12} sm={3} md={4}>
+              <FormControl fullWidth size="small">
+                <InputLabel >{t("SORT BY:")}</InputLabel>
+                <Select
+                  
+                  label={t("SORT BY:")}
+                  value={sort}
+                  onChange={(e) => setsort(e.target.value)}
+                >
+                  <MenuItem value="price">{t("Price")}</MenuItem>
+                  <MenuItem value="name">{t("Name")}</MenuItem>
+                  <MenuItem value="rate">{t("Rate")}</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+          </Grid>
+       
+
+        {/* Products Section */}
+        <Box sx={{ width: "100%" }}>
+          <Products
+            ascending={asc}
+            sortBy={sort}
+            minPrice={min}
+            maxPrice={max}
+          />
         </Box>
       </Container>
     </Box>

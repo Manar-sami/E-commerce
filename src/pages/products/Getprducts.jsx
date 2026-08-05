@@ -53,7 +53,7 @@ function Getprducts() {
       <Box>
         <Box sx={{display:"flex",flexWrap:"wrap",justifyContent:"space-between",alignItems:"center",gap:2}}>
             <Select
-             displayEmpty
+            
             value={ascending ? "asc" : "desc"}
             onChange={(e) => setAscending(e.target.value === "asc")}
              
@@ -81,7 +81,7 @@ function Getprducts() {
         <Grid container spacing={2}>
          {data.response.data.map((product)=>{
             return(
-                 <Grid size={{xs:12,md:6,lg:2}} component={Link} to={`/product/${product.id}`}>
+                 <Grid size={{xs:12,md:6,lg:4}} component={Link} to={`/product/${product.id}`}>
                     <Card sx={{ maxWidth: 345 }}>
          <CardActionArea>
         <CardMedia

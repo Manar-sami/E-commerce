@@ -106,7 +106,18 @@ i18n
           "EXPLORE COLLECTIONS":"EXPLORE COLLECTIONS",
           "VISIT A SHOWROOM":"VISIT A SHOWROOM",
           "Shop All Products":"Shop All Products",
-          "Elevate your daily rituals with our curated collection of architectural appliances and refined home technology.":"Elevate your daily rituals with our curated collection of architectural appliances and refined home technology."
+          "Elevate your daily rituals with our curated collection of architectural appliances and refined home technology.":"Elevate your daily rituals with our curated collection of architectural appliances and refined home technology.",
+          "All":"All",
+          "MIN":"MIN",
+          "MAX":"MAX",
+          "Sort Order":"Sort Order",
+          "Ascending":"Ascending",
+          "Descending":"Descending",
+          "SORT BY:":"SORT BY:",
+          "Price":"Price",
+          "Name":"Name",
+          "Rate":"Rate",
+          "Shop":"Shop"
 
         }
       },
@@ -204,8 +215,18 @@ i18n
           "EXPLORE COLLECTIONS":"استكشاف المجموعات",
           "VISIT A SHOWROOM":"زيارة صالة العرض",
           "Shop All Products":"تسوق جميع المنتجات",
-          "Elevate your daily rituals with our curated collection of architectural appliances and refined home technology.":"ارتقِ بطقوسك اليومية مع تشكيلتنا المختارة بعناية من الأجهزة ذات التصاميم المعمارية المبتكرة وتقنيات المنزل المتطورة."
-
+          "Elevate your daily rituals with our curated collection of architectural appliances and refined home technology.":"ارتقِ بطقوسك اليومية مع تشكيلتنا المختارة بعناية من الأجهزة ذات التصاميم المعمارية المبتكرة وتقنيات المنزل المتطورة.",
+          "All": "الكل",
+          "MIN": "الحد الأدنى",
+          "MAX": "الحد الأقصى",
+          "Sort Order": "ترتيب الفرز",
+          "Ascending": "تصاعدي",
+          "Descending": "تنازلي",
+          "SORT BY:": "الفرز حسب:",
+          "Price": "السعر",
+          "Name": "الاسم",
+          "Rate": "التقييم",
+          "Shop": "المتجر"
 
         }
       }

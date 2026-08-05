@@ -16,7 +16,7 @@ function Footer() {
   const{t}=useTranslation();
 
   return (
-    <Box component="section" sx={{py:10,textAlign:{xs:"center",md:"start"}}}>
+    <Box component="section" sx={{py:10,textAlign:{xs:"center",md:"start"},bgcolor:"#0000000d"}}>
         <Container>
            <Grid container sx={{pb:5}} spacing={2}>
 

@@ -34,11 +34,11 @@ function Products({ ascending,sortBy ,minPrice,maxPrice}) {
     
     
 
-     <Box sx={{py:10}}>
+     <Box sx={{py:2}}>
         <Grid container spacing={2}>
          {data.response.data.map((product)=>{
             return(
-                 <Grid size={{xs:12,md:6,lg:2}} component={Link} to={`/product/${product.id}`}>
+                 <Grid size={{xs:12,md:6,lg:3}} component={Link} to={`/product/${product.id}`}>
                     <Card sx={{ maxWidth: 345 }}>
          <CardActionArea>
         <CardMedia
