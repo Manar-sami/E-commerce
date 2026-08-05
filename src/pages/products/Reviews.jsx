@@ -21,55 +21,74 @@ import * as React from 'react';
 import { useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import CloseIcon from "@mui/icons-material/Close";
+import UseProfile from "./../../Hook/Profile"
 
 
 function Reviews() {
 
-  const Token=UseAuthStore((state)=>state.Token); 
-  const {id} = useParams();
-  const{data,isLoading}=useProductdetails(id);
-  const star=[1,2,3,4,5];
-  const [open,setopen]=useState(false);
-  const{mutate:addreview}=useAddreview();
-    const [value, setValue] = React.useState(0);
+    const Token=UseAuthStore((state)=>state.Token); 
+    const {id} = useParams();
+    const{data,isLoading}=useProductdetails(id);
+    const star=[1,2,3,4,5];
+    const [open,setopen]=useState(false);
+    const{mutate:addreview,isError,error}=useAddreview();
+ 
+    const [value, setValue] = useState(0);
     const [comment, setComment] = useState("");
     const{t}= useTranslation();
-    
-    const navigate=useNavigate();
+    const{data:profaildata,isLoading:profile}=UseProfile();
+    // console.log(profaildata.data.orders);
+    const[massage,setmassage]=useState(false);
 
+    const hasPaidOrder = profaildata?.data?.orders?.map(
+       (order) => order.paymentStatus === "paid"
+     );
+     console.log(hasPaidOrder)
+
+  
     const {
 
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { isSubmitting },
   } = useForm();
 
 const opens = () => {
-  {Token?setopen(true):
-    navigate("/Login")
-  }
+ {Token?setopen(true):setmassage(true)}
+ 
+  setTimeout(()=>{
+
+    setmassage(false);
+  },2000)
+ 
 };
 
 
-const review=(data)=>{
- addreview({
-    ProductId: id,
+const review = () => {
+  addreview(
+    {
+      ProductId: id,
+      Rating: value,
+      Comment: comment,
+    },
+    {
+      onSuccess: (response) => {
+        console.log(response.data);
+        setopen(false);
+      },
 
-   
-         Rating: value,
-         Comment:comment,
+      onError: (error) => {
+       
+        console.log("message:", error.response?.data?.message);
+      },
+    }
+  );
+};
+console.log(review);
 
-    
-    onSuccess: (response) => {
-  console.log(response.data);
-}
- }),
-
- console.log(data)
-}
-console.log(comment);
-
-
+  
   if(isLoading) return <CircularProgress></CircularProgress>
+  if(profile) return <CircularProgress></CircularProgress>
   
   return (
   <Box sx={{py:10}}>
@@ -102,15 +121,15 @@ console.log(comment);
          </Box>
         </Box>
 
-         <Box  sx={{py:10,display:"flex",flexDirection:"column",gap:2}}>
+         <Box  sx={{py:10,display:"flex",flexDirection:"column",gap:2,flexWrap:"wrap"}}>
             {data.reviews.map((review)=>{
               return(
                 
                  <Box sx={{boxShadow:3,p:"50px",borderRadius:"24px",}}>
-                  <Box sx={{display:"flex",justifyContent:"space-between"}}>
+                  <Box sx={{display:"flex",justifyContent:"space-between",flexWrap:"wrap"}}>
                      <Box sx={{
                     display:"flex",
-                    
+                    flexWrap:"wrap",
                     alignItems:"center"
                   }}>
                     <Box sx={{boxShadow:2,borderRadius:"100%",width:"48px",
@@ -143,7 +162,7 @@ console.log(comment);
                    
                      
                   </Box>
-                   <Box>
+                   <Box >
                          {star.map((star)=>{
                             return star <= review.rating ? <StarIcon sx={{color:"#1A237E"}} key={star} /> : <StarBorderIcon sx={{color:"#1A237E"}} key={star} />;
          
@@ -179,12 +198,16 @@ console.log(comment);
     }}
   >
 
-    <Typography sx={{fontSize:24,fontWeight:"bold"}}>
+     <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+       <Typography sx={{fontSize:24,fontWeight:"bold"}}>
      {t("Write Review")}
     </Typography>
 
    
-
+    <Button sx={{color:"red"}} onClick={()=>setopen(false)}>
+      <CloseIcon />
+    </Button>
+     </Box>
     <Box component="form" onSubmit={handleSubmit(review)}>
 
          <Rating
@@ -194,6 +217,9 @@ console.log(comment);
         setValue(newValue);
       }}
     />
+
+    
+
             <TextField
             value={comment}
             onChange={(e)=>setComment(e.target.value)}
@@ -205,7 +231,11 @@ console.log(comment);
             sx={{mt:2}}
     />
 
+    {isError?<Typography sx={{color:"red",mt:2}}>{error.response.data.message}</Typography>:""}
+
     <Button
+    
+    disabled={!comment||value === 0}
     type="submit"
       sx={{mt:2}}
     >
@@ -216,6 +246,38 @@ console.log(comment);
   </Box>
 )}
          
+
+
+
+                  {massage && (
+  <Box
+    sx={{
+      position:"fixed",
+      top:"50%",
+      left:"50%",
+      transform:"translate(-50%, -50%)",
+      backgroundColor:"white",
+      boxShadow:5,
+      borderRadius:3,
+      p:4,
+      width:400,
+      zIndex:2000
+    }}
+  >
+
+    
+    <Box component="form" onSubmit={handleSubmit(review)}>
+
+        
+         <Typography>
+          🔒 You must log in to add a comment
+         </Typography>
+
+ 
+    </Box>
+
+  </Box>
+)}
         </Container>
 
     </Box>

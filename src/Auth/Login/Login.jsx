@@ -103,6 +103,7 @@ function Login() {
                 <TextField
                   {...register("password")}
                   label="Password"
+                  type="password"
                   defaultValue="••••••••"
                   sx={{
                     "& .MuiInputLabel-root": {
