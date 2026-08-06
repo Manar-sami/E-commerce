@@ -125,7 +125,7 @@ console.log(review);
             {data.reviews.map((review)=>{
               return(
                 
-                 <Box sx={{boxShadow:3,p:"50px",borderRadius:"24px",}}>
+                 <Box sx={{boxShadow:3,p:{xs:"25px",md:"40px",lg:"50px"},borderRadius:"24px",}}>
                   <Box sx={{display:"flex",justifyContent:"space-between",flexWrap:"wrap"}}>
                      <Box sx={{
                     display:"flex",

@@ -513,13 +513,14 @@ function Header() {
                       </IconButton>
 
                       <IconButton
+                       onClick={toggleMode}
                         sx={{
                           color: "#1B1C1C",
                           fontSize: "18px",
                           fontWeight: "600",
                         }}
                       >
-                        <DarkModeIcon />
+                        {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
                       </IconButton>
 
                       <Box

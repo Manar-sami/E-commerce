@@ -6,9 +6,10 @@ import PhotoIcon from '@mui/icons-material/Photo';
 import Pagination from '@mui/material/Pagination';
 import { useState } from 'react';
 
+
 function Order() {
  
-  const{t}=useTranslation();
+  const{t, i18n}=useTranslation();
 
   const{data,isLoading,isError}=useProfile();
     console.log(data);
@@ -87,7 +88,11 @@ function Order() {
                 </Box>
                
             ))}
-             <Pagination  color="primary" sx={{mt:4,display:"flex",justifyContent:"center"}} count={Math.ceil(data.data.orders.length / itemsPage)} onChange={(event, value)=>setpage(value)}  />
+             <Pagination 
+             
+             color="primary" sx={{mt:4,display:"flex",justifyContent:"center",direction: i18n.language === "ar" ? "rtl" : "ltr",}} 
+             
+            count={Math.ceil(data.data.orders.length / itemsPage)} onChange={(event, value)=>setpage(value)}  />
              </Box>
           ) : (
             <Typography sx={{fontSize:"16px",color:"#454652"}}>

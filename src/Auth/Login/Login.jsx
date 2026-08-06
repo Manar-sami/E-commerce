@@ -66,11 +66,11 @@ function Login() {
                   fontWeight: "bold",
                 }}
               >
-                Welcome Back
+                {t("Welcome Back")}
               </Typography>
 
               <Typography component="p" sx={{ fontSize: 18 }}>
-                Access your curated wardrobe and exclusive collections.
+                {t("Access your curated wardrobe and exclusive collections.")}
               </Typography>
 
               <Box
@@ -80,7 +80,7 @@ function Login() {
               >
                 <TextField
                   {...register("email")}
-                  label="Email Address"
+                  label={t("Email Address")}
                   defaultValue="name@example.com"
                   sx={{
                     "& .MuiInputLabel-root": {
@@ -102,7 +102,7 @@ function Login() {
 
                 <TextField
                   {...register("password")}
-                  label="Password"
+                  label={t("Password")}
                   type="password"
                   defaultValue="••••••••"
                   sx={{
@@ -133,7 +133,7 @@ function Login() {
                     <CircularProgress></CircularProgress>
                   ) : (
                     <>
-                      Sign In <ArrowRightAltIcon />
+                     {t("Sign In")} <ArrowRightAltIcon />
                     </>
                   )}
                 </Button>
@@ -145,7 +145,7 @@ function Login() {
                   component="p"
                   sx={{ textAlign: "center", fontSize: 16, color: "#767683" }}
                 >
-                  OR CONTINUE WITH
+                  {t("OR CONTINUE WITH")}
                 </Typography>
 
                 <Box
@@ -167,7 +167,7 @@ function Login() {
                     }}
                   >
                     <GoogleIcon />
-                    <Typography>Google</Typography>
+                    <Typography>{t("Google")}</Typography>
                   </Box>
                   <Box
                     component={Link}
@@ -179,7 +179,7 @@ function Login() {
                     }}
                   >
                     <AppleIcon />
-                    <Typography>Apple</Typography>
+                    <Typography>{t("Apple")}</Typography>
                   </Box>
                 </Box>
                  <Typography component={Link} to="/ForgetPassword"
@@ -191,7 +191,7 @@ function Login() {
               
             }} 
            >
-            Forgot Password?
+            {t("Forgot Password?")}
            </Typography>
               </Box>
             </Grid>
@@ -223,12 +223,10 @@ function Login() {
               sx={{fontSize: { xs: 28, sm: 40, md: 64 }
               ,color:"white"}}
               >
-                Join the Collective.
+                {t("Join the Collective.")}
               </Typography>
               <Typography component="p" sx={{fontSize:16,color:"white"}}>
-                Experience retail engineered for precision.
-                Members get early access to limited archives and
-                personalized styling services.
+               {t("Experience retail engineered for precision.Members get early access to limited archives and personalized styling services.")}
 
               </Typography>
 
@@ -258,7 +256,7 @@ function Login() {
                 }
                 }}
                 >
-                Create Account
+                {t("Create Account")}
               </Typography>
                 <Button
                 sx={{
@@ -275,7 +273,7 @@ function Login() {
                 }
                 }}
                 >
-                  Learn More
+                  {t("Learn More")}
                 </Button>
               </Box>
             </Grid>

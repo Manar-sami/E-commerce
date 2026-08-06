@@ -6,13 +6,16 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function SubscribeSection() {
+ const {t}=useTranslation();
+
   return (
     <Box sx={{ py: 10, backgroundColor: "#F7F5F3" }}>
       <Container >
         <Paper
-          elevation={0}
+         
           sx={{
             p: { xs: 4, md: 8 },
             borderRadius: "24px",
@@ -29,7 +32,7 @@ function SubscribeSection() {
               mb: 2,
             }}
           >
-            Join the Circle
+            {t("Join the Circle")}
           </Typography>
 
           <Typography
@@ -41,8 +44,7 @@ function SubscribeSection() {
               lineHeight: 1.8,
             }}
           >
-            Be the first to experience private seasonal drops, designer
-            interviews, and member-only benefits.
+           {t("Be the first to experience private seasonal drops, designer interviews, and member-only benefits.")}
           </Typography>
 
           <Box
@@ -55,7 +57,7 @@ function SubscribeSection() {
             }}
           >
             <TextField
-              placeholder="Your email address"
+              placeholder={t("Your email address")}
               sx={{
                 width: { xs: "100%", sm: 320 },
               }}
@@ -74,7 +76,7 @@ function SubscribeSection() {
                 },
               }}
             >
-              Subscribe
+              {t("Subscribe")}
             </Button>
           </Box>
 
@@ -85,7 +87,7 @@ function SubscribeSection() {
               fontSize: "12px",
             }}
           >
-            By joining, you agree to our Privacy Policy and Terms of Service.
+            {t("By joining, you agree to our Privacy Policy and Terms of Service.")}
           </Typography>
         </Paper>
       </Container>

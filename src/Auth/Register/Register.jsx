@@ -13,10 +13,12 @@ import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { useTranslation } from "react-i18next";
 
 function Register() {
 
     const[error,seterror]=useState([]); 
+    const{t}=useTranslation();
    
       // هان استخدمنا مكتبة useForm
   const { register,handleSubmit,formState: { errors ,isSubmitting }}=useForm({
@@ -56,11 +58,11 @@ function Register() {
                 fontWeight: "bold",
               }}
             >
-              Create Account
+              {t("Create Account")}
             </Typography>
 
             <Typography sx={{ mt: 1, color: "#767683" }}>
-              Join our community and start your shopping journey.
+              {t("Join our community and start your shopping journey.")}
             </Typography>
 
             <Box
@@ -76,7 +78,7 @@ function Register() {
 
               <TextField
                 {...register("fullName")}
-                label="Full Name"
+                label={t("Full Name")}
                 variant="standard"
               />
               <Typography color="error">
@@ -85,7 +87,7 @@ function Register() {
 
               <TextField
                 {...register("userName")}
-                label="Username"
+                label={t("Username")}
                 variant="standard"
               />
               <Typography color="error">
@@ -94,7 +96,7 @@ function Register() {
 
               <TextField
                 {...register("email")}
-                label="Email"
+                label={t("Email")}
                 variant="standard"
               />
               <Typography color="error">
@@ -103,7 +105,7 @@ function Register() {
 
               <TextField
                 {...register("phoneNumber")}
-                label="Phone Number"
+                label={t("Phone Number")}
                 variant="standard"
               />
               <Typography color="error">
@@ -112,7 +114,7 @@ function Register() {
 
               <TextField
                 {...register("password")}
-                label="Password"
+                label={t("Password")}
                 type="password"
                 variant="standard"
               />
@@ -134,7 +136,7 @@ function Register() {
                   <span className="loader"></span>
                 ) : (
                   <>
-                    Create Account
+                    {t("Create Account")}
                     <ArrowRightAltIcon />
                   </>
                 )}
@@ -149,7 +151,7 @@ function Register() {
                   textDecoration: "none",
                 }}
               >
-                Already have an account? Sign In
+                {t("Already have an account? Sign In")}
               </Typography>
 
               <Typography>
@@ -194,7 +196,7 @@ function Register() {
                 fontWeight: "bold",
               }}
             >
-              Welcome!
+              {t("Welcome!")}
             </Typography>
 
             <Typography
@@ -204,9 +206,7 @@ function Register() {
                 textAlign: "center",
               }}
             >
-              Create your account to explore exclusive collections,
-              personalized recommendations, and a premium shopping
-              experience.
+             {t("Create your account to explore exclusive collections,personalized recommendations, and a premium shopping experience.")}
             </Typography>
 
           </Grid>

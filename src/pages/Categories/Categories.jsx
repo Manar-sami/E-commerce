@@ -6,9 +6,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Container } from '@mui/material';
 import SubscribeSection from './SubscribeSection';
+import { useTranslation } from 'react-i18next';
 
 function Categories() {
-
+  
+   const{t}=useTranslation();
    const{data,isLoading,isError}=useGetcategorise();
  
    if(isLoading){
@@ -76,7 +78,7 @@ function Categories() {
           variant="body2"
           sx={{ color: "#6B7280", mt: 1 }}
         >
-          Browse products in this category
+          {t("Browse products in this category")}
         </Typography>
       </Box>
     </Grid>

@@ -4,12 +4,16 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import useClearcart from "../../Hook/Clearcart";
-import { Container, Grid } from "@mui/material";
+import { CircularProgress, Container, Grid } from "@mui/material";
 import Checkout_section from "./Checkout_section";
 import Getcart from "./Getcart";
+import { useTranslation } from "react-i18next";
 
 
 function Cart() { 
+
+  const{t}=useTranslation();
+
   // هان استدعينا ال hook الخاص يلي بجيب المنتجات الموجودة في السلة
   const{data,isLoading,isError,error}=useGetitemformcart();
   console.log(data)
@@ -24,16 +28,18 @@ function Cart() {
 
 
  
+  if(isLoading) return <CircularProgress></CircularProgress>
+  if(isError)  return <Typography>error</Typography>
 
  return (
 
   <Box sx={{py:10}}>
     <Container>
       <Typography component="h1" sx={{fontSize:{xs:"24px",md:"48px"},fontWeight:"bold",color:"#000666"}}>
-       Your Shopping Bag
+       {t("Your Shopping Bag")}
       </Typography>
       <Typography sx={{color:"#5E5E5E",fontSize:"16px"}}>
-        {data.length}  Items ready for delivery
+        {data?.length}  {t("Items ready for delivery")}
       </Typography>
 
       <Grid container spacing={4}>
@@ -41,8 +47,8 @@ function Cart() {
         
         <Getcart></Getcart>
 
-        {data.length==0?"":<Button  onClick={()=>clear()} sx={{fontSize:"16px",display:"flex",justifyContent:"center",alignItems:"center",width:"100%",color:"#000666"}}>
-           Clear Cart
+        {data.length===0?"":<Button  onClick={()=>clear()} sx={{fontSize:"16px",display:"flex",justifyContent:"center",alignItems:"center",width:"100%",color:"#000666"}}>
+           {t("Clear Cart")}
         </Button>}
       </Grid>
       <Grid size={{xs:12,md:4}} sx={{mt:5}}>

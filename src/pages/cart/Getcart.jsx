@@ -10,7 +10,10 @@ import useRemovitemcart from "../../Hook/Removitemcart";
 import useUpdateQuantity from "../../Hook/UpdateQuantity";
 import { CircularProgress } from "@mui/material";
 import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
 function Getcart() {
+
+  const{t}=useTranslation();
 
     // هان استدعينا ال hook الخاص يلي بجيب المنتجات الموجودة في السلة
   const{data,isLoading,isError,error}=useGetitemformcart();
@@ -61,7 +64,7 @@ function Getcart() {
                 </Typography>
               </Box>
               <Typography sx={{color:"#5E5E5E",fontSize:"12px"}}>
-                Matte Black / 5.5L Capacity
+                {t("Matte Black / 5.5L Capacity")}
               </Typography>
 
               <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
@@ -86,7 +89,7 @@ function Getcart() {
 
                <Box sx={{color:"#BA1A1A"}}>
                 
-                <Button sx={{color:"#BA1A1A"}} onClick={()=>removecart(cart.productId)}> <DeleteIcon/>Remove</Button>
+                <Button sx={{color:"#BA1A1A"}} onClick={()=>removecart(cart.productId)}> <DeleteIcon/>{t("Remove")}</Button>
                </Box>
               </Box>
             </Box>

@@ -5,9 +5,11 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import LogoutIcon from '@mui/icons-material/Logout';
 import useAuthStore from "../../store/UseAuthStore";
+import { useTranslation } from "react-i18next";
 function Sidebar() {
  const[profile,setprofile]=useState("");
   const logout = useAuthStore((state) => state.logout);
+  const{t}=useTranslation();
   return (
     <Box >
         <Container>
@@ -21,7 +23,7 @@ function Sidebar() {
              fontSize:"14px",display:"flex",gap:2,alignItems:"center",
                 
              }}>
-                <PermIdentityIcon/>Account Settings
+                <PermIdentityIcon/>{t("Account Settings")}
             </Button>
             </ListItem>
 
@@ -30,7 +32,7 @@ function Sidebar() {
                 color:profile==="order"?"white":"#454652",
                 bgcolor:profile==="order"?"#1A237E":"white",
                 fontSize:"14px",display:"flex",gap:2,alignItems:"center"}}>
-                <ListAltIcon/>Order History
+                <ListAltIcon/>{t("Order History")}
             </Button>
             </ListItem>
 
@@ -39,7 +41,7 @@ function Sidebar() {
                 color:"#BA1A1A",
                 
                 fontSize:"14px",display:"flex",gap:2,alignItems:"center"}}>
-                <LogoutIcon />Log Out
+                <LogoutIcon />{t("Log Out")}
             </Button>
             </ListItem>
             </List>
