@@ -16,7 +16,7 @@ import Checkout from "./src/pages/Checkout/Checkout";
 import Profilelayout from "./src/pages/profile/Profilelayout";
 import Account from "./src/pages/profile/Account"
 import Order from "./src/pages/profile/Order";
-import Aboutpage from "./src/pages/about/aboutpage";
+import Aboutpage from "./src/pages/about/Aboutpage";
 import Shoppage from "./src/pages/Shop/Shoppage";
 
 const router = createBrowserRouter([
