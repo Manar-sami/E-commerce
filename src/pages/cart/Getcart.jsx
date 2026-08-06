@@ -67,7 +67,7 @@ function Getcart() {
                 {t("Matte Black / 5.5L Capacity")}
               </Typography>
 
-              <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+              <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap"}}>
                  <Box sx={{display: "flex",alignItems:"center",justifyContent:"end",border:"1px solid #C6C5D4",borderRadius:"8px"}}>
                  {cart.count<=1?<>
                   <IconButton sx={{opacity:0}} >

@@ -275,6 +275,22 @@ function Header() {
                 >
                   {t("About")}
                 </ListItem>
+                 <ListItem
+                  component={Link}
+                  to="/shop"
+                  sx={{
+                    color: "#1B1C1C",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    transition: "0.3s",
+                    "&:hover": {
+                      color: "#000666",
+                      textDecoration: "underline",
+                    },
+                  }}
+                >
+                  {t("Shop")}
+                </ListItem>
 
                   {Token ?<>
                   <MenuItem>

@@ -12,11 +12,11 @@ function Experience() {
         {t("Experience Excellence")}
       </Typography>
        <Box>
-         <Button onClick={() => navigate("/Categories")} sx={{ml:2,px:4,py:2,borderRadius:"12px",backgroundColor:"#1A237E",color:"#fff","&:hover":{backgroundColor:"#000666"}}}>
+         <Button onClick={() => navigate("/Categories")} sx={{ml:2,px:4,py:2,borderRadius:"12px",mt:1,backgroundColor:"#1A237E",color:"#fff","&:hover":{backgroundColor:"#000666"}}}>
         {t("EXPLORE COLLECTIONS")}
          </Button>
 
-         <Button sx={{ml:2,px:4,py:2,borderRadius:"12px",backgroundColor:"#fff",color:"#1A237E",border:"1px solid #1A237E","&:hover":{backgroundColor:"#000666",color:"#fff"}}}>
+         <Button sx={{ml:2,px:4,py:2,borderRadius:"12px",backgroundColor:"#fff",color:"#1A237E",border:"1px solid #1A237E",mt:1,"&:hover":{backgroundColor:"#000666",color:"#fff"}}}>
         {t("VISIT A SHOWROOM")}
          </Button>
         </Box>

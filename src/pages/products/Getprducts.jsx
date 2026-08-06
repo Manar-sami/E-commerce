@@ -36,8 +36,8 @@ function Getprducts() {
   <Box sx={{py:10}}>
    <Container>
     
-     <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-        <Box sx={{display:"flex",alignItems:"center",gap:2}}>
+     <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap"}}>
+        <Box sx={{display:"flex",alignItems:"center",gap:2,flexWrap:"wrap"}}>
         <Typography component="h3" sx={{
             fontSize:"24px",
             fontWeight:"bold",
