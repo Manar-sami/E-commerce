@@ -1,23 +1,30 @@
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Button from "@mui/material/Button";
 import useForgetPassword from "./../../Hook/ForgetPassword"
 import { useForm } from "react-hook-form";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import { CircularProgress } from "@mui/material";
+import { useState } from "react";
+import {Schemaforget} from "./Schemaforget"
+import { yupResolver } from "@hookform/resolvers/yup";
 
 
 function Forgetpassword() {
   
-    const {mutate:forget}=useForgetPassword();
+    const {mutate:forget,isPending}=useForgetPassword();
+    const [error, setError] = useState("");
      const navigate=useNavigate();
-    
     
  const {
      register,
      handleSubmit,
-   } = useForm({});
+     formState: { errors}
+   } = useForm({
+    resolver: yupResolver(Schemaforget),
+   });
 
 
    const forgetpassword=(data)=>{
@@ -26,34 +33,49 @@ function Forgetpassword() {
     forget(data, {
         onSuccess:()=>{
       navigate("/ResetPassword");
+    },
+    onError:(error)=>{
+      setError(error.response.data.message)
+     
+     console.log(error.response.data.message)
     }
     })
    }
 
   return (
-    <Container maxWidth="sm">
+    <Container>
       <Box
         sx={{
           mt: 10,
           p: 5,
-          borderRadius: 3,
+          borderRadius: "12px",
           boxShadow: 3,
-          backgroundColor: "#fff",
+          border:"1px solid #FFFFFF10",
+          backgroundColor: "#0F0F0F",
+          textAlign:'center',
+          maxWidth:"40%",
+          mx:"auto",
         }}
       >
         <Typography
           variant="h4"
           sx={{
             fontWeight: "bold",
+            color:"#F2CA50",
+            fontSize:"64px",
             mb: 2,
           }}
         >
-          Forgot Password?
+          KaShop
+        </Typography>
+
+        <Typography sx={{fontSize:'32px',color:"#E5E2E1"}}>
+          Forgot Your Password?
         </Typography>
 
         <Typography
           sx={{
-            color: "#767683",
+            color: "#D0C5AF",
             mb: 4,
           }}
         >
@@ -69,28 +91,60 @@ function Forgetpassword() {
             gap: 3,
           }}
         >
-          <TextField
-          {...register("email")}
-            label="Email Address"
-            type="email"
-            variant="standard"
-          />
+        
+          
+
+          <Box component="input" placeholder="Email Address" {...register("email")}
+          sx={{
+            px:1,
+            py:2,
+          }}
+          >
+
+          </Box>
+
 
           <Button
           type="submit"
             variant="contained"
+            disabled={isPending}
             sx={{
               mt: 2,
-              py: 2,
-              borderRadius: "50px",
-              background: "#000666",
+              py: "12px",
+              borderRadius: "4px",
+              background: "#D4AF37",
+              fontSize:"16px",
+              fontWeight:"600",
               "&:hover": {
-                background: "#0014b3",
+                background: "#F2CA50",
               },
             }}
           >
-            Send Code
+            {isPending?<CircularProgress></CircularProgress>:"Send Code"}
           </Button>
+        </Box>
+
+         {errors.email ? (
+                  <Box sx={{color:"red",mt:2 }}>{errors.email.message}</Box>
+                ) : (
+                  ""
+                )}
+
+        {error && (
+  <Typography sx={{ color: "red", mt: 1 }}>
+    {error}
+  </Typography>
+)}
+
+        <Box component={Link} to="/login" sx={{
+          color:"#D0C5AF",
+          textDecoration:'none',
+          display:"flex",
+          justifyContent:'center',
+          alignItems:'center',
+          py:5
+        }}>
+       <ArrowBackIcon /> BACK TO LOGIN
         </Box>
       </Box>
     </Container>
