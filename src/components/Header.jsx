@@ -55,7 +55,7 @@ function Header() {
   };
   return (
     <>
-      <Box sx={{ width: "100%",backgroundColor:"#ffffff4f",boxShadow:2 }}>
+      <Box sx={{ width: "100%",background:"background.default",boxShadow:2 }}>
         <Container maxWidth="lg">
           <Box sx={{ py: "20px" }}>
             <Box
@@ -73,7 +73,7 @@ function Header() {
                   sx={{
                     fontSize: { xs: "20px", md: "24px", lg: "32px" },
                     fontWeight: "bold",
-                    color: "black",
+                    color: "#F2CA50",
                     textDecoration: "none",
                   }}
                 >
@@ -86,12 +86,13 @@ function Header() {
                   component={Link}
                   to="/"
                   sx={{
-                    color: "#1B1C1C",
+                    color: "headercolor",
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
+                    textTransform: "uppercase",
                     "&:hover": {
-                      color: "#000666",
+                      color: "#F2CA50",
                       textDecoration: "underline",
                     },
                   }}
@@ -103,12 +104,13 @@ function Header() {
                   component={Link}
                   to="/Products"
                   sx={{
-                    color: "#1B1C1C",
+                    color: "headercolor",
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
+                    textTransform: "uppercase",
                     "&:hover": {
-                      color: "#000666",
+                      color: "#F2CA50",
                       textDecoration: "underline",
                     },
                   }}
@@ -120,12 +122,13 @@ function Header() {
                   component={Link}
                   to="/Categories"
                   sx={{
-                    color: "#1B1C1C",
+                    color: "headercolor",
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
+                    textTransform: "uppercase",
                     "&:hover": {
-                      color: "#000666",
+                      color: "#F2CA50",
                       textDecoration: "underline",
                     },
                   }}
@@ -137,12 +140,13 @@ function Header() {
                   component={Link}
                   to="/shop"
                   sx={{
-                    color: "#1B1C1C",
+                    color: "headercolor",
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
+                    textTransform: "uppercase",
                     "&:hover": {
-                      color: "#000666",
+                      color: "#F2CA50",
                       textDecoration: "underline",
                     },
                   }}
@@ -153,12 +157,13 @@ function Header() {
                   component={Link}
                   to="/about"
                   sx={{
-                    color: "#1B1C1C",
+                    color: "headercolor",
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
+                    textTransform: "uppercase",
                     "&:hover": {
-                      color: "#000666",
+                      color: "#F2CA50",
                       textDecoration: "underline",
                     },
                   }}
@@ -351,17 +356,7 @@ function Header() {
                   </MenuItem>
                    <MenuItem>
                     {/* logout */}
-                    <Box
-                      onClick={hundellogout}
-                      sx={{
-                        color: "#1B1C1C",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                      }}
-                    >
-                      <LogoutIcon />
-                      Logout
-                    </Box>
+                   
                   </MenuItem>
                   </> :
                   <>
@@ -397,7 +392,7 @@ function Header() {
                         component={Link}
                         to="/Login"
                         sx={{
-                          color: "#1B1C1C",
+                          color: "#E9C349",
                           fontSize: "18px",
                           fontWeight: "600",
                         }}
@@ -432,12 +427,12 @@ function Header() {
                       <IconButton
                         onClick={changeLanguage}
                         sx={{
-                          color: "#1B1C1C",
+                          color: "#E9C349",
                           fontSize: "18px",
                           fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
-                            color: "#000666",
+                            color: "#d9a807",
                           },
                         }}
                       >
@@ -447,12 +442,12 @@ function Header() {
                       <IconButton
                       onClick={toggleMode}
                         sx={{
-                          color: "#1B1C1C",
+                          color: "#E9C349",
                           fontSize: "18px",
                           fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
-                            color: "#000666",
+                            color: "#d9a807",
                           },
                         }}
                       >
@@ -463,12 +458,12 @@ function Header() {
                         component={Link}
                         to="/Cart"
                         sx={{
-                          color: "#1B1C1C",
+                          color: "#E9C349",
                           fontSize: "18px",
                           fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
-                            color: "#000666",
+                            color: "#d9a807",
                           },
                         }}
                       >
@@ -478,33 +473,19 @@ function Header() {
                         component={Link}
                         to="/Profile"
                         sx={{
-                          color: "#1B1C1C",
+                          color: "#E9C349",
                           fontSize: "18px",
                           fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
-                            color: "#000666",
+                            color: "#d9a807",
                           },
                         }}
                       >
                         <AccountCircleIcon />
                       </Box>
 
-                      <Box
-                        onClick={hundellogout}
-                        sx={{
-                          color: "#1B1C1C",
-                          fontSize: "18px",
-                          fontWeight: "600",
-                          transition: "0.4s",
-                          "&:hover": {
-                            color: "#000666",
-                          },
-                        }}
-                      >
-                        <LogoutIcon />
-                        {t("Logout")}
-                      </Box>
+                    
                     </Box>
                   </>
                 ) : (
@@ -520,7 +501,7 @@ function Header() {
                       <IconButton
                         onClick={changeLanguage}
                         sx={{
-                          color: "#1B1C1C",
+                          color: "#E9C349",
                           fontSize: "18px",
                           fontWeight: "600",
                         }}
@@ -531,7 +512,7 @@ function Header() {
                       <IconButton
                        onClick={toggleMode}
                         sx={{
-                          color: "#1B1C1C",
+                          color: "#E9C349",
                           fontSize: "18px",
                           fontWeight: "600",
                         }}
@@ -543,12 +524,12 @@ function Header() {
                         component={Link}
                         to="/Login"
                         sx={{
-                          color: "#1B1C1C",
+                          color: "#E9C349",
                           fontSize: "18px",
                           fontWeight: "600",
                         }}
                       >
-                        <LoginIcon />
+                        
                         Login
                       </Box>
                     </Box>

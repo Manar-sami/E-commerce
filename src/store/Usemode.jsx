@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 
 const UseThemmode=create((set)=>({
-    mode:"light",
+    mode:"dark",
     togglemode:()=>{
         
         set((state)=>({

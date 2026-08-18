@@ -14,7 +14,7 @@ function Home() {
      <Product_section></Product_section>
      <Categories_section></Categories_section>
      <Seasonal_section></Seasonal_section>
-     <COMMUNITY></COMMUNITY>
+     {/* <COMMUNITY></COMMUNITY> */}
      <Join></Join>
     </>
   )

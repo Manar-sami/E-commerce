@@ -1,103 +1,108 @@
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import TextField from '@mui/material/TextField';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { useTranslation } from 'react-i18next';
+import { Box, Typography, TextField, Button, Container, Stack } from '@mui/material';
+
+
 
 function Join() {
-  const { t } = useTranslation();
+  
 
   return (
-    <Box sx={{ py: 10, backgroundColor: '#0B1C30' }}>
+   <Box
+      sx={{
+        bgcolor: '#0d0d0d',
+        color: '#ffffff',
+        py: 10,
+        px: 2,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <Container maxWidth="md">
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            textAlign: 'center',
-          }}
-        >
-          
+        <Stack spacing={3} sx={{justifyContent:"center",alignItems:"center"}}>
+      
           <Typography
+            variant="h4"
+            component="h2"
             sx={{
-              color: 'white',
-              fontSize: '32px',
-              fontWeight: '700',
-              mb: 1.5,
+              fontWeight: 400,
+              letterSpacing: 1,
+            
             }}
           >
-            {t('Join the Collective.')}
+            Join the Inner Circle
+          </Typography>
+
+          
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#a1a1aa',
+              fontSize: '0.95rem',
+              fontWeight: 300,
+              mb: 2,
+            }}
+          >
+            Gain early access to limited releases and private viewing events.
           </Typography>
 
          
-          <Typography
+          <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            spacing={0}
             sx={{
-              color: '#ffffff8f',
-              fontSize: '15px',
-              maxWidth: '480px',
-              lineHeight: 1.6,
-              mb: 4,
+              width: '100%',
+              maxWidth: 550,
             }}
           >
-            {t(
-              'Subscribe to receive early access to new arrivals, private sales, and curated lifestyle editorials.'
-            )}
-          </Typography>
-
-          
-          <Box sx={{ width: '100%', maxWidth: '420px', mb: 2 }}>
             <TextField
-              fullWidth
+              placeholder="Email Address"
               variant="outlined"
-              placeholder={t('Email Address')}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      edge="end"
-                      sx={{
-                        color: 'rgba(255, 255, 255, 0.7)',
-                        '&:hover': { color: '#ffffff' },
-                      }}
-                    >
-                      <ArrowForwardIcon />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
+              fullWidth
               sx={{
+                bgcolor: '#ffffff',
+                borderRadius: { xs: 1, sm: '4px 0 0 4px' },
                 '& .MuiOutlinedInput-root': {
-                  color: 'white',
-                  borderRadius: '0px',
                   height: '48px',
+                  borderRadius: { xs: 1, sm: '4px 0 0 4px' },
                   '& fieldset': {
-                    borderColor: 'rgba(255, 255, 255, 0.2)',
+                    borderColor: 'transparent',
                   },
-                
+                  '&:hover fieldset': {
+                    borderColor: 'transparent',
+                  },
                   '&.Mui-focused fieldset': {
-                    
-                    borderWidth: '1px',
+                    borderColor: 'transparent',
                   },
                 },
-                '& .MuiInputBase-input::placeholder': {
-                  color: 'rgba(255, 255, 255, 0.4)',
-                  opacity: 1,
-                  fontSize: '14px',
+                '& .MuiInputBase-input': {
+                  color: '#000000',
+                  fontSize: '0.9rem',
                 },
               }}
             />
-          </Box>
-
-          
-          <Typography sx={{ color: 'rgba(255, 255, 255, 0.4)', fontSize: '12px', }}>
-            {t('By subscribing, you agree to our Privacy Policy and Terms of Service.')}
-          </Typography>
-        </Box>
+            <Button
+              variant="contained"
+              disableElevation
+              sx={{
+                bgcolor: '#d4af37',
+                color: '#000000',
+                fontWeight: 700,
+                px: 4,
+                height: '48px',
+                borderRadius: { xs: 1, sm: '0 4px 4px 0' },
+                textTransform: 'uppercase',
+                fontSize: '0.85rem',
+                letterSpacing: 1,
+                whiteSpace: 'nowrap',
+                '&:hover': {
+                  bgcolor: '#c5a028',
+                },
+              }}
+            >
+              Subscribe
+            </Button>
+          </Stack>
+        </Stack>
       </Container>
     </Box>
   );
