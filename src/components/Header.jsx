@@ -170,6 +170,23 @@ function Header() {
                 >
                   {t("About")}
                 </ListItem>
+                <ListItem
+                  component={Link}
+                  to="/contact"
+                  sx={{
+                    color: "headercolor",
+                    fontSize: "16px",
+                    fontWeight: "600",
+                    transition: "0.3s",
+                    textTransform: "uppercase",
+                    "&:hover": {
+                      color: "#F2CA50",
+                      textDecoration: "underline",
+                    },
+                  }}
+                >
+                  {t("Contact")}
+                </ListItem>
               </List>
               {/* التصميم الخاص بال mune */}
 

@@ -53,7 +53,7 @@ function Forgetpassword() {
           border:"1px solid #FFFFFF10",
           backgroundColor: "#0F0F0F",
           textAlign:'center',
-          maxWidth:"40%",
+          maxWidth:{xs:"90%",md:"50%",lg:"40%"},
           mx:"auto",
         }}
       >
@@ -62,7 +62,7 @@ function Forgetpassword() {
           sx={{
             fontWeight: "bold",
             color:"#F2CA50",
-            fontSize:"64px",
+            fontSize:{xs:"38px",md:"48px",lg:"64px"},
             mb: 2,
           }}
         >
