@@ -25,11 +25,11 @@ function Forgetpassword() {
    } = useForm({
     resolver: yupResolver(Schemaforget),
    });
-
+    
 
    const forgetpassword=(data)=>{
     console.log(data);
-
+       localStorage.setItem("userEmail", data.email);
     forget(data, {
         onSuccess:()=>{
       navigate("/ResetPassword");

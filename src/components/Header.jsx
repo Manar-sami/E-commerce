@@ -100,41 +100,9 @@ function Header() {
                   {t("Home")}
                 </ListItem>
 
-                <ListItem
-                  component={Link}
-                  to="/Products"
-                  sx={{
-                    color: "headercolor",
-                    fontSize: "16px",
-                    fontWeight: "600",
-                    transition: "0.3s",
-                    textTransform: "uppercase",
-                    "&:hover": {
-                      color: "#F2CA50",
-                      textDecoration: "underline",
-                    },
-                  }}
-                >
-                  {t("Products")}
-                </ListItem>
+              
 
-                <ListItem
-                  component={Link}
-                  to="/Categories"
-                  sx={{
-                    color: "headercolor",
-                    fontSize: "16px",
-                    fontWeight: "600",
-                    transition: "0.3s",
-                    textTransform: "uppercase",
-                    "&:hover": {
-                      color: "#F2CA50",
-                      textDecoration: "underline",
-                    },
-                  }}
-                >
-                  {t("Categories")}
-                </ListItem>
+               
 
                 <ListItem
                   component={Link}

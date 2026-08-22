@@ -88,7 +88,7 @@ function Footer() {
                  {t("Customer Service")}
                 </ListItem>
                   
-                <ListItem component={Link} sx={{px:"0px",fontSize:"14px",fontWeight:"600",color:'headercolor',
+                <ListItem component={Link} to="/contact" sx={{px:"0px",fontSize:"14px",fontWeight:"600",color:'headercolor',
                 transition:"color 0.3s ease",
                   "&:hover":{
                     color:"#F2CA50",

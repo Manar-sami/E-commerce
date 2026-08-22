@@ -18,8 +18,8 @@ function Sidebar() {
             <ListItem component={NavLink}  to=""   
             >
              <Button onClick={()=>setprofile("Account")} sx={{
-             color:profile==="Account"?"white":"#454652",
-             bgcolor:profile==="Account"?"#1A237E":"white",
+             color:profile==="Account"?"#F2CA50":"headercolor",
+            
              fontSize:"14px",display:"flex",gap:2,alignItems:"center",
                 
              }}>
@@ -29,8 +29,8 @@ function Sidebar() {
 
             <ListItem component={NavLink}  to="order">
              <Button onClick={()=>setprofile("order")} sx={{
-                color:profile==="order"?"white":"#454652",
-                bgcolor:profile==="order"?"#1A237E":"white",
+                color:profile==="order"?"#F2CA50":"headercolor",
+                
                 fontSize:"14px",display:"flex",gap:2,alignItems:"center"}}>
                 <ListAltIcon/>{t("Order History")}
             </Button>

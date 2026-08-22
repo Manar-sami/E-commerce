@@ -47,14 +47,17 @@ function Getcart() {
    }
 
 
-      const handleRemove = (productId) => {
+      const handleRemove = (productId,productName) => {
   Swal.fire({
-    title: "Are you sure?",
-    text: "You won't be able to undo this!",
+    title: `Delete "${productName}"?`,
+    text: "Are you sure you want to remove this product from your cart?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonText: "Yes, remove it",
     cancelButtonText: "Cancel",
+    
+
+    
   }).then((result) => {
     if (result.isConfirmed) {
       removecart(productId);
@@ -117,7 +120,7 @@ function Getcart() {
 
                <Box sx={{color:"headercolor",display:"flex",alignItems:"center",gap:3}}>
                  
-                <Button sx={{color:"headercolor"}} onClick={()=>handleRemove(cart.productId)}> <DeleteIcon/>{t("Remove")}</Button>
+                <Button sx={{color:"headercolor"}} onClick={()=>handleRemove(cart.productId,cart.productName)}> <DeleteIcon/>{t("Remove")}</Button>
                
                </Box>
               </Box>

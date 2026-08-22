@@ -4,6 +4,7 @@ import useGetitemformcart from "../../Hook/Getitemformcart";
 import HttpsIcon from '@mui/icons-material/Https';
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Swal from "sweetalert2";
 
 function Checkout_section() {
  
@@ -23,6 +24,36 @@ function Checkout_section() {
       if(isError) return <Typography sx={{color:"red"}}>{error}</Typography>
 
       console.log(total);
+      const handleCheckout = async () => {
+  const result = await Swal.fire({
+    title: t("Choose Payment Method"),
+    text: t("Please select your payment method"),
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonText: t("Pay"),
+    cancelButtonText: t("Cancel"),
+    input: "radio",
+    inputOptions: {
+      card: t("Credit Card"),
+      paypal: t("PayPal"),
+      cash: t("Cash on Delivery"),
+    },
+    inputValidator: (value) => {
+      if (!value) {
+        return t("Please choose a payment method");
+      }
+    },
+  });
+
+  if (result.isConfirmed) {
+    await Swal.fire({
+      title: t("Payment Successful"),
+      text: `${t("Payment method")}: ${result.value}`,
+      icon: "success",
+      confirmButtonText: t("Done"),
+    });
+  }
+};
 
   return (
     <Box sx={{boxShadow:2,display:"flex",gap:4,flexDirection:"column",justifyContent:"center",alignItems:"center",py:"24px",px:"87px",borderRadius:"8px",border:"1px solid #F2CA5020"}}>

@@ -4,9 +4,11 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { useTranslation } from 'react-i18next';
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
   const { t } = useTranslation();
+  const navigate=useNavigate();
 
   return (
     <Box
@@ -118,6 +120,7 @@ function Hero() {
           >
             <Button
               component={motion.button}
+               onClick={()=>navigate("/shop")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               sx={{
@@ -139,6 +142,7 @@ function Hero() {
 
             <Button
               component={motion.button}
+               onClick={()=>navigate("/about")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               sx={{
