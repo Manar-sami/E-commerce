@@ -1,12 +1,13 @@
 import React from "react";
 import Heroshop from "./Heroshop";
-import Products from "./Categorise";
+import Categorise from "./Categorise";
 
 function Shoppage() {
   return (
     <>
-      <Heroshop></Heroshop>
-      <Products></Products>
+      {/* <Heroshop></Heroshop> */}
+      
+      <Categorise></Categorise>
     </>
   );
 }

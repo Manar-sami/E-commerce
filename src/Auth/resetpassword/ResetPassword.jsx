@@ -112,7 +112,11 @@ const email =localStorage.getItem("userEmail");
               "& .MuiInputLabel-root.Mui-focused": { color: "#F2CA50" },
               "& .MuiInput-underline:before": { borderBottomColor: "#D0C5AF" },
               "& .MuiInput-underline:after": { borderBottomColor: "#F2CA50" },
-              input: { color: "#E5E2E1" },
+              input: { color: "#E5E2E1", },
+              "& input:-webkit-autofill": {
+  WebkitBoxShadow: "0 0 0 1000px #0F0F0F inset",
+  WebkitTextFillColor: "#E5E2E1",
+},
             }}
           />
 

@@ -1,11 +1,19 @@
-import { Box, CircularProgress, Container, Typography,Grid } from "@mui/material";
+import {
+  Box,
+  CircularProgress,
+  Container,
+  Typography,
+  Grid,
+} from "@mui/material";
 import useGetcategorise from "../../Hook/Getcategorise";
 import { useTranslation } from "react-i18next";
 import TextField from "@mui/material/TextField";
-import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
-import {  useState } from "react";
-import Products from "./Products";
 
+import { useState } from "react";
+import Products from "./Products";
+import Checkbox from "@mui/material/Checkbox";
+import InterestsIcon from "@mui/icons-material/Interests";
+import Button from "@mui/material/Button";
 
 function Categorise() {
   const { data, isLoading, isError } = useGetcategorise();
@@ -15,77 +23,78 @@ function Categorise() {
 
   const { t } = useTranslation();
 
-  const[sort,setsort]=useState("price");
-  //  تنازلي 
-  const[asc,setasc]=useState(false);
-  console.log(asc)
-
-  const[min,setmin]=useState("");
-   const[max,setmax]=useState("");
-
-  
+  const [min, setmin] = useState("");
+  const [max, setmax] = useState("");
 
   if (isLoading) return <CircularProgress></CircularProgress>;
   if (isError) return <Typography>error </Typography>;
 
   return (
-   <Box sx={{ py: { xs: 4, md: 8 }}}>
+    <Box sx={{ py: { xs: 4, md: 8 } }}>
       <Container maxWidth="lg">
-        
-         
-          <Box
+        <Grid container spacing={{ xs: 2, md: 3 }}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 3,
+            }}
             sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 1.5,
-              mb: 3,
-              alignItems: "center",
+              bgcolor: "#201F1F70",
+              p: "24px",
+              borderRadius: "12px",
+              border: "1px solid #FFFFFF10",
             }}
           >
-            <Box
-              sx={{
-                bgcolor: "#000666",
-                color: "white",
-                py: "6px",
-                px: "20px",
-                borderRadius: "20px",
-                fontSize: "14px",
-                fontWeight: "bold",
-                cursor: "pointer",
-                transition: "0.2s",
-                "&:hover": { opacity: 0.9 },
-              }}
-            >
-              {t("All")}
-            </Box>
-
-            {data?.response?.data?.map((categorise) => (
-              <Box
-                key={categorise.id}
+            <Box>
+              <Typography
                 sx={{
-                  bgcolor: "#f0f0f0",
-                  color: "#555",
-                  py: "6px",
-                  px: "20px",
-                  borderRadius: "20px",
-                  fontSize: "14px",
-                  cursor: "pointer",
-                  transition: "0.2s",
-                  "&:hover": {
-                    bgcolor: "#000666",
-                    color: "white",
-                  },
+                  color: "#F2CA50",
+                  fontSize: "24px",
+                  fontWeight: "700",
                 }}
               >
-                {categorise.name}
-              </Box>
-            ))}
-          </Box>
+                Filters
+              </Typography>
+              <Typography
+                sx={{
+                  color: "headercolor",
+                  fontSize: "12px",
+                }}
+              >
+                Refine your selection
+              </Typography>
+            </Box>
 
-          
-          <Grid container spacing={2} alignItems="center">
-            {/* min Price */}
-            <Grid item xs={6} sm={3} md={2}>
+            {/* Categories */}
+
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 1,
+              }}
+            >
+              <Box sx={{ fontSize: "18px", color: "#E5E2E1", mt: 2 }}>
+                <InterestsIcon sx={{ fontSize: "18px", color: "#E5E2E1" }} />{" "}
+                Categories
+              </Box>
+
+              {data?.response?.data?.map((categorise) => (
+                <Box key={categorise.id} sx={{ color: "#D0C5AF" }}>
+                  <Checkbox
+                    sx={{
+                      color: "#d0c5af12",
+                      "&.Mui-checked": {
+                        color: "#F2CA50",
+                      },
+                    }}
+                  />
+                  {categorise.name}
+                </Box>
+              ))}
+            </Box>
+
+            <Box sx={{ display: "flex", gap: 2, mt: 3 }}>
               <TextField
                 fullWidth
                 size="small"
@@ -96,10 +105,9 @@ function Categorise() {
                 type="number"
                 variant="outlined"
               />
-            </Grid>
 
-            {/* max Price */}
-            <Grid item xs={6} sm={3} md={2}>
+              {/* max Price */}
+
               <TextField
                 fullWidth
                 size="small"
@@ -110,52 +118,38 @@ function Categorise() {
                 type="number"
                 variant="outlined"
               />
-            </Grid>
+            </Box>
 
-           
-            <Grid item xs={12} sm={3} md={4}>
-              <FormControl fullWidth size="small">
-                <InputLabel >{t("Sort Order")}</InputLabel>
-                <Select
-                  
-                  label={t("Sort Order")}
-                  value={asc ? "asc" : "desc"}
-                  onChange={(e) => setasc(e.target.value === "asc")}
-                >
-                  <MenuItem value="asc">{t("Ascending")}</MenuItem>
-                  <MenuItem value="desc">{t("Descending")}</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
-
-            {/* Sort By :*/}
-            <Grid item xs={12} sm={3} md={4}>
-              <FormControl fullWidth size="small">
-                <InputLabel >{t("SORT BY:")}</InputLabel>
-                <Select
-                  
-                  label={t("SORT BY:")}
-                  value={sort}
-                  onChange={(e) => setsort(e.target.value)}
-                >
-                  <MenuItem value="price">{t("Price")}</MenuItem>
-                  <MenuItem value="name">{t("Name")}</MenuItem>
-                  <MenuItem value="rate">{t("Rate")}</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
+            <Button
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+                my: 3,
+                color: "#E5E2E1",
+                fontSize: "14px",
+                border: "1px solid #E5E2E1",
+              }}
+              onClick={() => {
+                (setmin(""), setmax(""));
+              }}
+            >
+              Clear All Filters
+            </Button>
           </Grid>
-       
 
-        {/* Products Section */}
-        <Box sx={{ width: "100%" }}>
-          <Products
-            ascending={asc}
-            sortBy={sort}
-            minPrice={min}
-            maxPrice={max}
-          />
-        </Box>
+          <Grid
+            size={{
+              xs: 12,
+              md: 9,
+            }}
+          >
+            <Box sx={{ width: "100%" }}>
+              <Products minPrice={min} maxPrice={max} />
+            </Box>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );
