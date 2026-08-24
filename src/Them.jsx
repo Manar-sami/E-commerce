@@ -15,6 +15,7 @@ const UseThemmode =(mode)=>{
         footerbg:mode === "light" ? "white" : "#0d0d0d",
         card:mode === "light" ? "white" : "#0F0F0F40",
         contactbg:mode === "light" ? "#F8F6F0" : "#0E0E0E",
+        colorp:mode === "light" ? "#0E0E0E" : "#CFC4C5",
     }
  
 });

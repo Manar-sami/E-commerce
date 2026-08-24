@@ -102,7 +102,7 @@ function Cart() {
     </Typography>
 
     <Button
-      onClick={()=>(navigate("/products"))}
+      onClick={()=>(navigate("/shop"))}
       variant="contained"
       sx={{
         bgcolor: "#F2CA50",
