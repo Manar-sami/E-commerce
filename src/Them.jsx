@@ -16,6 +16,8 @@ const UseThemmode =(mode)=>{
         card:mode === "light" ? "white" : "#0F0F0F40",
         contactbg:mode === "light" ? "#F8F6F0" : "#0E0E0E",
         colorp:mode === "light" ? "#0E0E0E" : "#CFC4C5",
+        whitecolor:mode === "light" ? "black" : "#FFFFFF",
+        productp:mode === "light" ? "black" : "#D1D5DB",
     }
  
 });
