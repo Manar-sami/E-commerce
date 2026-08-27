@@ -323,7 +323,7 @@ function Review() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            backgroundColor: "black",
+            backgroundColor: "#131313",
             boxShadow: 5,
             borderRadius: 3,
             p: 4,

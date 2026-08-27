@@ -21,6 +21,10 @@ import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import Usemode from "../store/Usemode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import { Typography } from "@mui/material";
 
 function Header() {
   const Token = useAuthStore((state) => state.Token);
@@ -32,30 +36,21 @@ function Header() {
     i18n.changeLanguage(lang);
   };
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const [open, setOpen] = useState(false);
 
   console.log(data);
   const { t } = useTranslation();
 
   const navigate = useNavigate();
 
-     const mode = Usemode((state) => state.mode);
-     const toggleMode = Usemode((state) => state.togglemode);
+  const mode = Usemode((state) => state.mode);
+  const toggleMode = Usemode((state) => state.togglemode);
 
-  const hundellogout = () => {
-    logout();
-    navigate("/");
-  };
   return (
     <>
-      <Box sx={{ width: "100%",background:"background.default",boxShadow:2 }}>
+      <Box
+        sx={{ width: "100%", background: "background.default", boxShadow: 2 }}
+      >
         <Container maxWidth="lg">
           <Box sx={{ py: "20px" }}>
             <Box
@@ -81,7 +76,12 @@ function Header() {
                 </Box>
               </Box>
 
-              <List sx={{ display: { xs: "none", lg: "flex" },justifyContent:"space-between" }}>
+              <List
+                sx={{
+                  display: { xs: "none", lg: "flex" },
+                  justifyContent: "space-between",
+                }}
+              >
                 <ListItem
                   component={Link}
                   to="/"
@@ -99,10 +99,6 @@ function Header() {
                 >
                   {t("Home")}
                 </ListItem>
-
-              
-
-               
 
                 <ListItem
                   component={Link}
@@ -156,249 +152,246 @@ function Header() {
                   {t("Contact")}
                 </ListItem>
               </List>
-              {/* التصميم الخاص بال mune */}
 
-              <Box sx={{ display: { xs: "flex", md: "none" } }}>
-                <Button
-                  id="demo-positioned-button"
-                  aria-controls={open ? "demo-positioned-menu" : undefined}
-                  aria-haspopup="true"
-                  aria-expanded={open}
-                  onClick={handleClick}
-                  sx={{ color: "#1B1C1C" }}
-                >
-                  <MenuIcon />
-                </Button>
-                <Menu
-                  id="demo-positioned-menu"
-                  aria-labelledby="demo-positioned-button"
-                  anchorEl={anchorEl}
-                  open={open}
-                  onClose={handleClose}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "left",
-                  }}
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "left",
-                  }}
-                >
-                  <ListItem
-                    component={Link}
-                    to="/"
-                    sx={{
-                      color: "#1B1C1C",
-                      fontSize: "16px",
-                      fontWeight: "600",
-                      transition: "0.3s",
-                      "&:hover": {
-                        color: "#000666",
-                        textDecoration: "underline",
-                      },
+              {/* الخاص بال menu  */}
+
+              <IconButton
+                onClick={() => setOpen(true)}
+                sx={{ display: { xs: "block", md: "none" },color:"menu" }}
+              >
+                <MenuIcon />
+              </IconButton>
+
+              <AnimatePresence>
+                {open && (
+                  <motion.div
+                    initial={{ x: "100%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x: "100%" }}
+                    transition={{ duration: 0.3 }}
+                    style={{
+                      position: "fixed",
+                      top: 0,
+                      right: 0,
+                      width: "300px",
+                      height: "100vh",
+                      zIndex: 9999,
                     }}
                   >
-                    {t("Home")}
-                  </ListItem>
-                  <ListItem
-                    component={Link}
-                    to="/Products"
-                    sx={{
-                      color: "#1B1C1C",
-                      fontSize: "16px",
-                      fontWeight: "600",
-                      transition: "0.3s",
-                      "&:hover": {
-                        color: "#000666",
-                        textDecoration: "underline",
-                      },
-                    }}
-                  >
-                    {t("Products")}
-                  </ListItem>
-
-                  <ListItem
-                    component={Link}
-                    to="/Categories"
-                    sx={{
-                      color: "#1B1C1C",
-                      fontSize: "16px",
-                      fontWeight: "600",
-                      transition: "0.3s",
-                      "&:hover": {
-                        color: "#000666",
-                        textDecoration: "underline",
-                      },
-                    }}
-                  >
-                    {t("Categories")}
-                  </ListItem>
-
-                   <ListItem
-                  component={Link}
-                  to="/shop"
-                  sx={{
-                    color: "#1B1C1C",
-                    fontSize: "16px",
-                    fontWeight: "600",
-                    transition: "0.3s",
-                    "&:hover": {
-                      color: "#000666",
-                      textDecoration: "underline",
-                    },
-                  }}
-                ></ListItem>
-
-                  <ListItem
-                  component={Link}
-                  to="/about"
-                  sx={{
-                    color: "#1B1C1C",
-                    fontSize: "16px",
-                    fontWeight: "600",
-                    transition: "0.3s",
-                    "&:hover": {
-                      color: "#000666",
-                      textDecoration: "underline",
-                    },
-                  }}
-                >
-                  {t("About")}
-                </ListItem>
-                 <ListItem
-                  component={Link}
-                  to="/shop"
-                  sx={{
-                    color: "#1B1C1C",
-                    fontSize: "16px",
-                    fontWeight: "600",
-                    transition: "0.3s",
-                    "&:hover": {
-                      color: "#000666",
-                      textDecoration: "underline",
-                    },
-                  }}
-                >
-                  {t("Shop")}
-                </ListItem>
-
-                  {Token ?<>
-                  <MenuItem>
-                    <IconButton
-                      onClick={changeLanguage}
-                      sx={{
-                        color: "#1B1C1C",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {i18n.language === "ar" ? "EN" : "AR"}
-                    </IconButton>
-                  </MenuItem>
-
-                     <MenuItem>
-                    {/* darkmode */}
-
-                    <IconButton
-                      onClick={toggleMode}
-                      sx={{
-                        color: "#1B1C1C",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
-                    </IconButton>
-                  </MenuItem>
-                  <MenuItem>
-                    {/* profil */}
                     <Box
-                     
-                      component={Link}
-                      to="/Profile"
                       sx={{
-                        color: "#1B1C1C",
-                        fontSize: "18px",
-                        fontWeight: "600",
+                        height: "100%",
+                        backgroundColor: "bgmenu",
+                        boxShadow: 3,
+                        p: 3,
                       }}
                     >
-                      <AccountCircleIcon />
-                    </Box>
-                  </MenuItem>
+                      <IconButton
+                        onClick={() => setOpen(false)}
+                        sx={{ display: "flex", justifyContent: "start" }}
+                      >
+                        <CloseIcon sx={{ color: "headercolor" }} />
+                      </IconButton>
 
-                   <MenuItem>
-                    <Box
-                      component={Link}
-                      to="/Cart"
-                      sx={{
-                        color: "#1B1C1C",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                      }}
-                    >
-                      <ShoppingCartIcon />
-                    </Box>
-                  </MenuItem>
-                   <MenuItem>
-                    {/* logout */}
-                   
-                  </MenuItem>
-                  </> :
-                  <>
-
-                    <MenuItem>
-                    {/* darkmode */}
-
-                    <IconButton
-                      onClick={toggleMode}
-                      sx={{
-                        color: "#1B1C1C",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
-                    </IconButton>
-                  </MenuItem>
-                  <MenuItem>
-                    <IconButton
-                      onClick={changeLanguage}
-                      sx={{
-                        color: "#1B1C1C",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                      }}
-                    >
-                      {i18n.language === "ar" ? "EN" : "AR"}
-                    </IconButton>
-                  </MenuItem>
-                  
-                  <Box
-                        component={Link}
-                        to="/Login"
+                      <Box
                         sx={{
-                          color: "#E9C349",
-                          fontSize: "18px",
-                          fontWeight: "600",
+                          display: "flex",
+                          justifyContent: "end",
+                          py: 4,
+                          flexDirection: "column",
+                          gap: 3,
+                          alignItems: "end",
+                          px: 5,
+                          borderBottom: "1px solid #F2CA5030",
                         }}
                       >
-                        <LoginIcon />
-                        Login
-                  </Box>
-                  </>
-                  }
+                        <Typography
+                          sx={{ fontSize: "22px", color: "headercolor" }}
+                        >
+                          Explore
+                        </Typography>
+                        <Box
+                          component={Link}
+                          to="/"
+                          sx={{
+                            textDecoration: "none",
+                            color: "menu",
+                            transition: "0.3s",
+                            "&:hover": {
+                              color: "#F2CA50",
+                              textDecoration: "underline",
+                              textUnderlineOffset: "5px",
+                            },
+                          }}
+                        >
+                          Home
+                        </Box>
+                        <Box
+                          component={Link}
+                          to="/shop"
+                          sx={{
+                            textDecoration: "none",
+                            color: "menu",
+                            transition: "0.3s",
+                            "&:hover": {
+                              color: "#F2CA50",
+                              textDecoration: "underline",
+                              textUnderlineOffset: "5px",
+                            },
+                          }}
+                        >
+                          Shop
+                        </Box>
+                        <Box
+                          component={Link}
+                          to="/about"
+                          sx={{
+                            textDecoration: "none",
+                            color: "menu",
+                            transition: "0.3s",
+                            "&:hover": {
+                              color: "#F2CA50",
+                              textDecoration: "underline",
+                              textUnderlineOffset: "5px",
+                            },
+                          }}
+                        >
+                          About
+                        </Box>
 
-                  
+                        <Box
+                          component={Link}
+                          to="/contact"
+                          sx={{
+                            textDecoration: "none",
+                            color: "menu",
+                            transition: "0.3s",
+                            "&:hover": {
+                              color: "#F2CA50",
+                              textDecoration: "underline",
+                              textUnderlineOffset: "5px",
+                            },
+                          }}
+                        >
+                          Contact
+                        </Box>
+                      </Box>
 
-                  
-               
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "end",
+                          py: 4,
+                          flexDirection: "column",
+                          gap: 3,
+                          alignItems: "end",
+                          px: 5,
+                          borderBottom: "1px solid #F2CA5030",
+                        }}
+                      >
+                        <Typography
+                          sx={{ fontSize: "22px", color: "headercolor" }}
+                        >
+                          Settings
+                        </Typography>
+                        <Box
+                          sx={{
+                            display:"flex",
+                            alignItems: "center",
+                            flexDirection: "column",
+                            gap: "15px",
+                          }}
+                        >
+                          <IconButton
+                            onClick={changeLanguage}
+                            sx={{
+                              color: "#E9C349",
+                              fontSize: "18px",
+                              fontWeight: "600",
+                              transition: "0.4s",
+                              "&:hover": {
+                                color: "#d9a807",
+                              },
+                            }}
+                          >
+                            {i18n.language === "ar" ? "EN" : "AR"}
+                          </IconButton>
 
-                 
-                 
-                </Menu>
-              </Box>
+                          <IconButton
+                            onClick={toggleMode}
+                            sx={{
+                              color: "#E9C349",
+                              transition: "0.4s",
+                              "&:hover": {
+                                color: "#d9a807",
+                              },
+                            }}
+                          >
+                            {mode === "light" ? (
+                              <DarkModeIcon />
+                            ) : (
+                              <LightModeIcon />
+                            )}
+                          </IconButton>
 
-              <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                          {Token ? (
+                            <>
+                              <Box
+                                component={Link}
+                                to="/Cart"
+                                sx={{
+                                  color: "#E9C349",
+                                  transition: "0.4s",
+                                  "&:hover": {
+                                    color: "#d9a807",
+                                  },
+                                }}
+                              >
+                                <ShoppingCartIcon />
+                              </Box>
+
+                              <Box
+                                component={Link}
+                                to="/Profile"
+                                sx={{
+                                  color: "#E9C349",
+                                  transition: "0.4s",
+                                  "&:hover": {
+                                    color: "#d9a807",
+                                  },
+                                }}
+                              >
+                                <AccountCircleIcon />
+                              </Box>
+                            </>
+                          ) : (
+                            <Box
+                              component={Link}
+                              to="/Login"
+                              sx={{
+                                color: "#E9C349",
+                                fontSize: "18px",
+                                fontWeight: "600",
+                                textDecoration: "none",
+                                transition: "0.4s",
+
+                                "&:hover": {
+                                  color: "#d9a807",
+                                  textDecoration: "underline",
+                                },
+                              }}
+                            >
+                              Login
+                            </Box>
+                          )}
+                        </Box>
+                      </Box>
+                    </Box>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <Box sx={{display: { xs: "none", md: "flex" },}}>
                 {Token ? (
                   <>
                     <Box
@@ -425,7 +418,7 @@ function Header() {
                       </IconButton>
 
                       <IconButton
-                      onClick={toggleMode}
+                        onClick={toggleMode}
                         sx={{
                           color: "#E9C349",
                           fontSize: "18px",
@@ -436,7 +429,11 @@ function Header() {
                           },
                         }}
                       >
-                          {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+                        {mode === "light" ? (
+                          <DarkModeIcon />
+                        ) : (
+                          <LightModeIcon />
+                        )}
                       </IconButton>
 
                       <Box
@@ -469,8 +466,6 @@ function Header() {
                       >
                         <AccountCircleIcon />
                       </Box>
-
-                    
                     </Box>
                   </>
                 ) : (
@@ -495,14 +490,18 @@ function Header() {
                       </IconButton>
 
                       <IconButton
-                       onClick={toggleMode}
+                        onClick={toggleMode}
                         sx={{
                           color: "#E9C349",
                           fontSize: "18px",
                           fontWeight: "600",
                         }}
                       >
-                        {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+                        {mode === "light" ? (
+                          <DarkModeIcon />
+                        ) : (
+                          <LightModeIcon />
+                        )}
                       </IconButton>
 
                       <Box
@@ -514,7 +513,6 @@ function Header() {
                           fontWeight: "600",
                         }}
                       >
-                        
                         Login
                       </Box>
                     </Box>

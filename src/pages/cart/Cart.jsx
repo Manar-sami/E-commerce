@@ -10,6 +10,7 @@ import Getcart from "./Getcart";
 import { useTranslation } from "react-i18next";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 function Cart() { 
@@ -29,6 +30,46 @@ function Cart() {
     const {mutate:clear}=useClearcart();
     console.log(clear);
 
+const clearcart = () => {
+  Swal.fire({
+    title: "Clear Cart?",
+    text: "Are you sure you want to remove all items from your cart?",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonText: "Yes, Clear Cart",
+    cancelButtonText: "Cancel",
+
+    background: "#121212",
+    color: "#ffffff",
+
+    confirmButtonColor: "#D4AF37",
+    cancelButtonColor: "#333333",
+
+    buttonsStyling: true,
+
+    customClass: {
+      popup: "my-swal-popup",
+      title: "my-swal-title",
+      htmlContainer: "my-swal-text",
+    },
+  }).then((result) => {
+    if (result.isConfirmed) {
+      clear();
+
+      Swal.fire({
+        title: "Cart Cleared!",
+        text: "All items have been removed from your cart.",
+        icon: "success",
+
+        background: "#121212",
+        color: "#ffffff",
+
+        confirmButtonColor: "#D4AF37",
+        confirmButtonText: "OK",
+      });
+    }
+  });
+};
 
  
   if(isLoading) return <CircularProgress></CircularProgress>
@@ -128,7 +169,7 @@ function Cart() {
       <Getcart />
 
       <Button
-        onClick={() => clear()}
+        onClick={() => clearcart()}
         sx={{
           fontSize: "16px",
           display: "flex",

@@ -55,7 +55,9 @@ function Getcart() {
     showCancelButton: true,
     confirmButtonText: "Yes, remove it",
     cancelButtonText: "Cancel",
-    
+     background: "#121212",
+    color: "#ffffff",
+    confirmButtonColor: "#D4AF37",
 
     
   }).then((result) => {

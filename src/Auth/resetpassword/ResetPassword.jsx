@@ -12,11 +12,15 @@ import { useNavigate } from "react-router-dom";
 function ResetPassword() {
   const navigate = useNavigate();
 
-  const { register, handleSubmit } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: yupResolver(schemaResetPassword),
   });
-const email =localStorage.getItem("userEmail");
-  const { mutate: reset } = useResetPassword();
+  const email = localStorage.getItem("userEmail");
+  const { mutate: reset, error, isError } = useResetPassword();
   const onSubmit = (data) => {
     console.log(data);
 
@@ -25,10 +29,14 @@ const email =localStorage.getItem("userEmail");
         alert("Password changed successfully");
         navigate("/Login");
       },
+
+      onError: (error) => {
+        console.log("Server Error:", error);
+        console.log("Server Response:", error.response?.data.message);
+      },
     });
   };
-   
-   
+
   return (
     <Container>
       <Box
@@ -78,7 +86,7 @@ const email =localStorage.getItem("userEmail");
             label="Email"
             type="email"
             value={email}
-            slotProps={{ input: { readOnly: true } }} 
+            slotProps={{ input: { readOnly: true } }}
             variant="standard"
             sx={{
               "& .MuiInputLabel-root": { color: "#D0C5AF" },
@@ -88,6 +96,12 @@ const email =localStorage.getItem("userEmail");
               input: { color: "#E5E2E1" },
             }}
           />
+
+          {errors.email ? (
+            <Box sx={{ color: "red" }}>{errors.email.message}</Box>
+          ) : (
+            ""
+          )}
 
           <TextField
             {...register("code")}
@@ -101,6 +115,11 @@ const email =localStorage.getItem("userEmail");
               input: { color: "#E5E2E1" },
             }}
           />
+          {errors.code ? (
+            <Box sx={{ color: "red" }}>{errors.code.message}</Box>
+          ) : (
+            ""
+          )}
 
           <TextField
             {...register("newPassword")}
@@ -112,13 +131,31 @@ const email =localStorage.getItem("userEmail");
               "& .MuiInputLabel-root.Mui-focused": { color: "#F2CA50" },
               "& .MuiInput-underline:before": { borderBottomColor: "#D0C5AF" },
               "& .MuiInput-underline:after": { borderBottomColor: "#F2CA50" },
-              input: { color: "#E5E2E1", },
+              input: { color: "#E5E2E1" },
               "& input:-webkit-autofill": {
-  WebkitBoxShadow: "0 0 0 1000px #0F0F0F inset",
-  WebkitTextFillColor: "#E5E2E1",
-},
+                WebkitBoxShadow: "0 0 0 1000px #0F0F0F inset",
+                WebkitTextFillColor: "#E5E2E1",
+              },
             }}
           />
+
+          {errors.newPassword ? (
+            <Box sx={{ color: "red" }}>{errors.newPassword.message}</Box>
+          ) : (
+            ""
+          )}
+
+          {isError && (
+            <Typography
+              sx={{
+                color: "#ff5252",
+                fontSize: "14px",
+                mt: 1,
+              }}
+            >
+              {error?.response?.data?.message || "Something went wrong"}
+            </Typography>
+          )}
 
           <Button
             type="submit"

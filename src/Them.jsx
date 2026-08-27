@@ -18,6 +18,8 @@ const UseThemmode =(mode)=>{
         colorp:mode === "light" ? "#0E0E0E" : "#CFC4C5",
         whitecolor:mode === "light" ? "black" : "#FFFFFF",
         productp:mode === "light" ? "black" : "#D1D5DB",
+        menu:mode === "light" ? "black" : "#F2CA50",
+        bgmenu:mode === "light" ? "white" : "black",
     }
  
 });

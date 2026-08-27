@@ -47,10 +47,52 @@ function Register() {
     <>
      <Container maxWidth="lg">
       <Box sx={{ mt: 10, px: 4 }}>
-        <Grid container >
+        <Grid container spacing={4}>
 
           {/* Left Side */}
-          <Grid size={{ lg: 6, xs: 12 }} sx={{ py: 8,px:3 }}>
+
+          <Grid
+            size={{ lg: 6, xs: 12 }}
+            sx={{
+              backgroundImage: 'url("./image/login.png")',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              p: 5,
+            }}
+          >
+            <Typography
+              sx={{
+                color: "#fff",
+                fontSize: {
+                  xs: 30,
+                  md: 60,
+                },
+                fontWeight: "bold",
+              }}
+            >
+              {t("Welcome!")}
+            </Typography>
+
+            <Typography
+              sx={{
+                color: "#fff",
+                mt: 2,
+                textAlign: "center",
+              }}
+            >
+             {t("Create your account to explore exclusive collections,personalized recommendations, and a premium shopping experience.")}
+            </Typography>
+
+          </Grid>
+        
+
+          {/* Right Side */}
+
+            <Grid size={{ lg: 6, xs: 12 }} sx={{ py: 8,px:3,bgcolor:"#0F0F0F",boxShadow:4 }}>
 
             <Typography
               sx={{
@@ -61,7 +103,7 @@ function Register() {
               {t("Create Account")}
             </Typography>
 
-            <Typography sx={{ mt: 1, color: "#767683" }}>
+            <Typography sx={{ mt: 1, color: "#D0C5AF" }}>
               {t("Join our community and start your shopping journey.")}
             </Typography>
 
@@ -129,7 +171,7 @@ function Register() {
                 sx={{
                   py: 2,
                   borderRadius: 5,
-                  background: "#000666",
+                  background: "#D4AF37",
                 }}
               >
                 {isSubmitting ? (
@@ -147,7 +189,7 @@ function Register() {
                 to="/Login"
                 sx={{
                   textAlign: "center",
-                  color: "#000666",
+                  color: "#D4AF37",
                   textDecoration: "none",
                 }}
               >
@@ -164,52 +206,7 @@ function Register() {
             </Box>
 
           </Grid>
-
-          {/* Right Side */}
-          <Grid
-            size={{ lg: 6, xs: 12 }}
-            sx={{
-              backgroundImage: `
-                linear-gradient(
-                  0deg,
-                  rgba(0,6,102,.8),
-                  rgba(0,6,102,.35)
-                ),
-                url('./image/login.png')
-              `,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              p: 5,
-            }}
-          >
-            <Typography
-              sx={{
-                color: "#fff",
-                fontSize: {
-                  xs: 30,
-                  md: 60,
-                },
-                fontWeight: "bold",
-              }}
-            >
-              {t("Welcome!")}
-            </Typography>
-
-            <Typography
-              sx={{
-                color: "#fff",
-                mt: 2,
-                textAlign: "center",
-              }}
-            >
-             {t("Create your account to explore exclusive collections,personalized recommendations, and a premium shopping experience.")}
-            </Typography>
-
-          </Grid>
+          
 
         </Grid>
       </Box>

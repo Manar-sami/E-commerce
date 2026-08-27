@@ -1,5 +1,5 @@
 import useProductdetails from "../../Hook/Productdetails";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import useAddtocart from "../../Hook/Addtocart";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -25,8 +25,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState } from "react";
 
 
+
 function ProductDetails() {
   const star = [1, 2, 3, 4, 5];
+  const navigate=useNavigate();
   const { mutate: addtocart, isSuccess } = useAddtocart();
   const { id } = useParams();
   const { data, isLoading } = useProductdetails(id);
@@ -53,6 +55,9 @@ Swal.fire({
           title: t("Product added to cart"),
           icon: "success",
           draggable: true,
+           background: "#121212",
+          color: "#ffffff",
+          confirmButtonColor: "#D4AF37",
         });
   };
 
@@ -415,11 +420,12 @@ Swal.fire({
                 {t("Add to Cart")}
               </Button>
               <Button
+              onClick={()=>navigate("/Checkout")}
                 sx={{
                   border: "1px solid #E9C349",
                   width: "100%",
                   borderRadius: "2px",
-                  color: "white",
+                  color: "Curatedbg",
                   fontSize: "18px",
                   
                   py: "24px",

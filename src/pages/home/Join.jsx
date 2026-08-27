@@ -60,6 +60,7 @@ function Join() {
               fullWidth
               sx={{
                 bgcolor: '#ffffff',
+                mt:1,
                 borderRadius: { xs: 1, sm: '4px 0 0 4px' },
                 '& .MuiOutlinedInput-root': {
                   height: '48px',
@@ -88,6 +89,7 @@ function Join() {
                 color: '#000000',
                 fontWeight: 700,
                 px: 4,
+                mt:1,
                 height: '48px',
                 borderRadius: { xs: 1, sm: '0 4px 4px 0' },
                 textTransform: 'uppercase',
