@@ -125,6 +125,7 @@ function Header() {
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
+                    whiteSpace: "nowrap",
                     textTransform: "uppercase",
                     "&:hover": {
                       color: "#F2CA50",
@@ -142,6 +143,7 @@ function Header() {
                     fontSize: "16px",
                     fontWeight: "600",
                     transition: "0.3s",
+                    whiteSpace: "nowrap",
                     textTransform: "uppercase",
                     "&:hover": {
                       color: "#F2CA50",
@@ -249,6 +251,7 @@ function Header() {
                             textDecoration: "none",
                             color: "menu",
                             transition: "0.3s",
+                            
                             "&:hover": {
                               color: "#F2CA50",
                               textDecoration: "underline",

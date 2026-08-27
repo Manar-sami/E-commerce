@@ -72,7 +72,7 @@ function Seasonal_section() {
                   fontSize: "0.75rem",
                 }}
               >
-                Masterpiece Collection
+                {t("Masterpiece Collection")}
               </Typography>
 
               <Typography
@@ -80,15 +80,14 @@ function Seasonal_section() {
                 component="h1"
                 sx={{ fontWeight: 600, mb: 2 }}
               >
-                Omnis Tower
+                {t("Omnis Tower")}
               </Typography>
 
               <Typography
                 variant="body2"
                 sx={{ color: "#a1a1aa", mb: 4, lineHeight: 1.6 }}
               >
-                Room-filling presence meets microscopic detail. The Omnis Tower
-                is an architectural statement that redefines reference audio.
+                {t("Room-filling presence meets microscopic detail. The Omnis Tower is an architectural statement that redefines reference audio.")} 
               </Typography>
 
               <Stack spacing={2.5} sx={{ mb: 4 }}>
@@ -109,10 +108,10 @@ function Seasonal_section() {
                         letterSpacing: 0.5,
                       }}
                     >
-                      FREQUENCY RESPONSE
+                    {t("FREQUENCY RESPONSE")}  
                     </Typography>
                     <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                      18Hz - 40kHz (±3dB)
+                      {t("18Hz - 40kHz (±3dB)")}
                     </Typography>
                   </Box>
                 </Stack>
@@ -134,10 +133,10 @@ function Seasonal_section() {
                         letterSpacing: 0.5,
                       }}
                     >
-                      DRIVER MATERIAL
+                      {t("DRIVER MATERIAL")}
                     </Typography>
                     <Typography variant="body2" sx={{ fontWeight: 500 }}>
-                      Beryllium Tweeter, Kevlar Bass
+                     {t("Beryllium Tweeter, Kevlar Bass")} 
                     </Typography>
                   </Box>
                 </Stack>
@@ -161,7 +160,7 @@ function Seasonal_section() {
                   },
                 }}
               >
-                Acquire Now
+               {t("Acquire Now")} 
               </Button>
             </Grid>
           </Grid>
@@ -183,6 +182,7 @@ function Seasonal_section() {
                   height: "100%",
                   border: "1px solid #F2CA5030",
                   display: "flex",
+                  
                 }}
               >
                 <LocalShippingOutlinedIcon
@@ -190,15 +190,15 @@ function Seasonal_section() {
                 />
               </Box>
 
-              <Box>
+              <Box >
                 <Typography
-                  sx={{ fontSize: "24px", fontWeight: 600, color: "h2color" }}
+                  sx={{ fontSize: "24px", fontWeight: 600, color: "h2color"}}
                 >
-                  Complimentary Courier
+                 {t("Complimentary Courier")}  
                 </Typography>
 
                 <Typography sx={{ fontSize: "14px", color: "#71717a" }}>
-                  Insured global delivery.
+                  {t("Insured global delivery.")}
                 </Typography>
               </Box>
             </Stack>
@@ -221,18 +221,18 @@ function Seasonal_section() {
                 />
               </Box>
 
-              <Box>
+              <Box >
                 <Typography
                   sx={{ fontSize: "24px", fontWeight: 600, color: "h2color" }}
                 >
-                  5-Year Warranty
+                 {t("5-Year Warranty")} 
                 </Typography>
 
                 <Typography
                   variant="caption"
                   sx={{ fontSize: "14px", color: "#71717a" }}
                 >
-                  Comprehensive protection plan.
+                 {t("Comprehensive protection plan.")} 
                 </Typography>
               </Box>
             </Stack>
@@ -257,14 +257,14 @@ function Seasonal_section() {
                 <Typography
                   sx={{ fontSize: "24px", fontWeight: 600, color: "h2color" }}
                 >
-                  Secure Transaction
+                  {t("Secure Transaction")}
                 </Typography>
 
                 <Typography
                   variant="caption"
                   sx={{ fontSize: "14px", color: "#71717a" }}
                 >
-                  Encrypted payment gateway.
+                  {t("Encrypted payment gateway.")}
                 </Typography>
               </Box>
             </Stack>

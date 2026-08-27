@@ -23,11 +23,7 @@ i18n
           "View Archive":"View Archive",
           "COLLECTION 2026":"COLLECTION 2026",
           "Logout":"Logout",
-          "Curated Essentials":"Curated Essentials",
-          "Refined silhouettes and premium materials, curated for the discerning individual":"Refined silhouettes and premium materials, curated for the discerning individual",
-          "View All Products":"View All Products",
-          "Featured Categories":"Featured Categories",
-          "View All  Categories":"View All  Categories",
+          
           "A Seasonal Shift.":"A Seasonal Shift.",
           "Exclusive early access to our Autumn/Winter pre-collection. Tailored for the transition.":"Exclusive early access to our Autumn/Winter pre-collection. Tailored for the transition.",
           "Explore Pre-Collection":"Explore Pre-Collection",
@@ -36,14 +32,7 @@ i18n
           "EXPLORE":"EXPLORE",
           "The Archive Series":"The Archive Series",
           "Elevated Basics":"Elevated Basics",
-          "Object & Form":"Object & Form",
-          "Join the Collective.":"Join the Collective.",
-          "Subscribe to receive early access to new arrivals, private sales, and curated lifestyle editorials.":"Subscribe to receive early access to new arrivals, private sales, and curated lifestyle editorials.",
-          "By subscribing, you agree to our Privacy Policy and Terms of Service.":"By subscribing, you agree to our Privacy Policy and Terms of Service.",
-          "Elevating the everyday through curated luxury and architectural design.":"Elevating the everyday through curated luxury and architectural design.",
-          "Track Order":"Track Order",
-          "Shipping & Returns":"Shipping & Returns",
-          "Size Guide":"Size Guide",
+          
           "Contact Us":"Contact Us",
           "CLIENT SERVICE":"CLIENT SERVICE",
           "ABOUT KASHOP":"ABOUT KASHOP",
@@ -66,13 +55,7 @@ i18n
           "Sort by: Price Low to High":"Sort by: Price Low to High",
           "Sort by: Price High to Low":"Sort by: Price High to Low",
           "Filter":"Filter",
-          "Precision technology meets modern luxury design for every morning.":"Precision technology meets modern luxury design for every morning.",
-          "DESIGN PHILOSOPHY":"DESIGN PHILOSOPHY",
-          "Innovation Beyond":"Innovation Beyond",
-          "the Familiar":"the Familiar",
-          " We don't just sell tools; we offer artistic pieces that elevate the quality of your daily experience in the heart of your home.":" We don't just sell tools; we offer artistic pieces that elevate the quality of your daily experience in the heart of your home.",
-          "Explore Full Collection":"Explore Full Collection",
-          "Product added to cart":"Product added to cart",
+          
           "Product ID":"Product ID",
           "reviews":"reviews",
           "Read more":"Read more",
@@ -84,27 +67,7 @@ i18n
           "Your comment":"Your comment",
           "Submit":"Submit",
           "About":"About",
-          "OUR HERITAGE":"OUR HERITAGE",
-          "Redefining the Modern Home":"Redefining the Modern Home",
-           "descriptionabout":"Founded on the principle that everyday objects should be both functional and transcendent, KaShop began as a small workshop dedicated to the pursuit of perfection. Today, we are the standard-bearer for luxury appliances that integrate seamlessly into the world's most refined interiors. Every curve, every tactile response, and every silent mechanism is the result of thousands of hours of refinement. We don't just build appliances; we curate environments.",
-           "The Art of Living Well":"The Art of Living Well",
-          "Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.":"Where precision engineering meets timeless design. We craft the tools for a life lived with intentionality.",
-          "Our Mission":"Our Mission",
-          "To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.":"To elevate the human experience by infusing daily rituals with beauty, silence, and unparalleled performance.",
-          "MASTERY":"MASTERY",
-          "Obsessive Craftsmanship":"Obsessive Craftsmanship",
-          "Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation.":"Every component is measured to the micron, ensuring a flawless fit and finish that lasts generations.We design for the ears as much as the eyes, utilizing advanced acoustic dampening for near-silent operation.",
-          "Circular Life":"Circular Life",
-          "Our products are 98% recyclable and designed to be repaired, not replaced.":"Our products are 98% recyclable and designed to be repaired, not replaced.",
-          "Efficiency Max":"Efficiency Max",
-          "A-rated energy consumption across our entire catalog without compromising performance.":"A-rated energy consumption across our entire catalog without compromising performance.",
-          "Carbon Neutral":"Carbon Neutral",
-          "Our logistics and manufacturing centers operate on 100% renewable energy.":"Our logistics and manufacturing centers operate on 100% renewable energy.",
-          "Sustainability by Design":"Sustainability by Design",
-          "True luxury is responsible. Our commitment to the planet is woven into the very fabric of our manufacturing processes.":"True luxury is responsible. Our commitment to the planet is woven into the very fabric of our manufacturing processes.",
-          "Experience Excellence":"Experience Excellence",
-          "EXPLORE COLLECTIONS":"EXPLORE COLLECTIONS",
-          "VISIT A SHOWROOM":"VISIT A SHOWROOM",
+          
           "Shop All Products":"Shop All Products",
           "Elevate your daily rituals with our curated collection of architectural appliances and refined home technology.":"Elevate your daily rituals with our curated collection of architectural appliances and refined home technology.",
           "All":"All",
@@ -176,6 +139,46 @@ i18n
           "Account Settings":"Account Settings",
           "Log Out":"Log Out",
 
+          // home
+
+          "FLAGSHIP RELEASE":"FLAGSHIP RELEASE",
+          "The Zenith Horizon":"The Zenith Horizon",
+          "Uncompromising acoustic precision encased in aerospace-grade titanium. Experience silence reimagined.":"Uncompromising acoustic precision encased in aerospace-grade titanium. Experience silence reimagined.",
+          "Shop Now":"Shop Now",
+          "Ecosystems":"Ecosystems",
+          "Audio":"Audio",
+          "Visual":"Visual",
+          "Mobile":"Mobile",
+          "Computing":"Computing",
+          "VIEW ALL":"VIEW ALL",
+          "Curated Excellence":"Curated Excellence",
+          "Aura Chronograph":"Aura Chronograph",
+          "ADD TO CART":"ADD TO CART",
+          "Nova IEMs":"Nova IEMs",
+          "Core DAC":"Core DAC",
+          "Apex Type-01":"Apex Type-01",
+          "Masterpiece Collection":"Masterpiece Collection",
+          "Omnis Tower":"Omnis Tower",
+          "Room-filling presence meets microscopic detail. The Omnis Tower is an architectural statement that redefines reference audio.":"Room-filling presence meets microscopic detail. The Omnis Tower is an architectural statement that redefines reference audio.",
+          "FREQUENCY RESPONSE":"FREQUENCY RESPONSE",
+          "18Hz - 40kHz (±3dB)":"18Hz - 40kHz (±3dB)",
+          "DRIVER MATERIAL":"DRIVER MATERIAL",
+          "Beryllium Tweeter, Kevlar Bass":"Beryllium Tweeter, Kevlar Bass",
+          "Acquire Now":"Acquire Now",
+          "Complimentary Courier":"Complimentary Courier",
+          "Insured global delivery.":"Insured global delivery.",
+          "5-Year Warranty":"5-Year Warranty",
+          "Comprehensive protection plan.":"Comprehensive protection plan.",
+          "Secure Transaction":"Secure Transaction",
+          "Encrypted payment gateway.":"Encrypted payment gateway.",
+
+          "Join the Inner Circle":"Join the Inner Circle",
+          "Gain early access to limited releases and private viewing events.":"Gain early access to limited releases and private viewing events.",
+          "Precision Engineering. Uncompromising Quality.":"Precision Engineering. Uncompromising Quality.",
+          "Customer Service":"Customer Service",
+
+
+
         }
       },
       ar: {
@@ -210,7 +213,7 @@ i18n
           "Track Order":"تتبع الطلب",
           "Shipping & Returns":"الشحن والإرجاع",
           "Size Guide":"دليل المقاسات",
-          "Contact Us":"اتصل بنا",
+          "Contact":"اتصل بنا",
           "CLIENT SERVICE":"خدمة العملاء",
           "ABOUT KASHOP":"عن KASHOP",
           "Our Story":"قصتنا",
@@ -340,8 +343,70 @@ i18n
           "View and track your previous luxury appliance purchases.": "اعرض وتتبع مشترياتك السابقة من الأجهزة الفاخرة.",
           "You have no previous orders.": "ليس لديك أي طلبات سابقة.",
           "Account Settings": "إعدادات الحساب",
-          "Log Out": "تسجيل الخروج"
+          "Log Out": "تسجيل الخروج",
+          // home
 
+          "FLAGSHIP RELEASE": "الإصدار الرائد",
+          "The Zenith Horizon": "زينيث هورايزن",
+          "Uncompromising acoustic precision encased in aerospace-grade titanium. Experience silence reimagined.": "دقة صوتية لا مثيل لها، مغلّفة بالتيتانيوم المستخدم في صناعة الطيران. اختبر مفهومًا جديدًا للصمت.",
+          "Shop Now": "تسوّق الآن",
+          "Ecosystems": "المنظومات",
+
+"Audio": "الصوتيات",
+
+"Visual": "المرئيات",
+
+"Mobile": "الهواتف والأجهزة المحمولة",
+
+"Computing": "الحوسبة",
+
+"VIEW ALL": "عرض الكل",
+
+"Curated Excellence": "روائع مختارة",
+
+"Aura Chronograph": "أورا كرونوغراف",
+
+"ADD TO CART": "أضف إلى السلة",
+
+"Nova IEMs": "نوفا IEMs",
+
+"Core DAC": "كور DAC",
+
+"Apex Type-01": "أبيكس Type-01",
+
+"Masterpiece Collection": "مجموعة التحف الفنية",
+
+"Omnis Tower": "برج أومنيس",
+
+"Room-filling presence meets microscopic detail. The Omnis Tower is an architectural statement that redefines reference audio.": "حضور صوتي يملأ المكان يلتقي مع أدق التفاصيل. برج أومنيس هو تحفة معمارية تعيد تعريف مفهوم الصوت المرجعي.",
+
+"FREQUENCY RESPONSE": "استجابة التردد",
+
+"18Hz - 40kHz (±3dB)": "18 هرتز - 40 كيلوهرتز (±3 ديسيبل)",
+
+"DRIVER MATERIAL": "مادة المحركات الصوتية",
+
+"Beryllium Tweeter, Kevlar Bass": "مكبر ترددات عالية من البيريليوم، ومكبر جهير من الكيفلار",
+
+"Acquire Now": "اقتنه الآن",
+
+"Complimentary Courier": "توصيل مجاني",
+
+"Insured global delivery.": "توصيل عالمي مؤمّن.",
+
+"5-Year Warranty": "ضمان لمدة 5 سنوات",
+
+"Comprehensive protection plan.": "خطة حماية شاملة.",
+
+"Secure Transaction": "معاملة آمنة",
+
+"Encrypted payment gateway.": "بوابة دفع مشفّرة.",
+"Join the Inner Circle": "انضم إلى الدائرة الخاصة",
+
+"Gain early access to limited releases and private viewing events.": "احصل على وصول مبكر إلى الإصدارات المحدودة وفعاليات العرض الخاصة.",
+"Precision Engineering. Uncompromising Quality.": "هندسة دقيقة. جودة لا تقبل المساومة.",
+
+"Customer Service": "خدمة العملاء",
 
         }
       }

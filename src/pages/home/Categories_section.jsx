@@ -28,6 +28,18 @@ function Categories_section() {
             mb: { xs: 4, md: 5 },
           }}
         >
+
+            <Typography
+            sx={{
+              color: "#D4AF37",
+              fontSize: "13px",
+              letterSpacing: "2px",
+              fontWeight: "500",
+              cursor: "pointer",
+            }}
+          >
+            {t('VIEW ALL')}
+          </Typography>
           <Typography
             component="h2"
             variant="h2"
@@ -40,17 +52,7 @@ function Categories_section() {
             {t('Curated Excellence')}
           </Typography>
 
-          <Typography
-            sx={{
-              color: "#D4AF37",
-              fontSize: "13px",
-              letterSpacing: "2px",
-              fontWeight: "500",
-              cursor: "pointer",
-            }}
-          >
-            {t('VIEW ALL')}
-          </Typography>
+        
         </Box>
 
      

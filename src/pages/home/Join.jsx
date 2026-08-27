@@ -1,8 +1,10 @@
 import { Box, Typography, TextField, Button, Container, Stack } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 
 
 function Join() {
+  const {t}=useTranslation();
   
 
   return (
@@ -29,7 +31,7 @@ function Join() {
             
             }}
           >
-            Join the Inner Circle
+            {t("Join the Inner Circle")}
           </Typography>
 
           
@@ -42,7 +44,7 @@ function Join() {
               mb: 2,
             }}
           >
-            Gain early access to limited releases and private viewing events.
+            {t("Gain early access to limited releases and private viewing events.")} 
           </Typography>
 
          
@@ -55,7 +57,7 @@ function Join() {
             }}
           >
             <TextField
-              placeholder="Email Address"
+              placeholder={t("Email Address")}
               variant="outlined"
               fullWidth
               sx={{
@@ -101,7 +103,7 @@ function Join() {
                 },
               }}
             >
-              Subscribe
+              {t("Subscribe")}
             </Button>
           </Stack>
         </Stack>
