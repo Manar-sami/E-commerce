@@ -33,7 +33,7 @@ function Reviews() {
   console.log(hasPaidOrder);
 
   if (isLoading) return <Loading></Loading>;
-  if (profile) return <Error></Error>;
+  if (profile) return <Loading></Loading>;
 
   return (
     <Box sx={{ py: 20 }}>
