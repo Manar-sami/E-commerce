@@ -11,6 +11,8 @@ import { useTranslation } from "react-i18next";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import Loading from "../../Loading";
+import Error from "../../Error/Error";
 
 
 function Cart() { 
@@ -72,8 +74,8 @@ const clearcart = () => {
 };
 
  
-  if(isLoading) return <CircularProgress></CircularProgress>
-  if(isError)  return <Typography>error</Typography>
+  if(isLoading) return <Loading></Loading>
+  if(isError)  return <Error></Error>
 
  return (
 

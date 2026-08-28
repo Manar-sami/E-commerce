@@ -14,6 +14,8 @@ import Products from "./Products";
 import Checkbox from "@mui/material/Checkbox";
 import InterestsIcon from "@mui/icons-material/Interests";
 import Button from "@mui/material/Button";
+import Error from "../../Error/Error";
+import Loading from "../../Loading";
 
 function Categorise() {
   const { data, isLoading, isError } = useGetcategorise();
@@ -26,8 +28,8 @@ function Categorise() {
   const [min, setmin] = useState("");
   const [max, setmax] = useState("");
 
-  if (isLoading) return <CircularProgress></CircularProgress>;
-  if (isError) return <Typography>error </Typography>;
+  if (isLoading) return <Loading></Loading>;
+  if (isError) return <Error></Error>
 
   return (
     <Box sx={{ py: { xs: 4, md: 8 } }}>

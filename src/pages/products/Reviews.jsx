@@ -15,6 +15,8 @@ import UseProfile from "./../../Hook/Profile";
 import Description from "./Description";
 import Review from "./Review";
 import Features from "./Features";
+import Loading from "../../Loading";
+import Error from "../../Error/Error";
 
 function Reviews() {
   const { id } = useParams();
@@ -30,8 +32,8 @@ function Reviews() {
   );
   console.log(hasPaidOrder);
 
-  if (isLoading) return <CircularProgress></CircularProgress>;
-  if (profile) return <CircularProgress></CircularProgress>;
+  if (isLoading) return <Loading></Loading>;
+  if (profile) return <Error></Error>;
 
   return (
     <Box sx={{ py: 20 }}>

@@ -23,6 +23,7 @@ import { CardMedia,  Rating, Stack, IconButton } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState } from "react";
+import Loading from "../../Loading";
 
 
 
@@ -62,9 +63,9 @@ Swal.fire({
   };
 
   if (isLoading) {
-    return <CircularProgress></CircularProgress>;
+    return <Loading></Loading>;
   }
-  if(productloading) return <CircularProgress></CircularProgress>;
+  if(productloading) return <Loading></Loading>;
 
   console.log(data);
 

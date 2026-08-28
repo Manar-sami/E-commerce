@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { Container } from '@mui/material';
 import SubscribeSection from './SubscribeSection';
 import { useTranslation } from 'react-i18next';
+import Error from '../../Error/Error';
 
 function Categories() {
   
@@ -19,9 +20,7 @@ function Categories() {
     </>
    }
       if(isError){
-    return <>
-     <h2>error</h2>
-    </>
+     <Error></Error>
    }
 
 

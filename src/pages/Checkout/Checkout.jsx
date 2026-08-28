@@ -21,6 +21,7 @@ import {
 } from "@mui/material";
 import LocalAtmOutlinedIcon from "@mui/icons-material/LocalAtmOutlined";
 import CreditCardOutlinedIcon from "@mui/icons-material/CreditCardOutlined";
+import Error from "../../Error/Error";
 
 function Checkout() {
   const { mutate: checkout } = useCheckout();
@@ -46,6 +47,9 @@ function Checkout() {
       paymentMethod: paymentMethod,
     });
   };
+
+  if(isLoading) return <CircularProgress></CircularProgress>
+  if(isError) return <Error></Error>
 
   return (
     <Box sx={{ py: 10 }}>

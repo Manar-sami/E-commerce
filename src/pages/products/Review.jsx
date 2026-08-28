@@ -18,6 +18,7 @@ import { useTranslation } from "react-i18next";
 
 
 import UseAuthStore from "../../store/UseAuthStore";
+import Loading from "../../Loading";
 
 function Review() {
   const { id } = useParams();
@@ -69,7 +70,7 @@ function Review() {
   };
 
 
-  if (isLoading) return <CircularProgress></CircularProgress>;
+  if (isLoading) return <Loading></Loading>;
   return (
     <Box>
       <Box

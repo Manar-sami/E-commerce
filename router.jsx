@@ -19,6 +19,7 @@ import Order from "./src/pages/profile/Order";
 import Aboutpage from "./src/pages/about/Aboutpage";
 import Shoppage from "./src/pages/Shop/Shoppage";
 import Contactpage from "./src/pages/Contact/Contactpage";
+import Error from "./src/Error/Error";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <Aboutpage/>,
+      },
+
+        {
+        path: "Error",
+        element: <Error/>,
       },
        
 

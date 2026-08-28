@@ -12,6 +12,8 @@ import { CircularProgress } from "@mui/material";
 import Button from "@mui/material/Button";
 import { useTranslation } from "react-i18next";
 import Swal from 'sweetalert2'
+import Error from "../../Error/Error";
+import Loading from "../../Loading";
 
 function Getcart() {
 
@@ -78,8 +80,8 @@ function Getcart() {
     // هان استدعينا ال hook الخاص يلي بعدل الكمية  الموجودة في السلة
    const{mutate:update,isPending:updateitem}=useUpdateQuantity();
 
-   if(isLoading) return <CircularProgress></CircularProgress>
-   if(isError) return <Typography>{error}</Typography>
+   if(isLoading) return <Loading></Loading>
+   if(isError) return  <Error></Error>
 
 
 
