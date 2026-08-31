@@ -22,6 +22,7 @@ import {
 import LocalAtmOutlinedIcon from "@mui/icons-material/LocalAtmOutlined";
 import CreditCardOutlinedIcon from "@mui/icons-material/CreditCardOutlined";
 import Error from "../../Error/Error";
+import Loading from "../../Loading";
 
 function Checkout() {
   const { mutate: checkout } = useCheckout();
@@ -48,7 +49,7 @@ function Checkout() {
     });
   };
 
-  if(isLoading) return <CircularProgress></CircularProgress>
+  if(isLoading) return <Loading></Loading>
   if(isError) return <Error></Error>
 
   return (

@@ -47,7 +47,7 @@ function Header() {
   const mode = Usemode((state) => state.mode);
   const toggleMode = Usemode((state) => state.togglemode);
 
-  if (isLoading) return <Loading></Loading>;
+  // if (isLoading) return <Loading></Loading>;
 
   return (
     <>
