@@ -58,7 +58,7 @@ function Reviews() {
               }}
               onClick={() => setactiveTab("Description")}
             >
-              Description
+             {t("Description")} 
             </Button>
             <Button
               sx={{
@@ -67,7 +67,7 @@ function Reviews() {
               }}
               onClick={() => setactiveTab("Features")}
             >
-              Features
+             {t("Features")} 
             </Button>
             <Button
               sx={{
@@ -76,7 +76,7 @@ function Reviews() {
               }}
               onClick={() => setactiveTab("Reviews")}
             >
-              Reviews ({data.reviews.length})
+              {t("Reviews")} ({data.reviews.length})
             </Button>
           </Box>
         </Box>

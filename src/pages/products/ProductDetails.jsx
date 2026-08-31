@@ -142,7 +142,7 @@ function ProductDetails() {
               component="p"
               sx={{ color: "whitecolor", fontSize: "16px" }}
             >
-              Premium Product, Exceptional Experience
+              {t("Premium Product, Exceptional Experience")}
             </Typography>
 
             <Box sx={{ display: "flex", gap: 2 }}>
@@ -184,15 +184,18 @@ function ProductDetails() {
                 },
               }}
             >
-              Crafted with precision and designed for excellence. Every detail
-              reflects exceptional quality and thoughtful design, delivering a
-              remarkable experience that exceeds expectations. Experience the
-              perfect balance of style, performance, and reliability.
+             {t("Crafted with precision and designed for excellence. Every detail reflects exceptional quality and thoughtful design, delivering a remarkable experience that exceeds expectations. Experience the perfect balance of style, performance, and reliability.")}
             </Typography>
 
             <Box sx={{ display: "flex", gap: 1 }}>
-              <Typography sx={{ color: "whitecolor" }}>Color:</Typography>
-              <Typography sx={{ color: "#E9C349" }}>Obsidian Black</Typography>
+              <Typography sx={{ color: "whitecolor" }}>{t("Color:")}</Typography>
+              <Typography sx={{ color: "#E9C349" }}>
+  {selectedColor === "#111111"
+    ? t("Obsidian Black")
+    : selectedColor === "#E5D3B3"
+    ? t("Champagne Beige")
+    : t("Silver")}
+</Typography>
             </Box>
 
             <Box sx={{ display: "flex", gap: 3, mb: 2 }}>
@@ -310,7 +313,7 @@ function ProductDetails() {
 
         <Box>
           <Typography sx={{ mb: 3, fontSize: "16px" }}>
-            You May Also Like
+            {t("You May Also Like")}
           </Typography>
           <Grid container spacing={3}>
             {products.map((product) => (

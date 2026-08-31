@@ -66,7 +66,7 @@ function Specification() {
                 fontWeight: 500,
               }}
             >
-              Premium Quality
+             {t("Premium Quality")} 
             </Typography>
 
             <Typography
@@ -76,7 +76,7 @@ function Specification() {
                 mt: 0.5,
               }}
             >
-              Crafted with carefully selected materials.
+              {t("Crafted with carefully selected materials.")} 
             </Typography>
           </Box>
         </Box>
@@ -122,7 +122,7 @@ function Specification() {
                 fontWeight: 500,
               }}
             >
-              Elegant Design
+             {t("Elegant Design")}  
             </Typography>
 
             <Typography
@@ -132,7 +132,7 @@ function Specification() {
                 mt: 0.5,
               }}
             >
-              A refined design made for a premium experience.
+             {t("A refined design made for a premium experience.")}  
             </Typography>
           </Box>
         </Box>
@@ -178,7 +178,7 @@ function Specification() {
                 fontWeight: 500,
               }}
             >
-              Built to Last
+              {t("Built to Last")}
             </Typography>
 
             <Typography
@@ -188,7 +188,7 @@ function Specification() {
                 mt: 0.5,
               }}
             >
-              Designed for reliable and long-lasting performance.
+            {t("Designed for reliable and long-lasting performance.")} 
             </Typography>
           </Box>
         </Box>
@@ -234,7 +234,7 @@ function Specification() {
                 fontWeight: 500,
               }}
             >
-              Exceptional Experience
+             {t("Exceptional Experience")}  
             </Typography>
 
             <Typography
@@ -244,7 +244,7 @@ function Specification() {
                 mt: 0.5,
               }}
             >
-              Designed to deliver comfort, style and performance.
+              {t("Designed to deliver comfort, style and performance.")}  
             </Typography>
           </Box>
         </Box>

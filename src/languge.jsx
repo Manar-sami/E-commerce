@@ -256,6 +256,34 @@ i18n
           "Direct Line": "Direct Line",
           "View FAQ": "View FAQ",
           EMAIL: "EMAIL",
+          "Premium Product, Exceptional Experience":
+            "Premium Product, Exceptional Experience",
+          "Crafted with precision and designed for excellence. Every detail reflects exceptional quality and thoughtful design, delivering a remarkable experience that exceeds expectations. Experience the perfect balance of style, performance, and reliability.":
+            "Crafted with precision and designed for excellence. Every detail reflects exceptional quality and thoughtful design, delivering a remarkable experience that exceeds expectations. Experience the perfect balance of style, performance, and reliability.",
+          "Color:": "Color:",
+          "Obsidian Black": "Obsidian Black",
+          "Champagne Beige": "Champagne Beige",
+          Silver: "Silver",
+          "Buy Now": "Buy Now",
+          "You May Also Like": "You May Also Like",
+          Reviews: "Reviews",
+          Features: "Features",
+          Description: "Description",
+          "Product Features": "Product Features",
+          "Premium Quality": "Premium Quality",
+          "Crafted with carefully selected materials.":
+            "Crafted with carefully selected materials.",
+          "Elegant Design": "Elegant Design",
+          "A refined design made for a premium experience.":
+            "A refined design made for a premium experience.",
+          "Built to Last": "Built to Last",
+          "Designed for reliable and long-lasting performance.":
+            "Designed for reliable and long-lasting performance.",
+          "Exceptional Experience": "Exceptional Experience",
+          "Designed to deliver comfort, style and performance.":
+            "Designed to deliver comfort, style and performance.",
+            "Load More Reviews":"Load More Reviews",
+            "Write a Review":"Write a Review",
         },
       },
       ar: {
@@ -577,6 +605,35 @@ i18n
           "Direct Line": "الخط المباشر",
           "View FAQ": "عرض الأسئلة الشائعة",
           EMAIL: "البريد الالكتروني",
+
+          "Premium Product, Exceptional Experience":
+            "منتج فاخر، تجربة استثنائية",
+          "Crafted with precision and designed for excellence. Every detail reflects exceptional quality and thoughtful design, delivering a remarkable experience that exceeds expectations. Experience the perfect balance of style, performance, and reliability.":
+            "صُنعت بدقة وصُممت لتحقيق التميز. كل تفصيل يعكس جودة استثنائية وتصميمًا مدروسًا، لتقديم تجربة رائعة تتجاوز التوقعات. استمتع بالتوازن المثالي بين الأناقة والأداء والموثوقية.",
+          "Color:": "اللون:",
+          "Obsidian Black": "أسود أوبسيديان",
+          "Champagne Beige": "بيج شامبانيا",
+          Silver: "فضي",
+          "Buy Now": "اشترِ الآن",
+          "You May Also Like": "قد يعجبك أيضًا",
+          Reviews: "التقييمات",
+          Features: "المميزات",
+          Description: "الوصف",
+          "Product Features": "مميزات المنتج",
+          "Premium Quality": "جودة فاخرة",
+          "Crafted with carefully selected materials.":
+            "صُنعت باستخدام مواد مختارة بعناية.",
+          "Elegant Design": "تصميم أنيق",
+          "A refined design made for a premium experience.":
+            "تصميم راقٍ صُمم لتقديم تجربة فاخرة.",
+          "Built to Last": "مصمم ليدوم",
+          "Designed for reliable and long-lasting performance.":
+            "صُمم لتقديم أداء موثوق وطويل الأمد.",
+          "Exceptional Experience": "تجربة استثنائية",
+          "Designed to deliver comfort, style and performance.":
+            "صُمم لتوفير الراحة والأناقة والأداء.",
+          "Load More Reviews":"تحميل المزيد من التقييمات",
+          "Write a Review":"اكتب تقييمًا",
         },
       },
     },

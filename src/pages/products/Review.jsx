@@ -272,7 +272,7 @@ function Review() {
               },
             }}
           >
-            Load More Reviews
+            {t("Load More Reviews")}
           </Button>
         ) : (
           ""
@@ -306,7 +306,7 @@ function Review() {
             },
           }}
         >
-          Write a Review
+         {t("Write a Review")}
         </Button>
       </Box>
 
