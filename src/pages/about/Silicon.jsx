@@ -20,21 +20,14 @@ function Silicon() {
                   mt: 1,
 
               }}}>
-                The Atelier of Sound & Silicon
+                {t("The Atelier of Sound & Silicon")}
               </Typography>
 
               <Typography sx={{fontSize:"16px",color:'colorp'}}>
-                Born from a relentless pursuit of acoustic and computational
-                perfection, Noir Excellence began in a small Swiss workshop. Our
-                founders, a horologist and an acoustic engineer, sought to merge the
-                timeless precision of mechanical craftsmanship with the bleeding
-                edge of modern technology.
+               {t("aboutStory")}
               </Typography>
                <Typography sx={{fontSize:"16px",color:'colorp'}}>
-                Every piece we create is not merely assembled; it is orchestrated.
-                From the tactile feedback of a solid brass dial to the imperceptible
-                latency of our wireless protocols, we engineer emotional resonance
-                into every interaction.
+                {t("aboutDescription2")}
               </Typography>
               
             </Grid>

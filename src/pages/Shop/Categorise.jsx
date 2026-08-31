@@ -55,7 +55,7 @@ function Categorise() {
                   fontWeight: "700",
                 }}
               >
-                Filters
+                {t("Filters")} 
               </Typography>
               <Typography
                 sx={{
@@ -63,7 +63,7 @@ function Categorise() {
                   fontSize: "12px",
                 }}
               >
-                Refine your selection
+                {t("Refine your selection")}
               </Typography>
             </Box>
 
@@ -78,7 +78,7 @@ function Categorise() {
             >
               <Box sx={{ fontSize: "18px", color: "#E5E2E1", mt: 2 }}>
                 <InterestsIcon sx={{ fontSize: "18px", color: "#E5E2E1" }} />{" "}
-                Categories
+                {t("Categories")}
               </Box>
 
               {data?.response?.data?.map((categorise) => (
@@ -137,7 +137,7 @@ function Categorise() {
                 (setmin(""), setmax(""));
               }}
             >
-              Clear All Filters
+                  {t("Clear All Filters")}
             </Button>
           </Grid>
 

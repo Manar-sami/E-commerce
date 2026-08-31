@@ -82,7 +82,7 @@ function Products({ minPrice, maxPrice }) {
             maxWidth: "40%",
           }}
         >
-          Shop All Products
+          {t("Shop All Products")}
         </Typography>
 
         <Box
@@ -289,7 +289,7 @@ function Products({ minPrice, maxPrice }) {
                       mb: "10px",
                     }}
                   >
-                    No Products Found
+                    {t("No Products Found")}
                   </Typography>
 
                   <Typography
@@ -298,7 +298,7 @@ function Products({ minPrice, maxPrice }) {
                       color: "colorp",
                     }}
                   > 
-                    There are no products available at the moment.
+                   {t("There are no products available at the moment.")}
                   </Typography>
                 </Box>
               </Grid>

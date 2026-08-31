@@ -13,8 +13,10 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactSection() {
+ const{t}=useTranslation();
   return (
     <Box sx={{ bgcolor: '#0a0a0a', minHeight: '100vh', py: 8, display: 'flex', alignItems: 'center' }}>
       <Container maxWidth="lg">
@@ -36,18 +38,18 @@ export default function ContactSection() {
               }}
             >
               <Typography variant="h4" component="h1" sx={{ color: '#fff', mb: 4, fontWeight: 400 }}>
-                Send a Message
+                {t("Send a Message")}
               </Typography>
 
               <Box component="form" noValidate autoComplete="off" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                 <Box>
                   <Typography variant="caption" sx={{ color: '#a0a0a0', letterSpacing: 1.5, fontWeight: 600 }}>
-                    NAME
+                   {t("NAME")} 
                   </Typography>
                   <TextField
                     fullWidth
                     variant="standard"
-                    placeholder="John Doe"
+                    placeholder={t("John Doe")}
                     sx={{
                       '& .MuiInput-underline:before': { borderBottomColor: '#333' },
                       '& .MuiInput-underline:after': { borderBottomColor: '#d4af37' },
@@ -58,7 +60,7 @@ export default function ContactSection() {
 
                 <Box>
                   <Typography variant="caption" sx={{ color: '#a0a0a0', letterSpacing: 1.5, fontWeight: 600 }}>
-                    EMAIL
+                    {t("EMAIL")}
                   </Typography>
                   <TextField
                     fullWidth
@@ -74,7 +76,7 @@ export default function ContactSection() {
 
                 <Box>
                   <Typography variant="caption" sx={{ color: '#a0a0a0', letterSpacing: 1.5, fontWeight: 600 }}>
-                    SUBJECT
+                    {t("SUBJECT")}
                   </Typography>
                   <TextField
                     fullWidth
@@ -90,14 +92,14 @@ export default function ContactSection() {
 
                 <Box sx={{ mb: 3 }}>
                   <Typography variant="caption" sx={{ color: '#a0a0a0', letterSpacing: 1.5, fontWeight: 600 }}>
-                    MESSAGE
+                    {t("MESSAGE")}
                   </Typography>
                   <TextField
                     fullWidth
                     multiline
                     rows={3}
                     variant="standard"
-                    placeholder="How can we help you?"
+                    placeholder={t("How can we help you?")}
                     sx={{
                       '& .MuiInput-underline:before': { borderBottomColor: '#333' },
                       '& .MuiInput-underline:after': { borderBottomColor: '#d4af37' },
@@ -124,7 +126,7 @@ export default function ContactSection() {
                     },
                   }}
                 >
-                  SEND MESSAGE
+                  {t("SEND MESSAGE")}
                 </Button>
               </Box>
             </Box>
@@ -150,12 +152,12 @@ export default function ContactSection() {
                     <LocationOnOutlinedIcon sx={{ color: '#d4af37', mt: 0.5 }} />
                     <Box>
                       <Typography variant="h6" sx={{ color: '#fff', fontSize: '18px' }}>
-                        Headquarters
+                        {t("Headquarters")}
                       </Typography>
                       <Typography variant="body2" sx={{ color: '#a0a0a0', mt: 0.5 }}>
-                        1200 Aureate Boulevard<br />
-                        Suite 500<br />
-                        San Francisco, CA 94107
+                         {t("1200 Aureate Boulevard")}<br />
+                        {t("Suite 500")}<br />
+                        {t("San Francisco, CA 94107")}
                       </Typography>
                     </Box>
                   </Box>
@@ -164,10 +166,10 @@ export default function ContactSection() {
                     <LocalPhoneOutlinedIcon sx={{ color: '#d4af37', mt: 0.5 }} />
                     <Box>
                       <Typography variant="h6" sx={{ color: '#fff', fontSize: '18px' }}>
-                        Direct Line
+                       {t("Direct Line")} 
                       </Typography>
                       <Typography variant="body2" sx={{ color: '#a0a0a0', mt: 0.5 }}>
-                        +1 (800) 555-0199
+                       +1 (800) 555-0199
                       </Typography>
                     </Box>
                   </Box>
@@ -176,10 +178,10 @@ export default function ContactSection() {
                     <EmailOutlinedIcon sx={{ color: '#d4af37', mt: 0.5 }} />
                     <Box>
                       <Typography variant="h6" sx={{ color: '#fff', fontSize: '18px' }}>
-                        Email
+                       {t("Email")}  
                       </Typography>
                       <Typography variant="body2" sx={{ color: '#a0a0a0', mt: 0.5 }}>
-                        concierge@aureate.tech
+                         concierge@aureate.tech
                       </Typography>
                     </Box>
                   </Box>
@@ -228,7 +230,7 @@ export default function ContactSection() {
                 }}
               >
                 <Typography variant="h6" sx={{ color: '#fff', fontSize: '18px' }}>
-                  View FAQ
+                 {t("View FAQ")} 
                 </Typography>
                 <ArrowForwardIcon sx={{ color: '#d4af37' }} />
               </Box>

@@ -25,11 +25,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { Typography } from "@mui/material";
+import Badge from "@mui/material/Badge";
+import Loading from "../Loading";
 
 function Header() {
   const Token = useAuthStore((state) => state.Token);
-  const logout = useAuthStore((state) => state.logout);
-  const { data } = useGetitemformcart();
+  const { data, isLoading } = useGetitemformcart();
+
   //  اللغة
   const changeLanguage = () => {
     const lang = i18n.language === "ar" ? "en" : "ar";
@@ -38,13 +40,14 @@ function Header() {
 
   const [open, setOpen] = useState(false);
 
-  console.log(data);
   const { t } = useTranslation();
 
   const navigate = useNavigate();
 
   const mode = Usemode((state) => state.mode);
   const toggleMode = Usemode((state) => state.togglemode);
+
+  if (isLoading) return <Loading></Loading>;
 
   return (
     <>
@@ -159,7 +162,7 @@ function Header() {
 
               <IconButton
                 onClick={() => setOpen(true)}
-                sx={{ display: { xs: "block", md: "none" },color:"menu" }}
+                sx={{ display: { xs: "block", md: "none" }, color: "menu" }}
               >
                 <MenuIcon />
               </IconButton>
@@ -251,7 +254,7 @@ function Header() {
                             textDecoration: "none",
                             color: "menu",
                             transition: "0.3s",
-                            
+
                             "&:hover": {
                               color: "#F2CA50",
                               textDecoration: "underline",
@@ -299,7 +302,7 @@ function Header() {
                         </Typography>
                         <Box
                           sx={{
-                            display:"flex",
+                            display: "flex",
                             alignItems: "center",
                             flexDirection: "column",
                             gap: "15px",
@@ -394,7 +397,7 @@ function Header() {
                 )}
               </AnimatePresence>
 
-              <Box sx={{display: { xs: "none", md: "flex" },}}>
+              <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 {Token ? (
                   <>
                     <Box
@@ -444,15 +447,32 @@ function Header() {
                         to="/Cart"
                         sx={{
                           color: "#E9C349",
-                          fontSize: "18px",
-                          fontWeight: "600",
                           transition: "0.4s",
                           "&:hover": {
                             color: "#d9a807",
                           },
                         }}
                       >
-                        <ShoppingCartIcon />
+                        <Badge
+                          badgeContent={data?.length}
+                          overlap="circular"
+                          sx={{
+                            "& .MuiBadge-badge": {
+                              backgroundColor: "#F2CA50",
+                              color: "#131313",
+                              fontWeight: "700",
+                              fontSize: "11px",
+                              minWidth: "18px",
+                              height: "18px",
+                              padding: "0 4px",
+                              borderRadius: "50%",
+                              top: "2px",
+                              right: "-3px",
+                            },
+                          }}
+                        >
+                          <ShoppingCartIcon sx={{ fontSize: "28px" }} />
+                        </Badge>
                       </Box>
                       <Box
                         component={Link}

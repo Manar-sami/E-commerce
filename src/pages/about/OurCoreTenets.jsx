@@ -25,7 +25,7 @@ function OurCoreTenets() {
               textAlign: "center",
             }}
           >
-            Our Core Tenets
+            {t("Our Core Tenets")}
           </Typography>
         </motion.div>
 
@@ -41,14 +41,14 @@ function OurCoreTenets() {
               component="h2"
               sx={{ fontSize: "24px", color: "h2color", my: 2 }}
             >
-              Innovation
+             {t("Innovation")} 
             </Typography>
 
             <Typography
               component="p"
               sx={{ fontSize: "16px", color: "colorp" }}
             >
-              Pushing boundaries beyond the visible spectrum of technology.
+              {t("Pushing boundaries beyond the visible spectrum of technology.")}
             </Typography>
           </Grid>
 
@@ -61,14 +61,14 @@ function OurCoreTenets() {
               component="h2"
               sx={{ fontSize: "24px", color: "h2color", my: 2 }}
             >
-              Quality
+             {t("Quality")}  
             </Typography>
 
             <Typography
               component="p"
               sx={{ fontSize: "16px", color: "colorp" }}
             >
-              Uncompromising materials sourced globally, engineered locally.
+              {t("Uncompromising materials sourced globally, engineered locally.")} 
             </Typography>
           </Grid>
 
@@ -83,14 +83,14 @@ function OurCoreTenets() {
               component="h2"
               sx={{ fontSize: "24px", color: "h2color", my: 2 }}
             >
-              Trust
+              {t("Trust")}
             </Typography>
 
             <Typography
               component="p"
               sx={{ fontSize: "16px", color: "colorp" }}
             >
-              A lifetime guarantee on the mechanical soul of our products.
+              {t("A lifetime guarantee on the mechanical soul of our products.")}
             </Typography>
           </Grid>
 
@@ -103,15 +103,14 @@ function OurCoreTenets() {
               component="h2"
               sx={{ fontSize: "24px", color: "h2color", my: 2 }}
             >
-              Client First
+                 {t("Client First")}
             </Typography>
 
             <Typography
               component="p"
               sx={{ fontSize: "16px", color: "colorp" }}
             >
-              White-glove service, ensuring your experience matches our
-              engineering.
+             {t("White-glove service, ensuring your experience matches our engineering.")} 
             </Typography>
           </Grid>
         </Grid>

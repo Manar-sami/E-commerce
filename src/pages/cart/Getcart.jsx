@@ -72,6 +72,9 @@ function Getcart() {
         text: "Product removed successfully.",
         timer: 1500,
         showConfirmButton: false,
+            background: "#121212",
+    color: "#ffffff",
+    confirmButtonColor: "#D4AF37",
       });
     }
   });

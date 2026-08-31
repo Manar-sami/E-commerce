@@ -13,7 +13,7 @@ function Stats() {
             20+
            </Typography>
            <Typography sx={{color:"colorp",fontSize:"12px",fontWeight:"700",mt:1}}>
-            YEARS OF EXCELLENCE
+            {t("YEARS OF EXCELLENCE")}
            </Typography>
          </Grid>
 
@@ -22,7 +22,7 @@ function Stats() {
             1M+
            </Typography>
            <Typography sx={{color:"colorp",fontSize:"12px",fontWeight:"700",mt:1}}>
-            PRODUCTS DELIVERED
+            {t("PRODUCTS DELIVERED")}
            </Typography>
          </Grid>
 
@@ -31,7 +31,7 @@ function Stats() {
             500K+
            </Typography>
            <Typography sx={{color:"colorp",fontSize:"12px",fontWeight:"700",mt:1}}>
-            SATISFIED CLIENTS
+            {t("SATISFIED CLIENTS")}
            </Typography>
          </Grid>
 
@@ -40,7 +40,7 @@ function Stats() {
             45
            </Typography>
            <Typography sx={{color:"colorp",fontSize:"12px",fontWeight:"700",mt:1}}>
-            COUNTRIES SERVED
+            {t("COUNTRIES SERVED")}
            </Typography>
          </Grid>
         </Grid>

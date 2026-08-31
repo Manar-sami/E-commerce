@@ -17,10 +17,10 @@ function Heroabout() {
         <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",textAlign:"center"}}>
            <Box>
               <Typography sx={{fontSize:{xs:"28px",sm:"38px",md:"72px"},fontWeight:"bold",color:"#E5E2E1",maxWidth:"80%",mx:"auto"}}>
-                {t("Crafting the Future of")}<Typography sx={{fontSize:{xs:"28px",sm:"38px",md:"72px"},color:"#E9C349"}}>Technology</Typography>
+                {t("Crafting the Future of")}<Typography sx={{fontSize:{xs:"28px",sm:"38px",md:"72px"},color:"#E9C349"}}>{t("Technology")}</Typography>
             </Typography>
             <Typography sx={{fontSize:"18px",color:"#CFC4C5"}}>
-              ENGINEERING PRECISION SINCE 2004.
+             {t("ENGINEERING PRECISION SINCE 2004.")} 
             </Typography>
             
            </Box>

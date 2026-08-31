@@ -16,7 +16,6 @@ import useAddreview from "./../../Hook/Addreview";
 import TextField from "@mui/material/TextField";
 import { useTranslation } from "react-i18next";
 
-
 import UseAuthStore from "../../store/UseAuthStore";
 import Loading from "../../Loading";
 
@@ -38,8 +37,6 @@ function Review() {
   } = useForm();
 
   const { mutate: addreview, isError, error } = useAddreview();
-  ;
-
   const opens = () => {
     {
       Token ? setopen(true) : setmassage(true);
@@ -68,7 +65,6 @@ function Review() {
       },
     );
   };
-
 
   if (isLoading) return <Loading></Loading>;
   return (
@@ -314,9 +310,6 @@ function Review() {
         </Button>
       </Box>
 
-     
-
-
       {open && (
         <Box
           sx={{
@@ -324,8 +317,14 @@ function Review() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            backgroundColor: "#131313",
-            boxShadow: 5,
+            backgroundColor: "#121212",
+           
+            backgroundImage:
+              "linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0))",
+            boxShadow:
+              "0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5)",
+            border: "1px solid",
+            borderColor: "divider",
             borderRadius: 3,
             p: 4,
             width: 400,
@@ -391,16 +390,70 @@ function Review() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            backgroundColor: "black",
-            boxShadow: 5,
-            borderRadius: 3,
+            width: { xs: "90%", sm: 400 },
             p: 4,
-            width: 400,
+            borderRadius: 4,
+            bgcolor: "#121212",
+            backgroundImage:
+              "linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0))",
+            boxShadow:
+              "0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5)",
+            border: "1px solid",
+            borderColor: "divider",
+            color: "text.primary",
             zIndex: 2000,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
           }}
         >
-          <Box component="form" onSubmit={handleSubmit(review)}>
-            <Typography>🔒 You must log in to add a comment</Typography>
+          <Box
+            component="form"
+            onSubmit={handleSubmit(review)}
+            sx={{ width: "100%" }}
+          >
+            <Box
+              sx={{
+                width: 56,
+                height: 56,
+                borderRadius: "50%",
+                bgcolor: "rgba(255, 255, 255, 0.08)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "1.75rem",
+                mx: "auto",
+                mb: 2,
+              }}
+            >
+              🔒
+            </Box>
+
+            <Box
+              component="h3"
+              sx={{
+                m: 0,
+                mb: 1,
+                fontSize: "1.25rem",
+                fontWeight: 600,
+                letterSpacing: "0.5px",
+              }}
+            >
+              Login Required
+            </Box>
+
+            <Box
+              component="p"
+              sx={{
+                m: 0,
+                fontSize: "0.875rem",
+                color: "text.secondary",
+                lineHeight: 1.5,
+              }}
+            >
+              You must log in first to add your comment.
+            </Box>
           </Box>
         </Box>
       )}
