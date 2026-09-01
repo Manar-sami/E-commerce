@@ -8,7 +8,7 @@ function UpdateQuantity() {
 
   const updateitem = useMutation({
    mutationFn: ({ productId, count }) => {
-      console.log(productId, count); // للتأكد
+      console.log(productId, count); 
       return Authinstance.patch(`/Carts/${productId}`, { count });
     },
     onSuccess: () => {

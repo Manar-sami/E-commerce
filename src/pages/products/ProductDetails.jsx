@@ -188,7 +188,7 @@ function ProductDetails() {
             </Typography>
 
             <Box sx={{ display: "flex", gap: 1 }}>
-              <Typography sx={{ color: "whitecolor" }}>{t("Color:")}</Typography>
+              <Typography sx={{ color: "whitecolor" }}>Color:{t("Color:")}</Typography>
               <Typography sx={{ color: "#E9C349" }}>
   {selectedColor === "#111111"
     ? t("Obsidian Black")

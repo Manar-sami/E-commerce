@@ -14,9 +14,11 @@ import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from "react-router-dom";
 
 export default function ContactSection() {
  const{t}=useTranslation();
+ const navigate=useNavigate();
   return (
     <Box sx={{ bgcolor: '#0a0a0a', minHeight: '100vh', py: 8, display: 'flex', alignItems: 'center' }}>
       <Container maxWidth="lg">
@@ -213,7 +215,7 @@ export default function ContactSection() {
 
              
               <Box
-                
+                onClick={()=>navigate("/FAQ")}
                 sx={{
                   p: 2.5,
                   bgcolor: '#121212',
@@ -229,7 +231,7 @@ export default function ContactSection() {
                   },
                 }}
               >
-                <Typography variant="h6" sx={{ color: '#fff', fontSize: '18px' }}>
+                <Typography sx={{ color: '#fff', fontSize: '18px' }} >
                  {t("View FAQ")} 
                 </Typography>
                 <ArrowForwardIcon sx={{ color: '#d4af37' }} />

@@ -1,19 +1,9 @@
-
 import { Box, Button, Typography } from "@mui/material";
 import ErrorIcon from "@mui/icons-material/Error";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 function Error() {
   const navigate = useNavigate();
-
-  const handleRefresh = () => {
-    window.location.reload();
-  };
-
-  const handleHome = () => {
-    navigate("/");
-  };
 
   return (
     <Box
@@ -35,10 +25,6 @@ function Error() {
         }}
       >
         <Box
-          component={motion.div}
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
           sx={{
             width: "100px",
             height: "100px",
@@ -50,15 +36,6 @@ function Error() {
             mx: "auto",
             mb: "30px",
             position: "relative",
-
-            "&::after": {
-              content: '""',
-              position: "absolute",
-              width: "120px",
-              height: "120px",
-              border: "1px solid rgba(242, 202, 80, 0.15)",
-              borderRadius: "50%",
-            },
           }}
         >
           <ErrorIcon
@@ -106,8 +83,8 @@ function Error() {
             mb: "30px",
           }}
         >
-          We couldn't load the requested data right now.
-          Please try again in a moment.
+          We couldn't load the requested data right now. Please try again in a
+          moment.
         </Typography>
 
         <Box
@@ -119,7 +96,7 @@ function Error() {
           }}
         >
           <Button
-            onClick={handleRefresh}
+            onClick={() => window.location.reload()}
             sx={{
               minWidth: "150px",
               backgroundColor: "#F2CA50",
@@ -144,7 +121,7 @@ function Error() {
           </Button>
 
           <Button
-            onClick={handleHome}
+            onClick={() => navigate("/")}
             sx={{
               minWidth: "150px",
               backgroundColor: "transparent",
@@ -186,4 +163,3 @@ function Error() {
 }
 
 export default Error;
-

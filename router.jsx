@@ -20,6 +20,7 @@ import Aboutpage from "./src/pages/about/Aboutpage";
 import Shoppage from "./src/pages/Shop/Shoppage";
 import Contactpage from "./src/pages/Contact/Contactpage";
 import Error from "./src/Error/Error";
+import FAQ from "./src/pages/FAQ";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "Categories",
         element: <Categories />,
+      },
+       {
+        path: "FAQ",
+        element: <FAQ/>,
       },
       {
         path: "about",

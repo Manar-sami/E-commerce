@@ -255,16 +255,8 @@ function Review() {
               fontSize: "18px",
               fontWeight: 400,
               fontFamily: '"Cormorant Garamond", "Times New Roman", serif',
-              px: {
-                xs: 2,
-                sm: 2.5,
-                md: 3.5,
-              },
-              py: {
-                xs: 0.8,
-                sm: 1,
-                md: 1.2,
-              },
+              px: {xs: 2,sm: 2.5,md: 3.5},
+              py: {xs: 0.8,sm: 1,md: 1.2},
               transition: "all 0.3s ease",
               "&:hover": {
                 borderColor: "#facc15",
@@ -289,17 +281,8 @@ function Review() {
             textTransform: "none",
             fontSize: "18px",
             fontWeight: 500,
-            fontFamily: '"Cormorant Garamond", "Times New Roman", serif',
-            px: {
-              xs: 2,
-              sm: 2.5,
-              md: 3.5,
-            },
-            py: {
-              xs: 0.8,
-              sm: 1,
-              md: 1.2,
-            },
+            px: {xs: 2,sm: 2.5,md: 3.5},
+            py: {xs: 0.8,sm: 1,md: 1.2},
             transition: "all 0.3s ease",
             "&:hover": {
               backgroundColor: "#e0b21a",

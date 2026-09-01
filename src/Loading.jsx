@@ -1,5 +1,5 @@
 
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, CircularProgress } from "@mui/material";
 import { motion } from "framer-motion";
 
 function Loading() {
@@ -15,7 +15,7 @@ function Loading() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        zIndex: 9999,
+        zIndex: 30,
       }}
     >
       <Box
@@ -32,24 +32,7 @@ function Loading() {
           boxShadow: "0px 10px 40px rgba(0, 0, 0, 0.35)",
         }}
       >
-        <Box
-          component={motion.div}
-          animate={{
-            rotate: 360,
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          sx={{
-            width: "55px",
-            height: "55px",
-            border: "3px solid rgba(242, 202, 80, 0.2)",
-            borderTop: "3px solid #F2CA50",
-            borderRadius: "50%",
-          }}
-        />
+        <CircularProgress sx={{color:"#F2CA50"}} />
 
         <Typography
           component={motion.p}
